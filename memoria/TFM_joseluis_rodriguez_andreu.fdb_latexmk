@@ -1,30 +1,24 @@
 # Fdb version 4
-["bibtex TFM_joseluis_rodriguez_andreu"] 1740478005.44314 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1740478008.64988 0
+["bibtex TFM_joseluis_rodriguez_andreu"] 1740478202.07318 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1740478204.97304 0
   "./referencias.bib" 1740472071 997 b44902f80c08ee7ff14e1901ee221511 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1740478007 6061 dcda1a637c6b0bb82518ee3b6b2f99d9 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.aux" 1740478203 3780 9cf2761fd23ede7c3a58bf9112726d6c "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1740402916 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "TFM_joseluis_rodriguez_andreu.bbl"
   "TFM_joseluis_rodriguez_andreu.blg"
   (rewritten before read)
-["pdflatex"] 1740478006.02716 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1740478008.6509 0
-  "0_resumen.tex" 1740478001 5367 c371c94e256b9ec51e9e3b08672a2006 ""
+["pdflatex"] 1740478202.57302 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1740478204.97401 0
+  "0_resumen.tex" 1740478038 5367 c371c94e256b9ec51e9e3b08672a2006 ""
   "0_titulo.tex" 1740472071 1219 b63e7f01433c3741802d4e893189d69f ""
   "1_introduccion.tex" 1740476958 6602 da7e50a4caa77a1076b4fdcbe3a63afd ""
-  "2_estado_del_arte.tex" 1740477072 124 0f842992505e77ed3248b85d70191007 ""
-  "3_metodos_y_recursos.tex" 1740477255 654 b3cbb27b26fa0a51cb1445af31ca5b4c ""
-  "4_resultados.tex" 1740477325 179 7edfde6db43b08b0dda3ebb1b830b301 ""
-  "5_conclusiones_y_trabajo_futuro.tex" 1740477372 686 0afdf2c3e62275ba1f5496f29ecf03f5 ""
-  "6_glosario.tex" 1740477442 174 1824c3c79a9ea29b1d3d54c29f756f7f ""
-  "7_anexos.tex" 1740477781 208 b3d4d95546cfacaa1c5c800a279fe3aa ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1740478007 6061 dcda1a637c6b0bb82518ee3b6b2f99d9 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.bbl" 1740478006 238 4ff6d0cedeb06742eee760021acf0194 "bibtex TFM_joseluis_rodriguez_andreu"
-  "TFM_joseluis_rodriguez_andreu.lof" 1740478007 398 7be44d4534a8276dab2f5f70e954da50 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.lot" 1740478007 278 9de4a1e861c68ca5b329878a8709383c "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.out" 1740478007 4453 3a49b898ba48aeb951907093178d3d86 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.tex" 1740477692 8509 40037b8815415323921dca5746531f13 ""
-  "TFM_joseluis_rodriguez_andreu.toc" 1740478007 2325 e96171c5e601578dabbe238e11c6d8f7 "pdflatex"
-  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1740477692 8509 40037b8815415323921dca5746531f13 ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1740478203 3780 9cf2761fd23ede7c3a58bf9112726d6c "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.bbl" 1740478202 238 4ff6d0cedeb06742eee760021acf0194 "bibtex TFM_joseluis_rodriguez_andreu"
+  "TFM_joseluis_rodriguez_andreu.lof" 1740478203 278 c21e96e2731652e86142f70aaa98ec40 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.lot" 1740478203 158 e1b8b7dea384b1c4b1f3b44ff0facae6 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.out" 1740478203 2792 1bde2df64b8eb25b8bf7b8e8c189caff "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.tex" 1740478198 3327 819417e63a01e63105a0691ed03b3c17 ""
+  "TFM_joseluis_rodriguez_andreu.toc" 1740478203 1429 4def85748d639820e92de05d80bb7d79 "pdflatex"
+  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1740478198 3327 819417e63a01e63105a0691ed03b3c17 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1740404314 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1740402467 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1740402467 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
