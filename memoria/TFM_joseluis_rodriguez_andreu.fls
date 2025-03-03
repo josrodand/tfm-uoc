@@ -1,8 +1,8 @@
-PWD c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria
+PWD g:/Mi unidad/UOC MASTER CIENCIA DE DATOS/TFM/tfm-uoc/memoria
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex
+INPUT g:/Mi unidad/UOC MASTER CIENCIA DE DATOS/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex
 OUTPUT TFM_joseluis_rodriguez_andreu.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/book.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/book.cls
