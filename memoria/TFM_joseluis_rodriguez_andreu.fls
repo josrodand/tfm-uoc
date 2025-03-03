@@ -1,8 +1,8 @@
-PWD g:/Mi unidad/UOC MASTER CIENCIA DE DATOS/TFM/tfm-uoc/memoria
+PWD c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT g:/Mi unidad/UOC MASTER CIENCIA DE DATOS/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex
+INPUT c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex
 OUTPUT TFM_joseluis_rodriguez_andreu.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/book.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/book.cls
@@ -234,21 +234,8 @@ INPUT ./1_introduccion.tex
 INPUT ./1_introduccion.tex
 INPUT 1_introduccion.tex
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
-INPUT c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
-INPUT c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
-INPUT ./figs/image1.png
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT TFM_joseluis_rodriguez_andreu.bbl
@@ -258,8 +245,5 @@ INPUT ./TFM_joseluis_rodriguez_andreu.out
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb

@@ -1,8 +1,17 @@
 \begin{thebibliography}{1}
 
-\bibitem{Sweeney:2002}
-Latanya Sweeney.
-\newblock k-anonymity: a model for protecting privacy.
-\newblock {\em Int. J. Uncertain. Fuzziness Knowl.-Based Syst.}, 10:557--570, October 2002.
+\bibitem{Khurana_2022}
+Diksha Khurana, Aditya Koli, Kiran Khatter, and Sukhdev Singh.
+\newblock Natural language processing: state of the art, current trends and challenges.
+\newblock {\em Multimedia Tools and Applications}, 82(3):3713–3744, July 2022.
+
+\bibitem{webscraping}
+Laia~Subirats Maté and Mireia~Calvo González.
+\newblock Web scraping.
+\newblock {\em Editorial UOC.}, 2019.
+
+\bibitem{iag}
+Sandeep~Singh Sengar, Affan~Bin Hasan, Sanjay Kumar, and Fiona Carroll.
+\newblock Generative artificial intelligence: A systematic review and applications, 2024.
 
 \end{thebibliography}
