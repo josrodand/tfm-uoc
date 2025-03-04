@@ -24,24 +24,57 @@ El propósito de esta solución es democratizar el acceso a oportunidades financ
 
 \section{Explicación de la motivación personal}
 
-Explicación de la motivación personal
+La motivación tras este proyecto nace del interés personal sobre el uso de las nuevas tecnologías, especialmente la Inteligencia Artificial, en aspectos de la vida, tanto personales como profesionales, donde pueden suponer un cambio importante en la forma de realizar ciertas tareas: Agilizando procesos, reduciendo la dificultad en algunos casos y, en resumen, facilitar y hacer más accesible ciertos aspectos de la vida personal y profesional que pueden resultar tediosos.
+
+El uso de tecnologías como el Procesamiento de Lenguaje Natural y la Inteligencia Artificial Generativa están cambiando desde hace unos años nuestra tecnología a un ritmo nunca visto. Prácticamente cada pocos meses aparecen nuevas tecnologías basadas en este campo de conocimiento, pasando por nuevos Grandes Modelos del Lenguaje como GPT-4o o DeepSeek, nuevas herramientas de desarrollo como Langchain, LLamaIndex, u Ollama, e incluso aplicaciones basadas en IA como Cursor, NotebookLM, o diferentes aplicaciones que te permiten generar texto, imágenes o música sin ser un experto.
+
+Todas estas tecnologías están cambiando la forma en la que vemos el mundo, y aunque es necesario cierto control y regulación para no acabar en unos años en una sociedad distópica digna de la ciencia ficción, sí que considero que tenemos que aprovechar el potencial de estas tecnologías, para seguir el camino, como siempre considero que hay que hacer, hacia una sociedad más justa, equitativa, y donde tenga más peso la calidad de nuestras vidas y los derechos sociales, que las obligaciones económicas y laborales que marcan nuestro día a día.
+
+En este caso concreto del proyecto, el uso de estas técnicas permite democratizar y hacer más accesible este tipo de ayudas. Crear una empresa y mantenerla a flote no es fácil, y en muchos casos sólo unas pocas sobreviven más de unos pocos años tras su creación, generalmente porque parten de unas capacidades económicas por detrás que no disponen el resto. Este tipo de ayudas económicas permiten a empresas con menos recursos de partida salir adelante, y herramientas como estas facilitan la búsqueda y su participación en éstas.
+
+\newpage
 
 \section{Definición de los objetivos}
 
-Definición de los Objetivos.
-
 \subsection{Objetivo Principal}
 
-Objetivo principal.
+El objetivo principal de este proyecto es el desarrollo de una solución automática basada en Inteligencia Artificial Generativa, que permita la indexación de información a partir de unas fuentes de datos concretas, en este caso convocatorias de ayudas a empresas, y realice tareas de extracción y estructuración de la información. 
+De esta forma, se generará un barrido de todas las posibles convocatorias y se generará una base de datos con información relevante para su consulta y explotación.
 
 
 \subsection{Objetivos Específicos}
 
-Objetivos Específicos.
+\begin{itemize}
+
+\item \textbf{Implementación de una herramienta de extracción de información}:\\
+En primer lugar se diseñará una herramienta que sea capaz de identificar las diferentes convocatorias de ayudas a partir de las fuentes disponibles y extraer la información necesaria:
+\begin{itemize}
+    \item Codigo fuente de la página web de convocatorias.
+    \item Ficha técnica de las convocatorias.
+    \item Documentos asociados.
+\end{itemize}
+Esta herramienta será una combinación de soluciones basadas en Inteligencia Artificial Generativa y Web Scraping.
+
+\item \textbf{Sistema NLP de extracción y procesado de información}:\\ 
+Una vez extraída la información de la convocatoria, se emplearán diferentes técnicas de Procesamiento de Lenguaje Natural para diferentes tareas de procesado de texto y extracción de información. 
+Este sistema empleará Grandes Modelos del Lenguaje (LLMs) en combinación con diferentes frameworks de orquestación, como Langchain o LLamaIndex.
+Se emplearán diferentes propuestas de LLMs para evaluar su eficacia en la extracción de información.
+
+% opcional si da tiempo
+\item \textbf{Herramienta de consulta de información}:\\
+Finalmente, se implementará una solución de consulta y recuperación de información sobre las diferentes convocatorias, partiendo tanto de los datos estructurados generados en el paso anterior como de las fuentes originales de datos.
+Esta solución se basará en un RAG multiagente, empleando técnicas avanzadas en cuanto a Question Answering y procesamiento de texto.
+\end{itemize}
+
+\newpage
 
 \section{Descripción de la metodología empleada en el desarrollo del proyecto}
 
-Descripción de la metodología empleada en el desarrollo del proyecto.
+
+
+
+
+\newpage
 
 \section{Planificación o plan de investigación del proyecto}
 
