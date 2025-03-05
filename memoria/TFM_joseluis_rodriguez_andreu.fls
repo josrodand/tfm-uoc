@@ -238,6 +238,11 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT ./figs/gantt.png
+INPUT ./figs/gantt.png
+INPUT ./figs/gantt.png
+INPUT ./figs/gantt.png
+INPUT ./figs/gantt.png
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT TFM_joseluis_rodriguez_andreu.bbl

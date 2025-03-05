@@ -28,7 +28,7 @@ La motivación tras este proyecto nace del interés personal sobre el uso de las
 
 El uso de tecnologías como el Procesamiento de Lenguaje Natural y la Inteligencia Artificial Generativa están cambiando desde hace unos años nuestra tecnología a un ritmo nunca visto. Prácticamente cada pocos meses aparecen nuevas tecnologías basadas en este campo de conocimiento, pasando por nuevos Grandes Modelos del Lenguaje como GPT-4o o DeepSeek, nuevas herramientas de desarrollo como Langchain, LLamaIndex, u Ollama, e incluso aplicaciones basadas en IA como Cursor, NotebookLM, o diferentes aplicaciones que te permiten generar texto, imágenes o música sin ser un experto.
 
-Todas estas tecnologías están cambiando la forma en la que vemos el mundo, y aunque es necesario cierto control y regulación para no acabar en unos años en una sociedad distópica digna de la ciencia ficción, sí que considero que tenemos que aprovechar el potencial de estas tecnologías, para seguir el camino, como siempre considero que hay que hacer, hacia una sociedad más justa, equitativa, y donde tenga más peso la calidad de nuestras vidas y los derechos sociales, que las obligaciones económicas y laborales que marcan nuestro día a día.
+Todas estas tecnologías están cambiando la forma en la que vemos el mundo, y aunque es necesario cierto control y regulación para no acabar en unos años en una sociedad distópica digna de la ciencia ficción, sí que considero que tenemos que aprovechar el potencial de estas tecnologías para seguir el camino hacia una sociedad más justa, equitativa, y donde tenga más peso la calidad de nuestras vidas y los derechos sociales, que las obligaciones económicas y laborales que marcan nuestro día a día.
 
 En este caso concreto del proyecto, el uso de estas técnicas permite democratizar y hacer más accesible este tipo de ayudas. Crear una empresa y mantenerla a flote no es fácil, y en muchos casos sólo unas pocas sobreviven más de unos pocos años tras su creación, generalmente porque parten de unas capacidades económicas por detrás que no disponen el resto. Este tipo de ayudas económicas permiten a empresas con menos recursos de partida salir adelante, y herramientas como estas facilitan la búsqueda y su participación en éstas.
 
@@ -70,131 +70,77 @@ Esta solución se basará en un RAG multiagente, empleando técnicas avanzadas e
 
 \section{Descripción de la metodología empleada en el desarrollo del proyecto}
 
+En este proyecto, se ha optado por implementar la metodología Agile debido a su enfoque iterativo y flexible, lo que nos permitirá adaptarnos rápidamente a cambios en los requisitos y mejorar continuamente el resultado a través de entregas incrementales. 
+Agile fomenta la colaboración, la comunicación y la retroalimentación continua, asegurando que el desarrollo se mantenga alineado con las necesidades del proyecto. 
+Además, esta metodología promueve la eficiencia y la optimización del tiempo, reduciendo riesgos y mejorando la calidad del resultado final.
+
+\begin{itemize}
+\item \textbf{Estrategia de investigación}\\
+La estrategia de investigación sigue el enfoque propuesto por Oates en su libro \textit{Researching
+Information Systems and Computing} \cite{Oates2005ResearchingIS}, combinando técnicas de análisis de datos cualitativos
+y cuantitativos para asegurar una comprensión holística del dominio.
+Durante el proyecto, se aplicarán estrategias presentadas en el enfoque anterior para la obtención de datos de las convocatorias.
+Las principales tecnologías empleadas en el desarrollo serán Python como lenguaje de programación, frameworks como Langchain, LLamaIndex o HuggingFace, y diferentes librerías de NLP y Web Scraping, así como diferentes Grandes Modelos del Lenguaje, algunos explotados desde su propia API, y otros desde orquestadores locales, como Ollama o LMStudio.
+    
+\item \textbf{Fases del desarrollo}\\
+El proyecto se dividirá en diferentes fases, cada una de las cuales se centrará en una tarea específica.
+    
+\begin{itemize}
+    \item \textbf{Fase de investigación}:
+    Revisión y análisis des las fuentes de datos disponibles, que en este casos son las diferentes webs proporcionadas de convocatorias de ayudas.
+    A partir de los datos disponibles en éstas, se podrán definir los requisitos y funcionalidades que tiene que tener el sistema en cuanto a ectracción y procesado de información.
+        
+    \item \textbf{Desarrollo de la herramienta de identificación y extracción de convocatorias}:
+    En esta fase se desarrollará la herramienta de extracción de datos de convocatorias. Esta herramienta empleará una combinación de web scraping e IA Generativa para acceder a los sitios web de las ayudas, identificar las diferentes convocatorias y extraer las fuentes de datos en formato textual.
+
+    \item \textbf{Desarrollo del sistema de procesamiento}:
+    Una vez extraída la información, se desarrollará un sistema de procesamiento basado en IA Generativa que permita la identificación y extracción de información relevante de las convocatorias.
+    Por un lado, extraerá datos en formato de texto web, que será procesado para cer accesible mediante Grandes Modelos del Lenguaje. Por otro lado, también procesará los ficheros PDF generalmente asociados a estas convocatorias.
+    como resultado, se generará una base de datos con información estructurada, y una base de datos vectorial que almacenará los embeddings de los documentos.
+    \item \textbf{Desarrollo del sistema de consulta de información}:
+    A partir de las bases de datos generadas en el paso anterior, se construirá un sistema basado en RAG que permita acceder a esas fuentes y realizar consultas sobre los datos.
+    Esas consultas permitirán extraer información estructurada en el formato solicitado.
+    
+\end{itemize}
 
 
-
+\end{itemize}
 
 \newpage
 
 \section{Planificación o plan de investigación del proyecto}
 
-Planificación o plan de investigación del proyecto.
+El plan de desarrollo de este proyecto va marcado por las diferentes etapas que establece la metodología de la UOC.
+En cada una de esos bloques de trabajo se abordarán las diferentes etapas indicadas del proyecto:
 
-% En la actualidad, los procesos de minería de datos requieren grandes cantidades de datos, que en muchas ocasiones contienen información personal y privada de usuarios o personas. Aunque se realicen procesos básicos de anonimización sobre los datos, es decir, eliminación de los nombres u otros identificadores clave, existen multitud de técnicas de re-identificación que permiten volver a identificar a un usuario dentro de este conjunto de datos. En la Figura \ref{fig:context-anoni1} se presenta un mapa donde es posible contextualizar los procesos de anonimización y re-identificación dentro de un proceso de minería de datos.
+\begin{itemize}
+    \item \textbf{19/02/2025 al 09/03/2025}:
+    Definición del TFM: Enunciado y entrega (M1).
+    Definición de los requisitos del proyecto, análisis de fuentes de datos y tecnologías disponibles.
+    \item \textbf{10/03/2025 al 30/03/2025}:
+    Estado del Arte: Enunciado y entrega de la actividad (M2). 
+    En este bloque de trabajo se redactará el capítulo del Estado del Arte, en base a un trabajo de investigación donde se recopilarán las herramientas y tecnologías con potencial de ser empleadas en el proyecto.
+    Este capítulo principalmente recopilará los últimos avances en Inteligencia Artificial Generativa, Grandes Modelos del Lenguaje, y frameworks asociados.
+    Paralelamente comenzará el desarrollo de la herramienta de identificación y extracción de convocatorias.
+    \item \textbf{31/03/2025 al 04/05/2025}:
+    Implementación: Enunciado y entrega de la actividad (M3).
+    Implementación de los diferentes bloques ya definidos: Herramienta de identificación de convocatorias, Sistema de procesamiento y la solución de consulta de información.
+    \item \textbf{05/05/2025 al 18/05/2025}:
+    Redacción de la memoria: Entrega preliminar (M4).
+    \item \textbf{19/05/2025 al 25/05/2025}:
+    Redacción de la memoria: Entrega final (M4).
+    \item \textbf{26/05/2025 al 03/06/2025}:
+    Presentación audiovisual del trabajo (M4).
+    \item \textbf{04/06/2025 al 06/06/2025}:
+    Entrega de la documentación al tribunal (M5).
+    \item \textbf{07/06/2025 al 27/06/2025}:
+    Defensa pública del trabajo (M5).
+\end{itemize}
 
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.6\textwidth]{figs/image1.png}
-% 	\caption{Pie de la imagen.}
-% 	\label{fig:context-anoni1}
-% \end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figs/gantt.png}
+	\caption{Timeline de tareas}
+	\label{fig:context-anoni1}
+\end{figure}
 
-% \subsection{Ejemplo de subsection}
-
-% Aunque se han realizado importantes avances en preservación de la privacidad en publicación de datos, tales como el modelo \textit{k}-anonymity \cite{Sweeney:2002}.
-
-% Un ejemplo de pseudo-código se puede encontrar en el Código \ref{code:RandomSwitch-1}
-
-% \begin{algorithm}
-% 	\caption{Pseudocódigo del algoritmo \textit{Random Switch}}
-% 	\label{code:RandomSwitch-1}
-% 	\begin{algorithmic}
-% 		\REQUIRE{El grafo original $G$ y el porcentaje de anonimización $p$ que se desea aplicar.}
-% 		\ENSURE{El grafo $G$ anonimizado.}
-% 		\STATE $num = round(G.num\_edges() * p)$
-% 		\STATE $i = 0$
-% 		\WHILE {$i < num$}
-% 		\STATE {$e_{1} = G.random\_edge()$}
-% 		\STATE $e_{2} = G.random\_edge()$
-% 		\STATE $new\_e_{1} = (e_{1}.origen, e_{2}.origen)$
-% 		\STATE $new\_e_{2} = (e_{1}.destino, e_{2}.destino)$
-% 		\IF {$!G.exist(new\_e_{1})$ \AND $!G.exist(new\_e_{2})$}
-% 		\STATE $G.add\_edge(new\_e_{1})$
-% 		\STATE $G.add\_edge(new\_e_{2})$
-% 		\STATE $G.delete\_edge(e_{1})$
-% 		\STATE $G.delete\_edge(e_{2})$
-% 		\STATE $i=i+1$
-% 		\ENDIF
-% 		\ENDWHILE
-% 		\RETURN $G$
-% 	\end{algorithmic}
-% \end{algorithm}
-
-% Un ejemplo de tabla se puede ver en la Tabla \ref{table:ejemplo_vertex_refi_query}
-
-% \begin{table}
-% 	\centering{}
-% 	\begin{tabular}{ l || c | c | l }
-% 		\hline
-% 		Node ID & $\mathcal{H}_{0}$ & $\mathcal{H}_{1}$ & $\mathcal{H}_{2}$ \\
-% 		\hline
-% 		\hline
-% 		Alice & $\epsilon$ & 1 & \{4\}  \\
-% 		\hline
-% 		Bob & $\epsilon$ & 4 & \{1, 1, 4, 4\}  \\
-% 		\hline
-% 		Carol & $\epsilon$ & 1 & \{4\}  \\
-% 		\hline
-% 		Dave & $\epsilon$ & 4 & \{2, 4, 4, 4\}  \\
-% 		\hline
-% 		Ed & $\epsilon$ & 4 & \{2, 4, 4, 4\}  \\
-% 		\hline
-% 		Fred & $\epsilon$ & 2 & \{4, 4\}  \\
-% 		\hline
-% 		Greg & $\epsilon$ & 4 & \{2, 2, 4, 4\}  \\
-% 		\hline
-% 		Harry & $\epsilon$ & 2 & \{4, 4\}  \\
-% 		\hline
-% 	\end{tabular}
-% 	\caption{\textit{Vertex refinement queries}.}
-% 	\label{table:ejemplo_vertex_refi_query}
-% \end{table}
-
-
-
-
-
-% \section{Introducción v2}
-
-% Esta plantilla pretende ser una guía para los estudiantes. Esta plantilla se puede adaptar a las necesidades específicas de cada proyecto si el supervisor del proyecto está de acuerdo con los cambios.
-
-% \begin{figure}[h]
-% \centering
-% \includegraphics[width=0.5\textwidth]{./figs/image1.png}
-% \caption{Ejemplo de figura. Será indexada en la “Lista de Figuras”.}
-% \label{fig:figura_ejemplo}
-% \end{figure}
-
-% \subsection{Contexto y motivación}
-
-% Punto de partida del proyecto (¿Cuál es el problema que necesita ser resuelto? ¿Por qué es un tema relevante? ¿Cómo se está resolviendo el problema actualmente?) y descripción de la contribución (¿Qué resultado se espera obtener?)
-
-% \subsection{Objetivos}
-
-% Listado de los objetivos a alcanzar en este proyecto.
-
-% \subsection{Sostenibilidad, diversidad y desafíos ético/sociales}
-
-% Esta sección debe evaluar el impacto positivo/negativo del proyecto en las siguientes dimensiones. No es necesario alcanzar un impacto positivo en todas las dimensiones, pero es necesario considerar y discutir si existe un impacto desde el inicio del proyecto.
-
-% \begin{description}
-%     \item[Sostenibilidad] En el desarrollo del proyecto o durante todo su ciclo de vida (por ejemplo, despliegue, retiro), ¿tiene el resultado de este proyecto un impacto en la sostenibilidad y/o huella ecológica (consumo/ahorro de energía/recursos, desperdicio, contaminación, agotamiento de materias primas)? ¿Está afectado por leyes o regulaciones sobre este asunto? Considerando otra perspectiva, ¿afecta a alguno de los Objetivos de Desarrollo Sostenible (ODS) relacionados con estas dimensiones? Si no tiene ningún impacto, ya sea positivo o negativo, debe explicar cómo llegó a esta conclusión y justificar su respuesta.
-%     \item[Comportamiento ético y responsabilidad social] ¿Es el resultado del proyecto demasiado técnico para tener algún impacto positivo/negativo en aspectos éticos/sociales? ¿Tiene un impacto en leyes/regulaciones (datos, privacidad, trabajo, propiedad intelectual, seguridad personal, …)? ¿Se adhiere a los principios deontológicos de la profesión? ¿Pone en peligro/mejora/empeora algún puesto de trabajo? Si no tiene ningún impacto, ya sea positivo o negativo, debe explicar cómo llegó a esta conclusión y justificar su respuesta.
-%     \item[Diversidad, género y derechos humanos] ¿Es el resultado de este proyecto tan técnico que no tiene impacto positivo/negativo en términos de género, diversidad o derechos humanos? ¿Y en leyes/regulaciones? ¿Y en términos de accesibilidad, discapacidad, ergonomía y/o seguridad de la información? Si no tiene ningún impacto, ya sea positivo o negativo, debe explicar cómo llegó a esta conclusión y justificar su respuesta.
-% \end{description}
-
-% \subsection{Enfoque y metodología}
-
-% Describa las estrategias potenciales para desarrollar este proyecto y explique la estrategia seleccionada. Discuta por qué la estrategia seleccionada es la más adecuada para alcanzar los objetivos del proyecto.
-
-% \subsection{Planificación}
-
-% Descripción de los recursos necesarios para desarrollar el proyecto, las tareas a realizar y una planificación temporal de cada tarea utilizando un diagrama de Gantt o equivalente. Esta planificación debe definir los hitos que se completarán en cada Prueba de Evaluación Continua (PEC).
-
-% \subsection{Resumen de los productos del proyecto}
-
-% No es necesario describir cada producto en detalle: esto se hará en los capítulos restantes del proyecto.
-
-% \subsection{Breve descripción de los demás capítulos del informe}
-
-% Breve descripción de los contenidos de cada capítulo y su relación con el resto del proyecto.

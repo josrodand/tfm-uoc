@@ -11,5 +11,5 @@
 \contentsline {subsection}{\numberline {3.1}Objetivo Principal}{5}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {3.2}Objetivos Específicos}{5}{subsection.1.3.2}%
 \contentsline {section}{\numberline {4}Descripción de la metodología empleada en el desarrollo del proyecto}{6}{section.1.4}%
-\contentsline {section}{\numberline {5}Planificación o plan de investigación del proyecto}{7}{section.1.5}%
-\contentsline {chapter}{Bibliografía}{8}{section.1.5}%
+\contentsline {section}{\numberline {5}Planificación o plan de investigación del proyecto}{8}{section.1.5}%
+\contentsline {chapter}{Bibliografía}{9}{figure.1.1}%
