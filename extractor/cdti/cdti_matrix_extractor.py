@@ -1,10 +1,16 @@
+import os
+
 import pandas as pd
 
 from selenium.webdriver.common.by import By
 
 from extractor.core.base_extractor import BaseExtractor
-from extractor.params.extraction_params import URL_CDTI, PERSIST_CDTI_DIR
-
+from extractor.params.extraction_params import (
+    URL_CDTI, 
+    CDTI_MAIN_DIR, 
+    CDTI_MATRIX_DATA_DIR, 
+    CDTI_MATRIX_FILENAME
+)
 
 
 class CDTIMatrixExtractor(BaseExtractor):
@@ -13,7 +19,8 @@ class CDTIMatrixExtractor(BaseExtractor):
 
         super().__init__()
         self.url_cdti = URL_CDTI
-        self.persist_data_dir = self.persist_data_dir + "/" + PERSIST_CDTI_DIR + "/matrix_data"
+        self.persist_data_dir = self.persist_data_dir + "/" + CDTI_MAIN_DIR + "/" + CDTI_MATRIX_DATA_DIR
+        self.file_name = CDTI_MATRIX_FILENAME
 
     
     def get_row_titles(self, section):
@@ -28,6 +35,7 @@ class CDTIMatrixExtractor(BaseExtractor):
     def run_matrix_extraction(self):
         """
         """
+        print("Running CDTI Matrix Extraction")
         self.driver.get(self.url_cdti)
         self.driver.implicitly_wait(5)
         # find matrix block
@@ -78,6 +86,18 @@ class CDTIMatrixExtractor(BaseExtractor):
         aid_list = [aid for aid in aid_list if aid['name'] != "Ver video"]
 
         self.aid_list = aid_list
+        print("CDTI Matrix Extraction Finished. found {} aids".format(len(aid_list)))
+
+        return self
+
+
+    def persist(self):
+        if not os.path.exists(self.persist_data_dir):
+            os.makedirs(self.persist_data_dir)
+        
+        self.get_aids_df().to_csv(self.persist_data_dir + "/" + self.file_name, index=False)
+
+        return self
 
     
     def get_aids_json(self):
@@ -86,14 +106,17 @@ class CDTIMatrixExtractor(BaseExtractor):
     
     def get_aids_df(self):
         return pd.DataFrame(self.aid_list)
+    
 
 
 if __name__ == "__main__":
-    cdti_extractor = CDTIMatrixExtractor()
-    cdti_extractor.run_matrix_extraction()
+    cdti_extractor = (CDTIMatrixExtractor()
+        .run_matrix_extraction()
+        .persist()
+    )
 
-    df_aids = cdti_extractor.get_aids_df()
-    print(df_aids)
+    aids = cdti_extractor.get_aids_json()
+    print(aids)
 
 
 

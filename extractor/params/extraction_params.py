@@ -2,7 +2,12 @@
 
 CHROMEDRIVE_ROUTE = "C:/chromedriver/chromedriver.exe"
 
+PERSIST_DATA_DIR = "data"
+
+
+#  CDTI
 URL_CDTI = "https://www.cdti.es/matriz-de-ayudas"
 
-PERSIST_DATA_DIR = "data"
-PERSIST_CDTI_DIR = "cdti"
+CDTI_MAIN_DIR = "cdti"
+CDTI_MATRIX_DATA_DIR = "matrix_data"
+CDTI_MATRIX_FILENAME = "cdti_matrix_data.csv"
