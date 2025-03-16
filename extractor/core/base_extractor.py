@@ -10,8 +10,10 @@ class BaseExtractor:
 
         self.chromedrive_route = CHROMEDRIVE_ROUTE
         self.persist_data_dir = PERSIST_DATA_DIR
-        self.driver = self.setup_driver()
-
+        # self.driver = self.setup_driver()
+        # TODO: cambiarlo para que sea un metodo que levanta el driver y se use en la pipeline
+        # general. Estando aqui provoca que al crear la clase se levante el driver (el bot)
+        # en la pipeline pegar un setup_driver y al final driver.quit()
     
     def setup_driver(self):
 

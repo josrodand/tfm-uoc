@@ -1,6 +1,7 @@
 
 
 CHROMEDRIVE_ROUTE = "C:/chromedriver/chromedriver.exe"
+IMPLICITY_WAIT_TIME = 3
 
 PERSIST_DATA_DIR = "data"
 

@@ -9,7 +9,8 @@ from extractor.params.extraction_params import (
     URL_CDTI, 
     CDTI_MAIN_DIR, 
     CDTI_MATRIX_DATA_DIR, 
-    CDTI_MATRIX_FILENAME
+    CDTI_MATRIX_FILENAME,
+    IMPLICITY_WAIT_TIME
 )
 
 
@@ -21,6 +22,8 @@ class CDTIMatrixExtractor(BaseExtractor):
         self.url_cdti = URL_CDTI
         self.persist_data_dir = self.persist_data_dir + "/" + CDTI_MAIN_DIR + "/" + CDTI_MATRIX_DATA_DIR
         self.file_name = CDTI_MATRIX_FILENAME
+
+        self.implicity_wait_time = IMPLICITY_WAIT_TIME
 
     
     def get_row_titles(self, section):
@@ -36,10 +39,12 @@ class CDTIMatrixExtractor(BaseExtractor):
         """
         """
         print("Running CDTI Matrix Extraction")
-        self.driver.get(self.url_cdti)
-        self.driver.implicitly_wait(5)
+
+        driver = self.setup_driver()
+        driver.get(self.url_cdti)
+        driver.implicitly_wait(self.implicity_wait_time)
         # find matrix block
-        section = self.driver.find_element(By.CLASS_NAME, "block-matriz-ayudas-block")
+        section = driver.find_element(By.CLASS_NAME, "block-matriz-ayudas-block")
         
         # get row titles
         row_titles = self.get_row_titles(section)
@@ -80,7 +85,7 @@ class CDTIMatrixExtractor(BaseExtractor):
                             }
         
                             aid_list.append(aid_data)
-        self.driver.quit()
+        driver.quit()
 
         # clean aid list
         aid_list = [aid for aid in aid_list if aid['name'] != "Ver video"]
