@@ -1,0 +1,3 @@
+# Programa Tecnológico Espacial (PTE)
+El Programa Tecnológico Espacial (PTE) se enmarca en el Programa de Transferencia y Colaboración del Plan Estatal de Investigación Científica y Técnica y de Innovación (2024-2027). 
+Asimismo, se enmarca en el Plan de Recuperación, Transformación y Resiliencia, específicamente en la inversión 9 "Sector Aeroespacial" del Componente 17 "Reforma institucional y fortalecimiento de las capacidades del Sistema Nacional de Ciencia, Tecnología e Innovación".

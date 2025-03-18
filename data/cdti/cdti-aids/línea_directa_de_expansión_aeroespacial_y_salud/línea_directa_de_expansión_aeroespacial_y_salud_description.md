@@ -1,0 +1,2 @@
+# Línea Directa de Expansión Aeroespacial y Salud
+Esta tipología de ayuda tiene como objetivo potenciar la innovación en determinadas regiones españolas más desfavorecidas y/o que atraviesan especiales dificultades económicas, a través de la mejora de capacidades de empresas que propongan proyectos de inversión tecnológicamente innovadores que faciliten su crecimiento.

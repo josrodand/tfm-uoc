@@ -1,0 +1,2 @@
+# Proyectos de I+D Aeroespacial y Salud
+Los proyectos de I+D son de carácter aplicado para la creación o mejora significativa de un proceso productivo, producto o servicio. Pueden comprender tanto actividades de investigación industrial como de desarrollo experimental.

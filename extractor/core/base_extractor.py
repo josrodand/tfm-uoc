@@ -18,6 +18,14 @@ class BaseExtractor:
     def setup_driver(self):
 
         service = Service(self.chromedrive_route)
-        driver = webdriver.Chrome(service=service)
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--headless")  # Runs Chrome in headless mode.
+        chrome_options.add_argument('--no-sandbox')  # Bypass OS security model
+        # chrome_options.add_argument("--window-position=-2400,-2400")  # start minimized
+        chrome_options.add_argument('disable-infobars')
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--disable-usb")
+        chrome_options.add_argument('--log-level=3')
+        driver = webdriver.Chrome(service=service, options=chrome_options)
 
         return driver

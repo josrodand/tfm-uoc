@@ -1,0 +1,2 @@
+# Línea Directa de Innovación Aeroespacial y Salud
+Los proyectos de innovación tecnológica vinculados a los PERTES Aeroespacial y de Salud de Vanguardia son proyectos individuales, realizados por empresas con carácter aplicado, muy cercanos al mercado y con riesgo tecnológico medio bajo.

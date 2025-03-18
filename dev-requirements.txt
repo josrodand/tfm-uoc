@@ -3,6 +3,7 @@ pandas
 scikit-learn
 beautifulsoup4
 selenium
+wget
 requests
 langchain
 langchain-core

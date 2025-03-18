@@ -1,0 +1,2 @@
+# Ayudas PYMES Sello de Excelencia
+Estas ayudas en concesión directa financian los proyectos de I+D de PYMES españolas que hayan recibido el Sello de Excelencia en el marco del instrumento "Acelerador" del Consejo Europeo de Innovación del programa "Horizonte Europa", que tiene como objetivo apoyar fundamentalmente la innovación creadora de mercados.

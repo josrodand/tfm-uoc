@@ -1,0 +1,18 @@
+# CDTI-Era-Net
+Las empresas españolas cuyos proyectos han sido seleccionados en las Convocatorias Internacionales de las distintas ERA-NETs, superando favorablemente la fase internacional, se pueden financiar a nivel nacional mediante dos instrumentos del CDTI, E.P.E.
+Las Convocatorias nacionales anuales de Subvenciones de adjudicación directa y sin concurrencia competitiva (SERA) financian, con cofinanciación de la Comisión Europea, los proyectos ERA-NET seleccionados en las Convocatorias Cofund.
+Préstamos para proyectos de I+D de Cooperación Tecnológica Europea. 
+Préstamos blandos con un tramo no reembolsable del 33% que financian los proyectos ERA-NET seleccionados en las Convocatorias Adicionales, sin cofinanciación de la Comisión Europea.
+La modalidad de financiación disponible para los proyectos ERA-NET de las Convocatorias Adicionales sin Cofinanciación Europea, consistirá en una Ayuda Parcialmente Reembolsable, con una cobertura financiera de hasta el 75% del presupuesto total aprobado (préstamo) y un tramo no reembolsable de hasta el 33 % en función de la naturaleza del beneficiario y proyecto.
+Con carácter excepcional, si no se superan los límites de intensidad de ayuda legales se podrán conceder hasta diez puntos porcentuales adicionales de financiación (hasta el 85% del presupuesto total aprobado), sin tramo no reembolsable asociado a estos diez puntos porcentuales extras. En cualquier caso, la ayuda concedida nunca será superior a la ayuda solicitada para el proyecto por la empresa.
+Adicionalmente, el CDTI emitirá el informe motivado ex-ante para acceder a desgravaciones fiscales por I+D.
+El tramo reembolsable tendrá un tipo de interés fijo igual a Euribor a un año, que se establecerá en el momento de la aprobación del proyecto.
+El CDTI podrá realizar un análisis económico-financiero de la empresa para asegurar su solvencia, así como la adecuación del presupuesto presentado por la misma para el proyecto, y establecer las condiciones o garantías que resulten oportunas a efectos de financiación del mismo.
+No podrán ser beneficiarias de estas ayudas las empresas en crisis, con arreglo a la definición establecida en el apartado 18 del artículo 2 del Reglamento General de Exención por Categorías, ni aquellas empresas que estén sujetas a una orden de recuperación pendiente tras una decisión previa de la Comisión Europea que haya declarado una ayuda ilegal e incompatible con el mercado común.
+Más información sobre las condiciones de financiación del CDTI en el siguiente enlace: Proyectos de I+D de Cooperación Tecnológica Europea
+A continuación se detallan las principales características de ambos instrumentos de financiación de proyectos:
+
+# Convocatoria SERA (ERA-NET Cofund) 2022.
+Las empresas españolas cuyos proyectos han sido seleccionados en las Convocatorias Internacionales de las distintas ERA-NETs, superando favorablemente la fase internacional, se pueden financiar a nivel nacional mediante dos instrumentos del CDTI, E.P.E.
+Las Convocatorias nacionales anuales de Subvenciones de adjudicación directa y sin concurrencia competitiva (SERA) financian, con cofinanciación de la Comisión Europea, los proyectos ERA-NET seleccionados en las Convocatorias Cofund.
+Préstamos para proyectos de I+D de Cooperación Tecnológica Europea. Préstamos blandos con un tramo no reembolsable del 33% que financian los proyectos ERA-NET seleccionados en las Convocatorias Adicionales, sin cofinanciación de la Comisión Europea.

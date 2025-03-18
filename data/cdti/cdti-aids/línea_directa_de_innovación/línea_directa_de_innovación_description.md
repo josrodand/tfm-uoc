@@ -1,0 +1,2 @@
+# Línea Directa de Innovación
+Apoyo a proyectos de carácter aplicado, muy cercanos al mercado, con riesgo tecnológico medio/bajo y cortos períodos de recuperación de la inversión, que consigan mejorar la competitividad de la empresa mediante la incorporación de tecnologías emergentes en el sector.
