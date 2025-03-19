@@ -12,4 +12,7 @@
 \contentsline {subsection}{\numberline {3.2}Objetivos Específicos}{5}{subsection.1.3.2}%
 \contentsline {section}{\numberline {4}Descripción de la metodología empleada en el desarrollo del proyecto}{6}{section.1.4}%
 \contentsline {section}{\numberline {5}Planificación o plan de investigación del proyecto}{8}{section.1.5}%
-\contentsline {chapter}{Bibliografía}{9}{figure.1.1}%
+\contentsline {chapter}{\numberline {2}Estado del Arte}{9}{chapter.2}%
+\contentsline {section}{\numberline {1}Introducción}{9}{section.2.1}%
+\contentsline {section}{\numberline {2}Problemática a resolver}{9}{section.2.2}%
+\contentsline {chapter}{Bibliografía}{11}{section.2.2}%

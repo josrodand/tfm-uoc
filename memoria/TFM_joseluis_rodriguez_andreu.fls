@@ -243,6 +243,9 @@ INPUT ./figs/gantt.png
 INPUT ./figs/gantt.png
 INPUT ./figs/gantt.png
 INPUT ./figs/gantt.png
+INPUT ./2_estado_del_arte.tex
+INPUT ./2_estado_del_arte.tex
+INPUT 2_estado_del_arte.tex
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT TFM_joseluis_rodriguez_andreu.bbl
