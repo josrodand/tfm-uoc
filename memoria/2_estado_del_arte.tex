@@ -20,19 +20,132 @@ Esto supone que a la hora de realizar una búsqueda de posibles convocatorias de
 
 En la mayoría de los casos, las convocatorias suelen tener asociados diferentes documentos, en su mayoría en formato PDF, los cuales pueden ser extensos, y además usan un lenguaje técnico, típico de este tipo de documentos, que dificulta su comprensión.
 Esto al final supone una complicación por parte de las empresas a la hora de acceder a información clave de las convocatorias de forma mas rápida, como requisitos, plazos, presupuesto o condiciones de participación.
-Estos problemas de accesibilidad y estandarización de las convocatorias de ayudas suponen una barrera de acceso importante, que reduce las oportunidades de acceso a financiación para algunas empresas, y suponen una inversión en tiempo y esfuerzo en la tarea de búsqueda y filtrado por parte de éstas
+Estos problemas de accesibilidad y estandarización de las convocatorias de ayudas suponen una barrera de acceso importante, que reduce las oportunidades de acceso a financiación para algunas empresas, y suponen una inversión en tiempo y esfuerzo en la tarea de búsqueda y filtrado por parte de éstas.
 
 El desarrollo planteado en este proyecto pretende ser una solución a esta problemática, proporcionando una herramienta que sea capaz de identificar y extraer la documentación de las convocatorias, y aplicar técnicas de Inteligencia Artificial para extraer la información clave y dotarla de una estructura mas estandarizada, así como permitir la consulta de esta información de forma sencilla a partir de un agente conversacional.
 
 
-% \section{Soluciones clásicas}
+\section{Soluciones disponibles}
+
+Dejando a parte de momento las soluciones basadas en Inteligencia Artificial, las cuales se comentarán en secciones posteriores, existen diferentes metodologías para la búsqueda de información sobre estas convocatorias:
+
+\subsection{Plataformas de convocatorias}
+
+Existen diferentes plataformas que recopilan información sobre convocatorias de ayudas y subvenciones, a las cuales las empresas pueden acceder para explorar las diferentes opciones de convocatorias, y valorar si se ajustan a su situación.
+Estos portales de convocatorias suelen estar disponibles en plataformas tanto gubernamentales como privadas, que recopilan y organizan la información sobre diferentes ayudas disponibles. 
+Además, estas herramientas suelen permitir aplicar filtros en las búsquedas por diferentes características, como el área geográfica, el perfil de la empresa solicitante, o el tipo de ayuda.
+
+\begin{itemize}
+
+    \item \textbf{Portales de ayudas gubernamentales}:\\
+    Las diferentes instituciones públicas suelen ofrecer portales informativos donde publican este tipo d econvocatorias, ya sean a nivel local, regional o nacional. Estos portales permiten visualizar estas voncovatorias, pero a un nivel básico en cuanto a experiencia de usuario, y aunque la totalidad de la información siempre está disponible, ya sea en el propio portal o mediante enlaces a diferentes fuentes documentales, el análisis y búsqueda de información clave es tediosa y lenta.    
+    
+    \begin{itemize}
+        \item CDTI: Centro para el Desarrollo Tecnológico y la Innovación\cite{cdti}.
+        \item Grupo SPRI\cite{spri}.
+        \item SODERCAN: Sociedad para el desarrollo ragional de Cantabria\cite{sodercan}.
+        \item Portal de ayudas del Ministerio para la Transofrmación Digital y de la Función Pública\cite{ayudasgob}.
+        \item Andalucía Trade: Incentivos para Desarrollo Induatrial y Proyectos de I+D+i \\Empresarial\cite{atrade}.
+    \end{itemize}
+
+    \item \textbf{Plataformas privadas de información sobre subvenciones}:\\
+    Algunas empresas recopilan información sobre ayudas a empresas, las estructuran en bases de datos y ofrecen el acceso a esta información como servicio, garantizando en éste la calidad de la información y una actualización constante del listado de ayudas disponibles.
+    El inconveniente de estas plataformas es que, pese a ofrecer servicios de búsqueda que suelen tener interfaces mas amigables e información mas directa, suelen ser herramientas de pago, y el acceso completo a la información puede supoer un coste económico adicional.
+    Algunos ejemplos de estas plataformas son Fandit \cite{fandit} u OpenGrants \cite{opengrants}.
+
+\end{itemize}
 
 
-% \subsection{Plataformas de convocatorias}
+\subsection{Web Scraping}
 
-% \subsection{Web Scraping}
+Una solución alternativa a la búsqueda manual en portales de ayudas es el uso de herramientas de Web Scraping.
+El Web Scraping \cite{inbook} es una técnica utilizada para extraer información de sitios web de manera automatizada. Consiste en el uso de programas o scripts que navegan por páginas web, recopilan datos estructurados y los almacenan en un formato más accesible, como bases de datos o archivos locales JSON o CSV, por ejemplo. Esta práctica es ampliamente utilizada en diversos sectores para la recopilación y análisis de información a gran escala.
 
-% \subsection{Procesamiento de Lenguaje Natural}
+Generalmente el proceso de Web Scraping se desarrolla en varias etapas:
+
+\begin{itemize}
+    \item Solicitud HTTP: La herramienta de scraping envía una solitcitud HTTP a una página web para obtener su contenido.
+    \item Extracción de datos: Se analiza el código fuente de la página, y según la configuración establecida en el scraper, se extraen los datos requeridos mediante comandos de parseo propios de la herramienta, expresiones regulares, o bots de navegación automatizada.
+    \item Almacenamiento de la información: Una vez obtenidos los datos, estos se pueden formatear y almacenar según convenga en el caso de uso. 
+\end{itemize}
+
+Existen diferentes metodologías de Web Scraping:
+
+\begin{itemize}
+    \item \textbf{Análisis HTML}: En múltiples sitios web, se generan automáticamente grandes volúmenes de páginas a partir de fuentes de datos estructuradas, como bases de datos, mediante scripts o plantillas que organizan la información en formatos homogéneos. 
+    En minería de datos, un wrapper es un programa que identifica plantillas en una fuente de datos, extrae su contenido y lo transforma en una estructura relacional. 
+    La inducción de wrappers asume que las páginas de entrada siguen un patrón identificable, usualmente a través de formatos de URL comunes. 
+    Además, lenguajes de consulta para datos semiestructurados, como XQuery y HTQL, permiten analizar, extraer y modificar información en sitios web HTML \cite{miningweb}.
+
+    \item \textbf{Análisis DOM}: Los programas pueden acceder a contenido dinámico generado por scripts del lado del cliente mediante la integración de un navegador web, como Internet Explorer o Mozilla browser control \cite{domparsing}. 
+    Estas aplicaciones analizan las páginas web y las estructuran en un árbol del Document Object Model (DOM), lo que permite extraer secciones específicas del contenido.
+    El modelo DOM organiza una página web en una estructura arbórea, permitiendo su interpretación y almacenamiento a partir de una dirección web especificada, como ocurre en los motores de búsqueda. 
+    Este enfoque ofrece gran flexibilidad y agilidad, ya que permite rastrear elementos presentes en la página sin depender de que el equipo de desarrollo web los exponga explícitamente en la capa de datos.
+
+    \item \textbf{HTML DOM (Hyper Text Markup Language Document Object Model)}: Es un estándar para la obtención, manipulación y modificación de elementos HTML \cite{Gunawan}. 
+    Define objetos y propiedades para cada componente HTML, así como métodos para acceder a ellos, optimizando la eficiencia del DOM.
+    JavaScript, como lenguaje principal, permite acceder y manipular todos los elementos de un documento HTML a través del DOM. 
+    En este modelo, cada elemento HTML se trata como un objeto, cuya interfaz de programación está compuesta por métodos y propiedades específicas.
+
+    \item \textbf{Expresiones regulares (RegEx)}: Las expresiones regulares son fórmulas que definen patrones específicos para identificar conjuntos de caracteres en diversas cadenas de texto \cite{oreilywebacraping}. 
+    Se componen de caracteres ordinarios y metacaracteres, los cuales modifican la interpretación del patrón.
+    Aunque su sintaxis puede parecer compleja, las expresiones regulares son una herramienta esencial para el análisis y procesamiento de datos en cadenas de texto, por lo que es fundamental comprenderlas al menos a nivel básico.
+    
+    \item \textbf{XPath}: XPath es el componente principal del estándar XSLT (Stylesheet Language Transformation) y se utiliza para navegar y seleccionar elementos y atributos dentro de documentos XML \cite{asikri}. 
+    Además, puede aplicarse en documentos HTML.
+    XPath funciona como un lenguaje de selección de nodos en estructuras XML, siendo la expresión más utilizada la ruta de ubicación (location path). 
+    Esta ruta emplea al menos un paso de ubicación para identificar un conjunto de nodos dentro de un documento. 
+    La forma más simple es la selección del nodo raíz del documento, representada por el símbolo "/" , que también es el indicador del directorio raíz en sistemas de archivos Unix.
+    
+    \item \textbf{Reconocimiento de anotaciones semánticas}: Las páginas extraídas pueden incluir metadatos, marcas semánticas y anotaciones que permiten identificar datos específicos \cite{inbook}. 
+    Por ejemplo, esta técnica puede considerarse un caso particular del análisis DOM si las anotaciones están integradas en las páginas, como ocurre con Microformat. 
+    En otro caso, las anotaciones se almacenan y gestionan de manera independiente de las páginas web, organizándose en una capa semántica, de modo que los scrapers pueden obtener el esquema e instrucciones desde esta capa antes de realizar el raspado de las páginas.
+
+
+\end{itemize}
+
+En el ámbito del Web Scraping, específicamente con el lenguaje de Programación Python, podemos encontrar las siguientes librerías:
+
+\begin{itemize}
+    \item \textbf{BeautyfulSoup}: BeautifulSoup es una biblioteca de Python diseñada para el análisis, extracción y manipulación de datos en documentos HTML y XML. 
+    Su funcionamiento se basa en la creación de un árbol de análisis sintáctico (parse tree), que estructura el contenido de la página web de manera jerárquica, permitiendo navegar por los nodos, buscar elementos específicos y modificar el contenido.
+    BeautifulSoup admite múltiples analizadores (parsers), como lxml, html.parser y html5lib, cada uno con diferentes niveles de velocidad y compatibilidad. 
+    Su sintaxis flexible permite localizar elementos a través de etiquetas, atributos y selectores CSS, facilitando la extracción de datos estructurados de páginas web. Además, cuenta con métodos para limpiar el contenido, eliminar etiquetas HTML y exportar la información en diversos formatos \cite{9274270}.
+
+    \item \textbf{Scrapy}: Scrapy es un framework de Python diseñado para la extracción estructurada de datos mediante web scraping y crawling. 
+    Su arquitectura modular permite gestionar solicitudes HTTP, procesar respuestas y almacenar datos de manera eficiente. 
+    Scrapy opera a través de un flujo de trabajo basado en spiders, que son clases definidas por el usuario encargadas de especificar la lógica de extracción \cite{domparsing}.
+    
+    El motor de Scrapy (Scrapy Engine) coordina los componentes principales:
+    
+    \begin{itemize}
+        \item Scheduler, que organiza las solicitudes pendientes.
+        \item Downloader, que ejecuta las peticiones HTTP y recibe las respuestas.
+        \item Spiders, que analizan y extraen información relevante.
+        \item Item Pipeline, que transforma, valida y almacena los datos obtenidos en formatos como JSON, CSV o bases de datos SQL y NoSQL.
+    \end{itemize}
+
+    Además, Scrapy admite el uso de middlewares, tanto en el Downloader como en el Spider, para modificar solicitudes y respuestas, gestionar sesiones y evitar bloqueos mediante técnicas como rotación de proxies y user agents. 
+    Su diseño asincrónico optimiza el rendimiento, permitiendo la extracción masiva de datos con alta eficiencia.
+
+    \item \textbf{Selenium}: Selenium es un framework de automatización de navegadores de código abierto utilizado para la ejecución de pruebas y la extracción de datos mediante web scraping \cite{9142938}. 
+    Su funcionamiento se basa en la interacción con páginas web a través de un WebDriver, que actúa como un controlador para manipular elementos de la interfaz de usuario, simular clics, completar formularios y desplazarse por el contenido dinámico generado mediante JavaScript.
+    El ecosistema de Selenium está compuesto por varios módulos:
+
+    \begin{itemize}
+        \item Selenium WebDriver, que permite la automatización de navegadores como Chrome, Firefox y Edge mediante controladores específicos.
+        \item Selenium Grid, que posibilita la ejecución distribuida de pruebas y scraping en múltiples máquinas.
+        \item Selenium IDE, una extensión que facilita la grabación y reproducción de secuencias de prueba en navegadores.
+    \end{itemize}
+
+    Para realizar web scraping con Selenium, se inicia una sesión de navegador con el WebDriver, se navega a la URL objetivo, y se localizan los elementos deseados mediante selectores XPath o CSS. A diferencia de frameworks como Scrapy o BeautifulSoup, Selenium es ideal para interactuar con sitios que requieren ejecución de JavaScript o carga dinámica de contenido, aunque su rendimiento puede ser inferior debido a la sobrecarga computacional del manejo de un navegador real.
+
+\end{itemize}
+
+\subsection{Procesamiento de Lenguaje Natural}
+
+El Procesamiento de Lenguaje Natural (NLP) es una disciplina de la inteligencia artificial y la lingüística computacional que permite a las máquinas interpretar, comprender, generar y manipular el lenguaje humano de manera estructurada. 
+Su aplicación abarca desde la traducción automática y el análisis de sentimientos hasta la generación de texto y los asistentes virtuales.
 
 % \section{Inteligencia Artificial Generativa}
 

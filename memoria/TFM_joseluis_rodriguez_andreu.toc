@@ -15,4 +15,8 @@
 \contentsline {chapter}{\numberline {2}Estado del Arte}{9}{chapter.2}%
 \contentsline {section}{\numberline {1}Introducción}{9}{section.2.1}%
 \contentsline {section}{\numberline {2}Problemática a resolver}{9}{section.2.2}%
-\contentsline {chapter}{Bibliografía}{11}{section.2.2}%
+\contentsline {section}{\numberline {3}Soluciones disponibles}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {3.1}Plataformas de convocatorias}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {3.2}Web Scraping}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {3.3}Procesamiento de Lenguaje Natural}{14}{subsection.2.3.3}%
+\contentsline {chapter}{Bibliografía}{15}{subsection.2.3.3}%

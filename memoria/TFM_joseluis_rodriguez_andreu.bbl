@@ -1,14 +1,74 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{atrade}
+Andalucía trade, https://www.andaluciatrade.es/financiacion-empresarial/incentivos-para-las-empresas/.
+
+\bibitem{cdti}
+Centro para el desarrollo tecnológico y la innovación, https://www.cdti.es/.
+
+\bibitem{fandit}
+Fandit, https://fandit.es/.
+
+\bibitem{spri}
+Grupo spri, https://www.spri.eus/es.
+
+\bibitem{opengrants}
+Opengrants/opengrants.io.
+
+\bibitem{ayudasgob}
+Portal de ayudas del ministerio para la transofrmación digital y de la función pública, https://portalayudas.digital.gob.es/paginas/convocatorias-ayudas.aspx.
+
+\bibitem{sodercan}
+Sociedad para el desarrollo ragional de cantabria, https://ayudas.sodercan.es/ayudas.
+
+\bibitem{miningweb}
+M.~El Asikri, S.~Krit, H.~Chaib, M.~Kabrane, H.~Ouadani, K.~Karimi, K.~Bendaouad, and H.~Elbousty.
+\newblock Mining the web for learning ontologies: State of art and critical review.
+\newblock pages 1--7, 2017.
+
+\bibitem{asikri}
+M.~El Asikri, S.~Krit, H.~Chaib, M.~Kabrane, H.~Ouadani, K.~Karimi, K.~Bendaouad, and H.~Elbousty.
+\newblock Mining the web for learning ontologies: State of art and critical review.
+\newblock pages 1--7, 2017.
+
+\bibitem{domparsing}
+M~Asikri¹, S~Krit, Hassan Chaib, and Krit Salah-ddine.
+\newblock Using web scraping in a knowledge environment to build ontologies using python and scrapy.
+\newblock {\em European Journal of Translational and Clinical Medicine}, 7:433--442, 10 2020.
+
+\bibitem{Gunawan}
+Rohmat Gunawan, Alam Rahmatulloh, Irfan Darmawan, and Firman Firdaus.
+\newblock Comparison of web scraping techniques : Regular expression, html dom and xpath.
+\newblock pages 283--287, 2019/03.
 
 \bibitem{Khurana_2022}
 Diksha Khurana, Aditya Koli, Kiran Khatter, and Sukhdev Singh.
 \newblock Natural language processing: state of the art, current trends and challenges.
 \newblock {\em Multimedia Tools and Applications}, 82(3):3713–3744, July 2022.
 
+\bibitem{inbook}
+Chaimaa Lotfi, Swetha Srinivasan, Myriam Ertz, and Imen Latrous.
+\newblock {\em Web Scraping Techniques and Applications: A Literature Review}, pages 381--394.
+\newblock 01 2021.
+
+\bibitem{9274270}
+Stephanie Lunn, Jia Zhu, and Monique Ross.
+\newblock Utilizing web scraping and natural language processing to better inform pedagogical practice.
+\newblock pages 1--9, 2020.
+
+\bibitem{9142938}
+K~Usha Manjari, Syed Rousha, Dasi Sumanth, and J~Sirisha~Devi.
+\newblock Extractive text summarization from web pages using selenium and tf-idf algorithm.
+\newblock pages 648--652, 2020.
+
 \bibitem{webscraping}
 Laia~Subirats Maté and Mireia~Calvo González.
 \newblock Web scraping.
 \newblock {\em Editorial UOC.}, 2019.
+
+\bibitem{oreilywebacraping}
+R.~(2018) Mitchell.
+\newblock Web scraping with python: Collecting more data from the modern web. o'reilly media, inc., 2018.
 
 \bibitem{Oates2005ResearchingIS}
 Briony~June Oates.
