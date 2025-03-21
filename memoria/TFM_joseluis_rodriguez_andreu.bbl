@@ -21,6 +21,10 @@ Portal de ayudas del ministerio para la transofrmación digital y de la función
 \bibitem{sodercan}
 Sociedad para el desarrollo ragional de cantabria, https://ayudas.sodercan.es/ayudas.
 
+\bibitem{almeida2023wordembeddingssurvey}
+Felipe Almeida and Geraldo Xexéo.
+\newblock Word embeddings: A survey, 2023.
+
 \bibitem{miningweb}
 M.~El Asikri, S.~Krit, H.~Chaib, M.~Kabrane, H.~Ouadani, K.~Karimi, K.~Bendaouad, and H.~Elbousty.
 \newblock Mining the web for learning ontologies: State of art and critical review.
@@ -36,15 +40,40 @@ M~Asikri¹, S~Krit, Hassan Chaib, and Krit Salah-ddine.
 \newblock Using web scraping in a knowledge environment to build ontologies using python and scrapy.
 \newblock {\em European Journal of Translational and Clinical Medicine}, 7:433--442, 10 2020.
 
+\bibitem{devlin2019bertpretrainingdeepbidirectional}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding, 2019.
+
 \bibitem{Gunawan}
 Rohmat Gunawan, Alam Rahmatulloh, Irfan Darmawan, and Firman Firdaus.
 \newblock Comparison of web scraping techniques : Regular expression, html dom and xpath.
 \newblock pages 283--287, 2019/03.
 
+\bibitem{nlpml}
+Emmanouil Ikonomakis, Sotiris Kotsiantis, and V.~Tampakas.
+\newblock Text classification using machine learning techniques.
+\newblock {\em WSEAS transactions on computers}, 4:966--974, 08 2005.
+
 \bibitem{Khurana_2022}
 Diksha Khurana, Aditya Koli, Kiran Khatter, and Sukhdev Singh.
 \newblock Natural language processing: state of the art, current trends and challenges.
 \newblock {\em Multimedia Tools and Applications}, 82(3):3713–3744, July 2022.
+
+\bibitem{nlpstate}
+Koli Khurana, K~Khatter, et~al.
+\newblock Natural language processing: State of the art, current trends and challenges.
+\newblock 2023.
+\newblock Available online.
+
+\bibitem{steminglemmatization}
+Divya Khyani, Siddhartha B~S, N.~Niveditha, Divya M., and Dr~Y~M.
+\newblock An interpretation of lemmatization and stemming in natural language processing.
+\newblock {\em Shanghai Ligong Daxue Xuebao/Journal of University of Shanghai for Science and Technology}, 22:350--357, 01 2021.
+
+\bibitem{postagging}
+Deepika Kumawat and Vinesh Jain.
+\newblock Pos tagging approaches: A comparison.
+\newblock {\em International Journal of Computer Applications}, 118:32--38, 05 2015.
 
 \bibitem{inbook}
 Chaimaa Lotfi, Swetha Srinivasan, Myriam Ertz, and Imen Latrous.
@@ -75,8 +104,55 @@ Briony~June Oates.
 \newblock Researching information systems and computing.
 \newblock 2005.
 
+\bibitem{bow}
+Wisam Qader, Musa M.~Ameen, and Bilal Ahmed.
+\newblock An overview of bag of words;importance, implementation, applications, and challenges.
+\newblock pages 200--204, 06 2019.
+
+\bibitem{raffel2023exploringlimitstransferlearning}
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter~J. Liu.
+\newblock Exploring the limits of transfer learning with a unified text-to-text transformer, 2023.
+
+\bibitem{roy2021recenttrendsnamedentity}
+Arya Roy.
+\newblock Recent trends in named entity recognition (ner), 2021.
+
+\bibitem{tfidf}
+Claude Sammut and Geoffrey~I. Webb, editors.
+\newblock {\em TF--IDF}, pages 986--987.
+\newblock Springer US, Boston, MA, 2010.
+
+\bibitem{Sarica_2021}
+Serhad Sarica and Jianxi Luo.
+\newblock Stopwords in technical language processing.
+\newblock {\em PLOS ONE}, 16(8):e0254937, August 2021.
+
+\bibitem{schmidt2024tokenizationcompression}
+Craig~W. Schmidt, Varshini Reddy, Haoran Zhang, Alec Alameddine, Omri Uzan, Yuval Pinter, and Chris Tanner.
+\newblock Tokenization is more than compression, 2024.
+
+\bibitem{schmidt2019recurrentneuralnetworksrnns}
+Robin~M. Schmidt.
+\newblock Recurrent neural networks (rnns): A gentle introduction and overview, 2019.
+
 \bibitem{iag}
 Sandeep~Singh Sengar, Affan~Bin Hasan, Sanjay Kumar, and Fiona Carroll.
 \newblock Generative artificial intelligence: A systematic review and applications, 2024.
+
+\bibitem{staudemeyer2019understandinglstmtutorial}
+Ralf~C. Staudemeyer and Eric~Rothstein Morris.
+\newblock Understanding lstm -- a tutorial into long short-term memory recurrent neural networks, 2019.
+
+\bibitem{vaswani2023attentionneed}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need, 2023.
+
+\bibitem{yenduri2023generativepretrainedtransformercomprehensive}
+Gokul Yenduri, Ramalingam M, Chemmalar~Selvi G, Supriya Y, Gautam Srivastava, Praveen Kumar~Reddy Maddikunta, Deepti~Raj G, Rutvij~H Jhaveri, Prabadevi B, Weizheng Wang, Athanasios~V. Vasilakos, and Thippa~Reddy Gadekallu.
+\newblock Generative pre-trained transformer: A comprehensive review on enabling technologies, potential applications, emerging challenges, and future directions, 2023.
+
+\bibitem{zhang2020surveysyntacticsemanticparsingbased}
+Meishan Zhang.
+\newblock A survey of syntactic-semantic parsing based on constituent and dependency structures, 2020.
 
 \end{thebibliography}

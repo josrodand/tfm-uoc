@@ -13,49 +13,51 @@ Warning--to sort, need author or key in opengrants
 Warning--empty journal in miningweb
 Warning--empty journal in asikri
 Warning--empty journal in Gunawan
+Warning--empty journal in nlpstate
 Warning--empty publisher in inbook
 Warning--empty journal in 9274270
 Warning--empty journal in 9142938
 Warning--empty booktitle in Oates2005ResearchingIS
-You've used 19 entries,
+Warning--empty booktitle in bow
+You've used 36 entries,
             2118 wiz_defined-function locations,
-            576 strings with 6742 characters,
-and the built_in function-call counts, 5678 in all, are:
-= -- 507
-> -- 276
-< -- 6
-+ -- 113
-- -- 94
-* -- 361
-:= -- 860
-add.period$ -- 41
-call.type$ -- 19
-change.case$ -- 103
+            654 strings with 9784 characters,
+and the built_in function-call counts, 11423 in all, are:
+= -- 1010
+> -- 660
+< -- 8
++ -- 267
+- -- 228
+* -- 760
+:= -- 1821
+add.period$ -- 83
+call.type$ -- 36
+change.case$ -- 219
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 218
-empty$ -- 486
-format.name$ -- 94
-if$ -- 1238
+cite$ -- 52
+duplicate$ -- 387
+empty$ -- 905
+format.name$ -- 228
+if$ -- 2419
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 11
-newline$ -- 82
-num.names$ -- 24
-pop$ -- 166
+int.to.str$ -- 36
+missing$ -- 18
+newline$ -- 158
+num.names$ -- 59
+pop$ -- 333
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 185
 quote$ -- 0
-skip$ -- 209
+skip$ -- 368
 stack$ -- 0
-substring$ -- 269
-swap$ -- 56
-text.length$ -- 6
+substring$ -- 498
+swap$ -- 90
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
-warning$ -- 14
-while$ -- 38
-width$ -- 21
-write$ -- 154
-(There were 14 warnings)
+type$ -- 140
+warning$ -- 16
+while$ -- 81
+width$ -- 38
+write$ -- 311
+(There were 16 warnings)
