@@ -44,10 +44,23 @@ M~Asikri¹, S~Krit, Hassan Chaib, and Krit Salah-ddine.
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
 \newblock Bert: Pre-training of deep bidirectional transformers for language understanding, 2019.
 
+\bibitem{ding2024risegenerativeartificialintelligence}
+Liangping Ding, Cornelia Lawson, and Philip Shapira.
+\newblock Rise of generative artificial intelligence in science, 2024.
+
+\bibitem{goodfellow2014generativeadversarialnetworks}
+Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\newblock Generative adversarial networks, 2014.
+
 \bibitem{Gunawan}
 Rohmat Gunawan, Alam Rahmatulloh, Irfan Darmawan, and Firman Firdaus.
 \newblock Comparison of web scraping techniques : Regular expression, html dom and xpath.
 \newblock pages 283--287, 2019/03.
+
+\bibitem{Hagendorff_2024}
+Thilo Hagendorff.
+\newblock Mapping the ethics of generative ai: A comprehensive scoping review.
+\newblock {\em Minds and Machines}, 34(4), September 2024.
 
 \bibitem{nlpml}
 Emmanouil Ikonomakis, Sotiris Kotsiantis, and V.~Tampakas.
@@ -143,9 +156,23 @@ Sandeep~Singh Sengar, Affan~Bin Hasan, Sanjay Kumar, and Fiona Carroll.
 Ralf~C. Staudemeyer and Eric~Rothstein Morris.
 \newblock Understanding lstm -- a tutorial into long short-term memory recurrent neural networks, 2019.
 
+\bibitem{genaibusiness}
+A.D. Stolyarov, A.V. Abramov, and V.I. Abramov.
+\newblock Generative artificial intelligence for business models innovation:opportunities and limitations.
+\newblock {\em Beneficium}, pages 43--51, 09 2024.
+
+\bibitem{iagengraphicdesign}
+Ivana Tomić, Ivana Jurič, Sandra Dedijer, and Savka Adamovic.
+\newblock Artificial intelligence in graphic design.
+\newblock 09 2023.
+
 \bibitem{vaswani2023attentionneed}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
 \newblock Attention is all you need, 2023.
+
+\bibitem{yang2024diffusionmodelscomprehensivesurvey}
+Ling Yang, Zhilong Zhang, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao Zhang, Bin Cui, and Ming-Hsuan Yang.
+\newblock Diffusion models: A comprehensive survey of methods and applications, 2024.
 
 \bibitem{yenduri2023generativepretrainedtransformercomprehensive}
 Gokul Yenduri, Ramalingam M, Chemmalar~Selvi G, Supriya Y, Gautam Srivastava, Praveen Kumar~Reddy Maddikunta, Deepti~Raj G, Rutvij~H Jhaveri, Prabadevi B, Weizheng Wang, Athanasios~V. Vasilakos, and Thippa~Reddy Gadekallu.

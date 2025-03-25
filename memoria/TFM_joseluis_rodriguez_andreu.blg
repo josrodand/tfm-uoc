@@ -19,45 +19,46 @@ Warning--empty journal in 9274270
 Warning--empty journal in 9142938
 Warning--empty booktitle in Oates2005ResearchingIS
 Warning--empty booktitle in bow
-You've used 36 entries,
+Warning--empty booktitle in iagengraphicdesign
+You've used 42 entries,
             2118 wiz_defined-function locations,
-            654 strings with 9784 characters,
-and the built_in function-call counts, 11423 in all, are:
-= -- 1010
-> -- 660
-< -- 8
-+ -- 267
-- -- 228
-* -- 760
-:= -- 1821
-add.period$ -- 83
-call.type$ -- 36
-change.case$ -- 219
+            679 strings with 10844 characters,
+and the built_in function-call counts, 13508 in all, are:
+= -- 1186
+> -- 817
+< -- 9
++ -- 329
+- -- 284
+* -- 913
+:= -- 2178
+add.period$ -- 98
+call.type$ -- 42
+change.case$ -- 265
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 387
-empty$ -- 905
-format.name$ -- 228
-if$ -- 2419
+cite$ -- 59
+duplicate$ -- 449
+empty$ -- 1044
+format.name$ -- 284
+if$ -- 2840
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 18
-newline$ -- 158
-num.names$ -- 59
-pop$ -- 333
+int.to.str$ -- 42
+missing$ -- 21
+newline$ -- 185
+num.names$ -- 71
+pop$ -- 397
 preamble$ -- 1
-purify$ -- 185
+purify$ -- 225
 quote$ -- 0
-skip$ -- 368
+skip$ -- 423
 stack$ -- 0
-substring$ -- 498
-swap$ -- 90
-text.length$ -- 8
+substring$ -- 548
+swap$ -- 103
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
-warning$ -- 16
-while$ -- 81
-width$ -- 38
-write$ -- 311
-(There were 16 warnings)
+type$ -- 164
+warning$ -- 17
+while$ -- 95
+width$ -- 44
+write$ -- 366
+(There were 17 warnings)

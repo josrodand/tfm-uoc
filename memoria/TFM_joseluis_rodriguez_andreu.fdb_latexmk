@@ -1,24 +1,24 @@
 # Fdb version 4
-["bibtex TFM_joseluis_rodriguez_andreu"] 1742586625.61883 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1742586628.55007 0
-  "./referencias.bib" 1742585749 13409 68fec50426d55b69ac0bf7a417728d9f ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1742586627 6344 df3db071527ae40ec7a988a76af88ede "pdflatex"
+["bibtex TFM_joseluis_rodriguez_andreu"] 1742858355.26756 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1742858365.27889 0
+  "./referencias.bib" 1742814612 15593 075bca6f37104a4bff16d3aa0697b86f ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1742858362 9097 0478c96b4efee4c2d13baada20411712 "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1740402916 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "TFM_joseluis_rodriguez_andreu.bbl"
   "TFM_joseluis_rodriguez_andreu.blg"
   (rewritten before read)
-["pdflatex"] 1742586626.14495 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1742586628.55104 0
+["pdflatex"] 1742858356.95333 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1742858365.28047 0
   "0_resumen.tex" 1742292576 5760 a3dd052f4842c3c9d5950abcf1d421e8 ""
   "0_titulo.tex" 1742312702 1200 738f65d395098a713cd1c1f587a0be8a ""
   "1_introduccion.tex" 1741190975 12143 214bf98a9a02f8ea9310e97738c8e66d ""
-  "2_estado_del_arte.tex" 1742586622 29735 40de9eec933428e7b297d04575d8581d ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1742586627 6344 df3db071527ae40ec7a988a76af88ede "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.bbl" 1742586626 6631 6330ed6fd9f5847ea56372af2717b7a8 "bibtex TFM_joseluis_rodriguez_andreu"
-  "TFM_joseluis_rodriguez_andreu.lof" 1742586627 162 53dbf939e35cf3193797543647e06fc0 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.lot" 1742586627 70 8fe2ab9072681f28727538b78de0125c "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.out" 1742586627 3870 02214f3770a906bfc43533829a078af0 "pdflatex"
+  "2_estado_del_arte.tex" 1742858341 57058 411e572316fe1091bc3734bd00d2b11e ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1742858362 9097 0478c96b4efee4c2d13baada20411712 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.bbl" 1742858356 7884 74234fb43f306c639bd790ee77d04d95 "bibtex TFM_joseluis_rodriguez_andreu"
+  "TFM_joseluis_rodriguez_andreu.lof" 1742858362 261 e65f619986685c9f23ea07c20be7f224 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.lot" 1742858362 70 8fe2ab9072681f28727538b78de0125c "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.out" 1742858362 6587 c9813c601c0f714123e6e87f54bf8ace "pdflatex"
   "TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
-  "TFM_joseluis_rodriguez_andreu.toc" 1742586627 1848 c0ceed80d06ee058250f32d4bc06134b "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.toc" 1742858362 3150 c1408df4bdc62467b6e3ede3b3e77ec7 "pdflatex"
   "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1740403271 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1740404314 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -131,6 +131,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740409644 3352886 db8b5e5cdc6956e817151b10fce306f0 ""
   "c:/texlive/2024/texmf.cnf" 1740409308 713 e69b156964470283e0530f5060668171 ""
   "figs/gantt.png" 1741190344 32261 d1570e0fb1764c85411b8f5c8de7fbf8 ""
+  "figs/transformer_arquitecture.png" 1742815529 36004 717af1ee6383dd79ee4a18ac2787eb33 ""
   "images/UOC-logo.png" 1740472071 20022 88d0abedab165f70c13152c87632c8c7 ""
   "images/license.png" 1740472071 5332 ccaceeca2358bb244c29a37e82101f6c ""
   (generated)

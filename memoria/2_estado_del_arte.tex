@@ -241,7 +241,296 @@ Estas técnicas han permitido avances en aplicaciones como asistentes virtuales,
 
 \section{Inteligencia Artificial Generativa}
 
-% \subsection{Grandes Modelos del Lenguaje (LLMs)}
+La inteligencia artificial generativa (IA generativa) es un campo de la inteligencia artificial que se centra en la creación de contenido nuevo y original a partir de datos existentes. 
+A través del uso de modelos de aprendizaje profundo y técnicas avanzadas de procesamiento de datos, la IA generativa es capaz de generar texto, imágenes, audio, video y otros tipos de contenido de manera autónoma y coherente.  
+El desarrollo de la IA generativa ha sido impulsado por la evolución de arquitecturas de redes neuronales como las redes generativas adversarias (GANs) \cite{goodfellow2014generativeadversarialnetworks}, los modelos basados en transformers \cite{vaswani2023attentionneed} y los modelos de difusión \cite{yang2024diffusionmodelscomprehensivesurvey}. 
+Estas tecnologías han permitido la generación de contenido con una calidad cada vez mayor, logrando resultados que pueden ser indistinguibles de los creados por humanos.  
+
+Su impacto ha sido significativo en múltiples sectores. 
+En la industria creativa, ha transformado el diseño gráfico, la producción audiovisual y la generación de música, facilitando la automatización de tareas y ampliando las posibilidades de expresión artística \cite{iagengraphicdesign}. 
+En el ámbito de la ciencia y la tecnología, se ha utilizado para la síntesis de datos, el descubrimiento de fármacos y la optimización de algoritmos \cite{ding2024risegenerativeartificialintelligence}. 
+En el sector empresarial, la IA generativa ha revolucionado el marketing, la generación de contenido automatizado y la personalización de experiencias para los usuarios \cite{genaibusiness}.  
+
+A medida que la tecnología continúa evolucionando, la IA generativa se enfrenta a desafíos éticos y regulatorios \cite{Hagendorff_2024}, incluyendo cuestiones sobre derechos de autor, desinformación y uso responsable. Sin embargo, su potencial sigue expandiéndose, con nuevos avances que permiten aplicaciones aún más sofisticadas y accesibles para diversos campos.
+
+
+Los modelos de IA Generativa emplean diferentes técnicas de aprendizaje profundo para generar contenido, optimizando la calidad, coherencia y realismo de los resultados.
+Las arquitecturas de redes neuronales basadas en transformers, introducidos en el artículo "Attention Is All You Need" (Vaswani et al., 2017) \cite{vaswani2023attentionneed} son la base de muchos de los modelos de IA generativa actuales, incluyendo los modelos de la familia GPT, Gemini de Google y Claude de Anthropic. 
+Su principal ventaja radica en su capacidad para procesar y generar texto, imágenes, código y otros tipos de datos de manera eficiente y con una gran coherencia contextual.
+
+Los transformers emplean un mecanismo llamado self-attention, que les permite asignar pesos a diferentes partes de la secuencia de entrada para comprender mejor las relaciones entre palabras o elementos. el flujo de esta arquitectura funciona de la siguiente manera:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figs/transformer_arquitecture.png}
+	\caption{Arquitectura transformer}
+	\label{fig:context-anoni1}
+\end{figure}
+
+
+\begin{itemize}
+    \item \textbf{Codificación de entrada (Embedding Layer)}: Convierte los datos de entrada (por ejemplo, texto o imágenes) en vectores numéricos que representan cada elemento en un espacio multidimensional. En el caso del texto, se utiliza un embedding de palabras, que transforma cada token en un vector denso de alta dimensión.
+    \item \textbf{Mecanismo de Self-Attention}: Permite que el modelo asigne importancia a diferentes palabras dentro de una oración o documento. Se basa en tres matrices: Query (Q), Key (K) y Value (V), que permiten calcular la relevancia de cada palabra con respecto a las demás. Se utiliza una función de Softmax para asignar pesos a cada conexión, ajustando la atención que se le da a diferentes partes del contexto.
+    \item \textbf{Capas de Normalización y Feed-Forward}: Cada capa de atención es seguida por una red neuronal completamente conectada (feed-forward network) y una normalización de los datos para mejorar la estabilidad del entrenamiento.
+    \item \textbf{Mecanismo de Positional Encoding}: Dado que los transformers no tienen memoria secuencial como las redes recurrentes, utilizan codificaciones posicionales para mantener el orden de los elementos en la secuencia. Estas codificaciones se agregan a los embeddings de entrada y permiten que el modelo distinga la estructura del texto.
+    \item \textbf{Capa de Decodificación (para modelos generativos)}: En los modelos generativos, la salida del transformer se pasa a una capa de decodificación que genera una secuencia de salida basada en los tokens previos. Utiliza un enfoque autoregresivo, donde se genera un token a la vez y se retroalimenta al modelo para predecir el siguiente.
+\end{itemize}
+
+La inteligencia artificial generativa abarca diversas aplicaciones, como la creación de imágenes, texto, audio, video y modelos 3D. 
+Sin embargo, debido a la naturaleza de este proyecto, nos centraremos principalmente en los grandes modelos de lenguaje, que son capaces de generar texto coherente y contextual a partir de indicaciones, transformando la interacción con la tecnología y facilitando la creación de contenido escrito de manera automática.
+
+\section{Grandes Modelos del Lenguaje}
+
+Los Grandes Modelos del Lenguage (LLMs) han generado gran atención debido a su sólido rendimiento en una amplia gama de tareas de lenguaje natural desde el lanzamiento de ChatGPT en noviembre de 2022. 
+La capacidad de comprensión y generación de lenguaje de propósito general de los LLMs se adquiere mediante el entrenamiento de miles de millones de parámetros del modelo con grandes volúmenes de datos textuales. 
+Aunque el área de investigación de los LLMs es muy reciente, está evolucionando rápidamente.
+
+\subsection{Primeros modelos del lenguaje}
+
+Con el auge de los Transformers, empezaron a surgir nuevos modelos cada vez mas complejos, incluyendo cada vez un volumen de parámetros mayor.
+BERT (2018) marcó un punto de inflexión al introducir un preentrenamiento bidireccional basado en masked language modeling (MLM), mejorando la comprensión contextual en diversas tareas. 
+Posteriormente, GPT-2 (2019) se centró en la generación de texto autoregresiva, destacando por su coherencia y fluidez, aunque con preocupaciones sobre su posible uso indebido. 
+En paralelo, T5 (2019) propuso un enfoque texto a texto, permitiendo abordar múltiples tareas con una arquitectura unificada. 
+La llegada de GPT-3 (2020) con 175B parámetros supuso un avance significativo en few-shot learning, posibilitando la generación de contenido sin necesidad de ajuste fino específico. 
+Finalmente, LaMDA (2021) optimizó la interacción en diálogos abiertos, mejorando la coherencia en conversaciones de largo alcance y consolidando los avances en modelos conversacionales. 
+
+\subsection{ChatGPT (2022)}
+El lanzamiento de ChatGPT por OpenAI en noviembre de 2022 marcó un hito significativo en la evolución de los modelos de lenguaje, especialmente en aplicaciones de interacción conversacional. 
+ChatGPT es una versión mejorada de GPT-3, que fue afinada específicamente para mejorar la calidad de los diálogos y la coherencia en respuestas a preguntas abiertas y conversaciones continuas. 
+ChatGPT se entrenó utilizando un enfoque de Reinforcement Learning from Human Feedback (RLHF), donde los humanos proporcionaron retroalimentación activa sobre las respuestas generadas, lo que permitió al modelo mejorar su capacidad de ofrecer respuestas más relevantes, precisas y menos propensas a producir información errónea o sesgada.
+
+
+
+\subsection{GPT-4 (marzo 2023)}
+
+En marzo de 2023, OpenAI lanzó GPT-4, un modelo significativamente más avanzado que GPT-3 y ChatGPT. 
+Con una capacidad de procesar entradas multimodales (texto e imágenes), GPT-4 permitió nuevas aplicaciones en áreas como análisis de contenido visual y descripciones detalladas. 
+Además, mostró mejoras significativas en razonamiento complejo, en la resolución de problemas matemáticos avanzados y en la comprensión de contextos más largos.
+
+sus principales características son:
+
+\begin{itemize}
+    \item Multimodalidad: GPT-4 podía procesar imágenes junto con texto, lo que le permitió realizar tareas como la interpretación de gráficos, la descripción de imágenes y la creación de contenido visual a partir de texto.
+    \item Razonamiento mejorado: El modelo mostró un mejor desempeño en tareas que requieren razonamiento lógico y la capacidad de resolver problemas complejos.
+    \item Mayor capacidad de manejo de contexto: A diferencia de GPT-3, GPT-4 pudo gestionar contextos más largos, lo que resultó en una mayor coherencia durante conversaciones extensas.    
+\end{itemize}
+
+% meter Incorporación de GPT-4 en Productos Comerciales (2023)
+% Tras el lanzamiento de GPT-4, OpenAI lo integró en varios productos comerciales, como Microsoft Copilot (en herramientas como Word, Excel y otras aplicaciones de Microsoft 365) y Azure OpenAI Service. Estas integraciones proporcionaron una interfaz sencilla para que las empresas y los desarrolladores pudieran utilizar la potencia de GPT-4 para generar contenido, automatizar tareas y mejorar la productividad en diversas industrias.
+
+% Aplicaciones clave:
+
+% Automatización de procesos empresariales: GPT-4 se utilizó para mejorar la productividad en la automatización de procesos empresariales, como la generación de reportes, análisis de datos y respuestas automáticas.
+
+% Generación de contenido: Integración en plataformas de generación de contenido para redactar artículos, correos electrónicos y otros textos comerciales.
+
+% Asistentes virtuales avanzados: Mejora significativa en la creación de asistentes virtuales más inteligentes y capaces de manejar tareas complejas de atención al cliente.
+
+\subsection{LLaMA (febrero 2023)}
+
+LLaMA (Large Language Model Meta AI), lanzado por Meta (anteriormente Facebook) en 2023, se presentó como un competidor directo de GPT-3 y GPT-4. 
+LLaMA se desarrolló con un enfoque en ser un modelo de gran escala, pero de mayor accesibilidad para la investigación académica y la comunidad de código abierto. 
+LLaMA está diseñado para ser más eficiente y eficaz, permitiendo a los investigadores utilizar modelos de lenguaje a gran escala sin la necesidad de grandes cantidades de infraestructura.
+
+Características clave de LLaMA:
+\begin{itemize}
+    \item \textbf{Accesibilidad}: Meta liberó versiones de LLaMA con diferentes tamaños de parámetros, haciendo posible que se usaran en equipos de investigación más pequeños.
+    \item \textbf{Desempeño a gran escala}: A pesar de que LLaMA no es tan grande como GPT-4, mostró un rendimiento comparable en tareas de procesamiento de lenguaje natural (PLN).
+    \item \textbf{Eficiencia}: El modelo fue diseñado para ser más eficiente en términos de uso de recursos, lo que lo hacía más accesible para investigadores en lugar de depender de poderosas infraestructuras.
+\end{itemize}
+
+LLaMA ayudó a democratizar el acceso a modelos de lenguaje de gran escala, permitiendo que más organizaciones y académicos participaran en la investigación y desarrollo de modelos avanzados.
+
+\subsection{DeepSeek (junio 2023)}
+DeepSeek es un modelo propuesto por DeepMind en 2023, cuyo enfoque se centra en la búsqueda semántica profunda y la comprensión avanzada de consultas complejas. 
+Este modelo es particularmente útil en sistemas de búsqueda y recuperación de información, donde se requiere un entendimiento más allá de las coincidencias exactas de palabras clave, permitiendo la interpretación semántica de las consultas.
+
+Características principales de DeepSeek:
+\begin{itemize}
+    \item \textbf{Búsqueda semántica avanzada}: DeepSeek está optimizado para interpretar y responder a consultas complejas, mejorando la precisión de las búsquedas más allá de simples coincidencias de términos.
+    \item \textbf{Comprensión del contexto}: Utiliza técnicas de procesamiento de lenguaje natural para interpretar el significado detrás de las consultas, lo que permite ofrecer resultados más relevantes y contextualizados.
+    \item \textbf{Aplicaciones en la búsqueda web y bases de datos}: DeepSeek ha demostrado ser particularmente útil en la mejora de los motores de búsqueda, brindando una mejor experiencia al usuario mediante la entrega de resultados más precisos y personalizados.
+\end{itemize}
+
+DeepSeek es un ejemplo del progreso continuo hacia el entendimiento más profundo del lenguaje y su aplicación en la búsqueda semántica, un área clave en la IA.
+
+
+\subsection{LLaMA 2(julio 2024) AMPLIAR}
+
+Meta lanzó LLaMA 2, mejorando la eficiencia computacional y la precisión en generación de texto.
+
+Novedades:
+
+Más robusto en generación de texto.
+
+Mayor alineación en seguridad y control de respuestas.
+
+Disponible en variantes de 7B, 13B y 70B parámetros.
+
+
+\subsection{GPT-4 Turbo (noviembre 2023) AMPLIAR}
+
+Una versión más rápida y económica de GPT-4.
+
+Mejoras:
+
+Menor costo y respuesta más rápida.
+
+Mayor eficiencia energética en centros de datos.
+
+
+\subsection{LLaMA 3 (marzo 2024)}
+
+LLaMA 3 fue lanzado por Meta a finales de 2024, mejorando la versión anterior de LLaMA con capacidades avanzadas y optimizaciones aún más eficientes. 
+Este modelo continúa con la tendencia de facilitar el acceso a modelos de gran escala mientras aumenta el rendimiento en tareas de procesamiento del lenguaje natural y la generación de texto.
+
+Principales avances en LLaMA 3:
+\begin{itemize}
+    \item \textbf{Mejora en eficiencia computacional}: LLaMA 3 se diseñó para ser aún más eficiente que sus predecesores, permitiendo que más instituciones, especialmente académicas y de investigación, puedan usarlo para diversos proyectos.
+    \item \textbf{Mayor capacidad de razonamiento}: LLaMA 3 incluye avances en el razonamiento lógico y la resolución de problemas complejos, lo que lo hace más competitivo frente a modelos como GPT-4.
+    \item \textbf{Entrenamiento más accesible}: Meta optimizó aún más los procesos de entrenamiento, lo que permite a los investigadores entrenar versiones del modelo en un rango más amplio de infraestructuras.
+\end{itemize}
+
+LLaMA 3 sigue siendo una opción accesible para la investigación en el ámbito de los LLMs, brindando una combinación de potencia y eficiencia.
+
+
+
+
+
+
+
+
+
+
+\subsection{deepseek v2 (mayo 2024)}
+
+En 2024, DeepMind presentó DeepSeek v2, una versión mejorada de su modelo de búsqueda semántica. 
+Esta versión avanzó notablemente en la precisión y adaptabilidad de los resultados, especialmente al integrar capacidades multimodales y mejorar la generación de respuestas contextualizadas en tiempo real.
+
+Características de DeepSeek v2:
+\begin{itemize}
+    \item \textbf{Mejor capacidad de comprensión multimodal}: DeepSeek v2 ahora es capaz de interpretar no solo texto, sino también imágenes, audio y otros tipos de datos, lo que le permite ofrecer respuestas aún más completas.
+    \item \textbf{Generación de respuestas en tiempo real}: El modelo mejora la interacción con los usuarios al generar respuestas más rápidas y adaptadas a consultas complejas en tiempo real.
+    \item \textbf{Mayor precisión en tareas de búsqueda y análisis}: La nueva versión presenta una mejora significativa en la precisión de la recuperación de información y la generación de respuestas relevantes, ajustadas al contexto.
+\end{itemize}
+
+DeepSeek v2 se destacó como una herramienta esencial para sistemas de búsqueda avanzados y la recuperación semántica de información, adaptándose a las necesidades de los usuarios de manera más efectiva.
+
+
+\subsection{GPT-4o (mayo 2024)}
+
+En mayo de 2024, OpenAI presentó GPT-4o (omni), una nueva iteración de su serie de modelos GPT, con mejoras significativas en velocidad, eficiencia y capacidades multimodales. 
+A diferencia de su predecesor GPT-4, que dependía de una arquitectura con distintos expertos (Mixture of Experts, MoE) y procesamiento separado para texto, imágenes y audio, GPT-4o adopta un enfoque nativamente multimodal, permitiendo procesar y generar texto, audio e imágenes con latencias mucho más bajas.
+
+Uno de los aspectos más innovadores de GPT-4o es su capacidad para manejar múltiples modalidades de entrada y salida en tiempo real. 
+A diferencia de modelos anteriores que requerían módulos separados para audio y visión, GPT-4o emplea un solo modelo unificado, optimizado para la inferencia eficiente en diversas tareas. 
+Esto permite interacciones más naturales y rápidas, especialmente en aplicaciones conversacionales y de asistencia virtual.
+
+Además, OpenAI mejoró la velocidad de respuesta del modelo, alcanzando tiempos de procesamiento hasta 2× más rápidos que GPT-4-turbo, con una reducción considerable en los costos computacionales. Esto ha permitido desplegar GPT-4o como la opción por defecto en la API de OpenAI y en ChatGPT, democratizando el acceso a un modelo de alto rendimiento sin restricciones significativas.
+
+GPT-4o es el primer modelo de OpenAI diseñado desde cero para integrar texto, audio e imágenes de manera fluida. 
+En términos de procesamiento de audio, es capaz de reconocer y generar voz en tiempo real, permitiendo conversaciones fluidas sin la latencia que caracterizaba a versiones previas. 
+En el ámbito visual, mejora la comprensión de imágenes y videos, ofreciendo capacidades avanzadas en reconocimiento de objetos, descripción de escenas y generación de contenido visual.
+
+En tareas de procesamiento de lenguaje natural, GPT-4o supera a sus predecesores en comprensión, generación de texto, traducción automática y razonamiento contextual. 
+Su capacidad para manejar consultas más complejas, junto con una mayor coherencia en respuestas largas, lo posiciona como uno de los modelos más potentes en la actualidad. 
+También ha demostrado mejoras en la reducción de alucinaciones y en la precisión factual, aunque sigue enfrentando desafíos en ciertas tareas de razonamiento avanzado.
+
+
+Gracias a su rapidez y capacidades mejoradas, GPT-4o ha sido implementado en una variedad de aplicaciones, desde asistentes virtuales avanzados hasta herramientas de productividad basadas en IA. 
+Su integración en la aplicación web ChatGPT ha permitido a los usuarios experimentar una IA más interactiva y versátil, con respuestas más rápidas y contextualizadas. 
+Además, la reducción en los costos de inferencia ha facilitado su adopción en productos comerciales y empresariales.
+
+Con GPT-4o, OpenAI ha dado un paso importante hacia una inteligencia artificial más accesible, interactiva y eficiente, consolidando su liderazgo en el desarrollo de modelos multimodales de alto rendimiento.
+
+
+\subsection{GPT-4o mini (junio 2024)}
+
+En junio de 2024, OpenAI lanzó GPT-4o Mini, una versión optimizada y más ligera de GPT-4o, diseñada para ofrecer un equilibrio entre rendimiento, eficiencia y accesibilidad. 
+Este modelo mantiene muchas de las capacidades avanzadas de su predecesor, pero con un enfoque en menor consumo computacional, lo que lo hace ideal para aplicaciones en dispositivos con recursos limitados y para despliegues comerciales a gran escala.
+
+A diferencia del modelo completo GPT-4o, que está diseñado para tareas de alta demanda en procesamiento de texto, imagen y audio en tiempo real, GPT-4o Mini reduce la complejidad computacional, permitiendo tiempos de respuesta aún más rápidos con un menor costo energético. 
+OpenAI ha optimizado este modelo para ofrecer rendimiento competitivo en tareas de Procesamiento de Lenguaje natural, sin comprometer significativamente la calidad de las respuestas.
+
+Esta versión sigue el principio de modelos nativamente multimodales, lo que significa que puede manejar texto, imágenes y audio de manera integrada, aunque con menor capacidad de procesamiento en tareas extremadamente complejas. 
+Esto lo hace ideal para asistentes virtuales, chatbots, herramientas de productividad y aplicaciones móviles, donde la latencia y el consumo de recursos son factores clave.
+
+Si bien GPT-4o Mini conserva muchas de las mejoras de su versión completa, presenta algunas diferencias en términos de profundidad de razonamiento y capacidad de generación en tareas extensas. 
+Entre sus características principales se destacan:
+\begin{itemize}
+    \item \textbf{Mayor eficiencia en dispositivos con menos recursos}: facilitando su implementación en plataformas con hardware limitado.
+    \item \textbf{Rendimiento optimizado para tareas de conversación y asistencia virtual}: con respuestas más rápidas y coherentes en diálogos cotidianos.
+    \item \textbf{Menor latencia en comparación con modelos más grandes}: lo que lo hace ideal para aplicaciones en tiempo real.
+    \item \textbf{Capacidades multimodales básicas}: aunque con menor profundidad en la comprensión y generación de contenido visual y auditivo en comparación con GPT-4o completo.
+\end{itemize}
+
+Gracias a su balance entre velocidad y capacidad, GPT-4o Mini ha sido adoptado en múltiples industrias, desde atención al cliente automatizada hasta educación y asistentes personales. 
+Empresas tecnológicas han comenzado a integrarlo en productos de bajo consumo computacional, asegurando interacciones de IA más fluidas y económicas.
+
+Con el lanzamiento de GPT-4o Mini, OpenAI ha reforzado su enfoque en modelos accesibles y eficientes, ofreciendo una opción poderosa para usuarios y desarrolladores que requieren inteligencia artificial de alto nivel sin los costos computacionales de modelos más grandes. 
+
+
+\subsection{Claude 3.5 Sonnet (julio 2024)}
+
+En julio de 2024, Anthropic lanzó Claude 3.5 Sonnet, una evolución significativa dentro de la serie Claude 3, mejorando notablemente el rendimiento en razonamiento complejo, generación de texto y eficiencia computacional. 
+Este modelo se posiciona como un competidor directo de GPT-4o, ofreciendo capacidades avanzadas en comprensión contextual y generación fluida de contenido.
+
+Claude 3.5 Sonnet mantiene la arquitectura basada en transformers, pero con optimización en la gestión de memoria y eficiencia en la atención. 
+Se ha reportado una notable mejora en la velocidad de procesamiento y en la capacidad para manejar contextos extensos sin degradación del rendimiento. 
+Además, se han implementado técnicas avanzadas para reducir alucinaciones y mejorar la precisión factual.
+
+En comparación con sus predecesores, Claude 3.5 Sonnet sobresale en:
+
+\begin{itemize}
+    \item Mayor precisión en tareas de razonamiento lógico y matemático.
+    \item Mejora en la comprensión de documentos extensos y consultas complejas.
+    \item Optimización en generación de código, con respuestas más estructuradas y precisas.
+    \item Reducción de sesgos y alineación mejorada con instrucciones del usuario.
+\end{itemize}
+
+Si bien Claude 3.5 Sonnet aún no ofrece capacidades multimodales tan avanzadas como GPT-4o, su procesamiento de texto sigue siendo de alto nivel, lo que lo hace ideal para tareas como asistencia en redacción, generación de informes, investigación académica y programación.
+
+Comparado con modelos anteriores de Anthropic, Claude 3.5 Sonnet es más rápido y preciso, acercándose en rendimiento a modelos de última generación de GPT y DeepSeek.
+
+Debido a su balance entre rendimiento y eficiencia, Claude 3.5 Sonnet ha sido adoptado en entornos empresariales, plataformas de asistencia virtual y generación de contenido automatizado. 
+Además, su lanzamiento ha fortalecido la posición de Anthropic en la competencia por modelos de IA de alto rendimiento, consolidándose como una de las opciones más avanzadas para usuarios que requieren modelos precisos y eficientes. 
+
+\subsection{DeppSeek V3 (enero 2025)}
+
+En enero de 2025, DeepSeek lanzó DeepSeek V3, su modelo más avanzado hasta la fecha, que marca una evolución significativa respecto a las versiones anteriores. 
+DeepSeek V3 está diseñado para ofrecer capacidades de razonamiento avanzado, generación de contenido multimodal y aprendizaje más rápido, con un enfoque en mejorar la precisión en tareas complejas y optimizar el rendimiento en plataformas comerciales.
+
+DeepSeek V3 utiliza una arquitectura de transformers de última generación, mejorando los mecanismos de atención y la gestión de memoria para trabajar con secuencias más largas y complejas. Su principal avance radica en la optimización de la interacción multimodal, donde puede procesar texto, imágenes y audio de manera más eficiente, permitiendo un rendimiento fluido en tareas que combinan estas modalidades.
+
+% \subsection{Modelos Instrucción-Optimized (2023-2024)}
+% Con el éxito de ChatGPT, un enfoque clave en los desarrollos de modelos posteriores fue la optimización para tareas de instrucción directa. Los modelos basados en instrucciones optimizadas permiten a los usuarios interactuar con el modelo de manera más eficiente, formulando comandos más claros y específicos.
+
+% Ejemplos incluyen el modelo Claude de Anthropic, y las nuevas versiones de PaLM (Pathways Language Model) de Google. Estos modelos se entrenaron específicamente para mejorar la capacidad de seguir instrucciones explícitas y generar respuestas detalladas a partir de entradas más estructuradas.
+
+% Características y avances:
+
+% Instrucciones claras: Mejor capacidad para seguir instrucciones más complejas y entregar respuestas más ajustadas a las necesidades del usuario.
+
+% Mejor alineación ética y de seguridad: Los nuevos modelos se entrenaron con enfoques mejorados para mitigar riesgos, como el manejo de sesgos y la seguridad de las respuestas generadas.
+
+% Mayor control en la generación de contenido: Estos modelos fueron diseñados para ofrecer un mayor control sobre la generación de contenido, asegurando que las respuestas sean más precisas y menos propensas a desviaciones.
+
+
+% \subsection{Desarrollo de Modelos Multimodales Avanzados (2024)}
+% A medida que avanzamos en 2024, los desarrollos en modelos multimodales continuaron ampliándose. Los modelos que integran no solo texto e imágenes, sino también audio y video, están comenzando a emerger. Gato de DeepMind y Gemini de Google son ejemplos de modelos que combinan diversos tipos de entradas (texto, imágenes, audio, etc.) para realizar tareas más complejas.
+
+% Principales características:
+
+% Integración de múltiples modalidades: Estos modelos pueden comprender y generar respuestas a partir de entradas que combinan texto, imágenes, video y audio, permitiendo un enfoque más holístico para tareas de IA.
+
+% Desempeño mejorado en contextos complejos: Los modelos multimodales son capaces de realizar tareas complejas como la descripción de escenas en imágenes o videos, la transcripción y traducción de discursos en tiempo real, y la creación de contenido audiovisual.
+
+
+
+
+
+
+
 
 % \subsection{Prompt Engineering}
 

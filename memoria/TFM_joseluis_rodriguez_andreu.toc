@@ -20,4 +20,18 @@
 \contentsline {subsection}{\numberline {3.2}Web Scraping}{11}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {3.3}Procesamiento de Lenguaje Natural}{14}{subsection.2.3.3}%
 \contentsline {section}{\numberline {4}Inteligencia Artificial Generativa}{19}{section.2.4}%
-\contentsline {chapter}{Bibliografía}{20}{section.2.4}%
+\contentsline {section}{\numberline {5}Grandes Modelos del Lenguaje}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {5.1}Primeros modelos del lenguaje}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {5.2}ChatGPT (2022)}{22}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {5.3}GPT-4 (marzo 2023)}{22}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {5.4}LLaMA (febrero 2023)}{23}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {5.5}DeepSeek (junio 2023)}{23}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {5.6}LLaMA 2(julio 2024) AMPLIAR}{24}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {5.7}GPT-4 Turbo (noviembre 2023) AMPLIAR}{24}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {5.8}LLaMA 3 (marzo 2024)}{24}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {5.9}deepseek v2 (mayo 2024)}{25}{subsection.2.5.9}%
+\contentsline {subsection}{\numberline {5.10}GPT-4o (mayo 2024)}{26}{subsection.2.5.10}%
+\contentsline {subsection}{\numberline {5.11}GPT-4o mini (junio 2024)}{27}{subsection.2.5.11}%
+\contentsline {subsection}{\numberline {5.12}Claude 3.5 Sonnet (julio 2024)}{28}{subsection.2.5.12}%
+\contentsline {subsection}{\numberline {5.13}DeppSeek V3 (enero 2025)}{29}{subsection.2.5.13}%
+\contentsline {chapter}{Bibliografía}{30}{subsection.2.5.13}%

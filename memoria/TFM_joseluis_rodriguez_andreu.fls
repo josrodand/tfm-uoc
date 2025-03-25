@@ -246,6 +246,11 @@ INPUT ./figs/gantt.png
 INPUT ./2_estado_del_arte.tex
 INPUT ./2_estado_del_arte.tex
 INPUT 2_estado_del_arte.tex
+INPUT ./figs/transformer_arquitecture.png
+INPUT ./figs/transformer_arquitecture.png
+INPUT ./figs/transformer_arquitecture.png
+INPUT ./figs/transformer_arquitecture.png
+INPUT ./figs/transformer_arquitecture.png
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT TFM_joseluis_rodriguez_andreu.bbl
