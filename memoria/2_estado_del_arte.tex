@@ -286,49 +286,22 @@ La capacidad de comprensión y generación de lenguaje de propósito general de 
 Aunque el área de investigación de los LLMs es muy reciente, está evolucionando rápidamente.
 
 \subsection{Primeros modelos del lenguaje}
-
 Con el auge de los Transformers, empezaron a surgir nuevos modelos cada vez mas complejos, incluyendo cada vez un volumen de parámetros mayor.
-BERT (2018) marcó un punto de inflexión al introducir un preentrenamiento bidireccional basado en masked language modeling (MLM), mejorando la comprensión contextual en diversas tareas. 
-Posteriormente, GPT-2 (2019) se centró en la generación de texto autoregresiva, destacando por su coherencia y fluidez, aunque con preocupaciones sobre su posible uso indebido. 
-En paralelo, T5 (2019) propuso un enfoque texto a texto, permitiendo abordar múltiples tareas con una arquitectura unificada. 
-La llegada de GPT-3 (2020) con 175B parámetros supuso un avance significativo en few-shot learning, posibilitando la generación de contenido sin necesidad de ajuste fino específico. 
-Finalmente, LaMDA (2021) optimizó la interacción en diálogos abiertos, mejorando la coherencia en conversaciones de largo alcance y consolidando los avances en modelos conversacionales. 
+BERT en 2018 marcó un punto de inflexión al introducir un preentrenamiento bidireccional basado en masked language modeling (MLM), mejorando la comprensión contextual en diversas tareas. 
+Posteriormente, GPT-2 en 2019 \cite{radford2019language} se centró en la generación de texto autoregresiva, destacando por su coherencia y fluidez, aunque con preocupaciones sobre su posible uso indebido. 
+En paralelo, T5 en 2019 \cite{raffel2023exploringlimitstransferlearning} propuso un enfoque texto a texto, permitiendo abordar múltiples tareas con una arquitectura unificada. 
+La llegada de GPT-3 en 2020 \cite{brown2020languagemodelsfewshotlearners} con 175B parámetros supuso un avance significativo en few-shot learning, posibilitando la generación de contenido sin necesidad de ajuste fino específico. 
+Finalmente, LaMDA en 2021 \cite{thoppilan2022lamdalanguagemodelsdialog} optimizó la interacción en diálogos abiertos, mejorando la coherencia en conversaciones de largo alcance y consolidando los avances en modelos conversacionales. 
 
-\subsection{ChatGPT (2022)}
-El lanzamiento de ChatGPT por OpenAI en noviembre de 2022 marcó un hito significativo en la evolución de los modelos de lenguaje, especialmente en aplicaciones de interacción conversacional. 
+
+\subsection{ChatGPT}
+El lanzamiento de ChatGPT por OpenAI en noviembre de 2022 marcó un hito significativo en la evolución de los modelos de lenguaje, especialmente en aplicaciones de interacción conversacional \cite{Liu_2023}. 
 ChatGPT es una versión mejorada de GPT-3, que fue afinada específicamente para mejorar la calidad de los diálogos y la coherencia en respuestas a preguntas abiertas y conversaciones continuas. 
 ChatGPT se entrenó utilizando un enfoque de Reinforcement Learning from Human Feedback (RLHF), donde los humanos proporcionaron retroalimentación activa sobre las respuestas generadas, lo que permitió al modelo mejorar su capacidad de ofrecer respuestas más relevantes, precisas y menos propensas a producir información errónea o sesgada.
 
 
-
-\subsection{GPT-4 (marzo 2023)}
-
-En marzo de 2023, OpenAI lanzó GPT-4, un modelo significativamente más avanzado que GPT-3 y ChatGPT. 
-Con una capacidad de procesar entradas multimodales (texto e imágenes), GPT-4 permitió nuevas aplicaciones en áreas como análisis de contenido visual y descripciones detalladas. 
-Además, mostró mejoras significativas en razonamiento complejo, en la resolución de problemas matemáticos avanzados y en la comprensión de contextos más largos.
-
-sus principales características son:
-
-\begin{itemize}
-    \item Multimodalidad: GPT-4 podía procesar imágenes junto con texto, lo que le permitió realizar tareas como la interpretación de gráficos, la descripción de imágenes y la creación de contenido visual a partir de texto.
-    \item Razonamiento mejorado: El modelo mostró un mejor desempeño en tareas que requieren razonamiento lógico y la capacidad de resolver problemas complejos.
-    \item Mayor capacidad de manejo de contexto: A diferencia de GPT-3, GPT-4 pudo gestionar contextos más largos, lo que resultó en una mayor coherencia durante conversaciones extensas.    
-\end{itemize}
-
-% meter Incorporación de GPT-4 en Productos Comerciales (2023)
-% Tras el lanzamiento de GPT-4, OpenAI lo integró en varios productos comerciales, como Microsoft Copilot (en herramientas como Word, Excel y otras aplicaciones de Microsoft 365) y Azure OpenAI Service. Estas integraciones proporcionaron una interfaz sencilla para que las empresas y los desarrolladores pudieran utilizar la potencia de GPT-4 para generar contenido, automatizar tareas y mejorar la productividad en diversas industrias.
-
-% Aplicaciones clave:
-
-% Automatización de procesos empresariales: GPT-4 se utilizó para mejorar la productividad en la automatización de procesos empresariales, como la generación de reportes, análisis de datos y respuestas automáticas.
-
-% Generación de contenido: Integración en plataformas de generación de contenido para redactar artículos, correos electrónicos y otros textos comerciales.
-
-% Asistentes virtuales avanzados: Mejora significativa en la creación de asistentes virtuales más inteligentes y capaces de manejar tareas complejas de atención al cliente.
-
-\subsection{LLaMA (febrero 2023)}
-
-LLaMA (Large Language Model Meta AI), lanzado por Meta (anteriormente Facebook) en 2023, se presentó como un competidor directo de GPT-3 y GPT-4. 
+\subsection{LLaMA}
+LLaMA (Large Language Model Meta AI), lanzado por Meta (anteriormente Facebook) en 2023, se presentó como un competidor directo de GPT-3 \cite{touvron2023llamaopenefficientfoundation}. 
 LLaMA se desarrolló con un enfoque en ser un modelo de gran escala, pero de mayor accesibilidad para la investigación académica y la comunidad de código abierto. 
 LLaMA está diseñado para ser más eficiente y eficaz, permitiendo a los investigadores utilizar modelos de lenguaje a gran escala sin la necesidad de grandes cantidades de infraestructura.
 
@@ -341,8 +314,24 @@ Características clave de LLaMA:
 
 LLaMA ayudó a democratizar el acceso a modelos de lenguaje de gran escala, permitiendo que más organizaciones y académicos participaran en la investigación y desarrollo de modelos avanzados.
 
-\subsection{DeepSeek (junio 2023)}
-DeepSeek es un modelo propuesto por DeepMind en 2023, cuyo enfoque se centra en la búsqueda semántica profunda y la comprensión avanzada de consultas complejas. 
+
+\subsection{GPT-4}
+
+En marzo de 2023, OpenAI lanzó GPT-4, un modelo significativamente más avanzado que GPT-3 y ChatGPT \cite{openai2024gpt4technicalreport}. 
+Con una capacidad de procesar entradas multimodales (texto e imágenes), GPT-4 permitió nuevas aplicaciones en áreas como análisis de contenido visual y descripciones detalladas. 
+Además, mostró mejoras significativas en razonamiento complejo, en la resolución de problemas matemáticos avanzados y en la comprensión de contextos más largos.
+
+sus principales características son:
+
+\begin{itemize}
+    \item Multimodalidad: GPT-4 podía procesar imágenes junto con texto, lo que le permitió realizar tareas como la interpretación de gráficos, la descripción de imágenes y la creación de contenido visual a partir de texto.
+    \item Razonamiento mejorado: El modelo mostró un mejor desempeño en tareas que requieren razonamiento lógico y la capacidad de resolver problemas complejos.
+    \item Mayor capacidad de manejo de contexto: A diferencia de GPT-3, GPT-4 pudo gestionar contextos más largos, lo que resultó en una mayor coherencia durante conversaciones extensas.    
+\end{itemize}
+
+
+\subsection{DeepSeek}
+DeepSeek es un modelo propuesto en 2023, cuyo enfoque se centra en la búsqueda semántica profunda y la comprensión avanzada de consultas complejas \cite{deepseekai2024deepseekllmscalingopensource}. 
 Este modelo es particularmente útil en sistemas de búsqueda y recuperación de información, donde se requiere un entendimiento más allá de las coincidencias exactas de palabras clave, permitiendo la interpretación semántica de las consultas.
 
 Características principales de DeepSeek:
@@ -355,33 +344,45 @@ Características principales de DeepSeek:
 DeepSeek es un ejemplo del progreso continuo hacia el entendimiento más profundo del lenguaje y su aplicación en la búsqueda semántica, un área clave en la IA.
 
 
-\subsection{LLaMA 2(julio 2024) AMPLIAR}
+\subsection{LLaMA 2}
 
-Meta lanzó LLaMA 2, mejorando la eficiencia computacional y la precisión en generación de texto.
+En julio de 2023, Meta AI lanzó LLaMA 2, la segunda generación de su familia de modelos de lenguaje de código abierto \cite{touvron2023llama2openfoundation}. 
+Este lanzamiento representó un avance significativo en la democratización de modelos de lenguaje de gran escala, proporcionando a la comunidad investigadora y a empresas un acceso sin restricciones a modelos altamente capaces para diversas aplicaciones.
 
-Novedades:
+LLaMA 2 conserva la arquitectura basada en transformers de su predecesor, pero con mejoras en eficiencia, entrenamiento y alineación. 
+Se lanzó en tres versiones principales, diferenciadas por su tamaño en parámetros: 7B (7 mil millones de parámetros), 13B y 65B, permitiendo su implementación en distintos entornos según las necesidades de hardware y rendimiento.
 
-Más robusto en generación de texto.
+Las mejoras clave en LLaMA 2 incluyen:
+\begin{itemize}
+    \item \textbf{Entrenamiento con un corpus de datos significativamente más amplio}, lo que mejoró su capacidad de generalización.
+    \item \textbf{Optimización de eficiencia computacional}, logrando una mejor relación entre calidad de respuesta y costos computacionales.
+    \item \textbf{Mejor alineación y reducción de sesgos}, gracias a un refinamiento en su entrenamiento mediante aprendizaje por refuerzo con retroalimentación humana (RLHF).
+    \item \textbf{Mayor estabilidad en generación de texto}, proporcionando respuestas más coherentes y precisas en conversaciones prolongadas.
+\end{itemize}
 
-Mayor alineación en seguridad y control de respuestas.
+En términos de rendimiento, LLaMA 2-13B demostró ser comparable a modelos comerciales más grandes como GPT-3.5, mientras que la versión 65B se acercó en capacidad a GPT-4 en ciertas tareas de procesamiento de lenguaje natural.
 
-Disponible en variantes de 7B, 13B y 70B parámetros.
+\subsection{Mistral}
+
+En septiembre de 2023, la empresa Mistral AI lanzó Mistral 7B, un modelo de lenguaje de código abierto que destacó por su eficiencia y rendimiento optimizado, superando a otros modelos de tamaño similar \cite{jiang2023mistral7b}. 
+Con un enfoque en alta calidad y accesibilidad, Mistral 7B se convirtió rápidamente en una de las opciones más utilizadas en la comunidad de IA de código abierto.
+
+Mistral 7B se diseñó con una arquitectura optimizada basada en transformers densos, pero con mejoras específicas:
+
+\begin{itemize}
+    \item \textbf{Uso de bloques de atención eficiente}: Lo que permitió un mejor manejo del contexto y una mayor capacidad de generalización.
+    \item \textbf{Reducción del tamaño del modelo sin sacrificar el rendimiento}: Optimizando la relación entre calidad y consumo de recursos.
+    \item \textbf{Mejor respuesta en tareas de razonamiento y generación de texto}: Alcanzando un rendimiento comparable a modelos más grandes como LLaMA 2-13B.
+    \item \textbf{Diseño modular y altamente escalable}: Facilitando la integración en diversas aplicaciones comerciales y de investigación.
+\end{itemize}
+
+En comparación con modelos de tamaño similar, Mistral 7B mostró superioridad en generación de código, razonamiento matemático y comprensión de instrucciones, convirtiéndolo en una opción viable frente a modelos más grandes como LLaMA 2-13B y Falcon 40B.
+Si bien Mistral 7B es más pequeño en parámetros que modelos como DeepSeek V2 (16B) o LLaMA 2-13B, su eficiencia le permitió superar a ambos en múltiples tareas. Su rendimiento fue similar al de modelos cerrados como GPT-3.5, pero con la ventaja de ser de código abierto y optimizado para ejecución en hardware menos costoso.
 
 
-\subsection{GPT-4 Turbo (noviembre 2023) AMPLIAR}
+\subsection{LLaMA 3}
 
-Una versión más rápida y económica de GPT-4.
-
-Mejoras:
-
-Menor costo y respuesta más rápida.
-
-Mayor eficiencia energética en centros de datos.
-
-
-\subsection{LLaMA 3 (marzo 2024)}
-
-LLaMA 3 fue lanzado por Meta a finales de 2024, mejorando la versión anterior de LLaMA con capacidades avanzadas y optimizaciones aún más eficientes. 
+LLaMA 3 fue lanzado por Meta en marzo de 2024, mejorando la versión anterior de LLaMA con capacidades avanzadas y optimizaciones aún más eficientes \cite{grattafiori2024llama3herdmodels}. 
 Este modelo continúa con la tendencia de facilitar el acceso a modelos de gran escala mientras aumenta el rendimiento en tareas de procesamiento del lenguaje natural y la generación de texto.
 
 Principales avances en LLaMA 3:
@@ -394,20 +395,12 @@ Principales avances en LLaMA 3:
 LLaMA 3 sigue siendo una opción accesible para la investigación en el ámbito de los LLMs, brindando una combinación de potencia y eficiencia.
 
 
+\subsection{deepseek V2}
 
-
-
-
-
-
-
-
-\subsection{deepseek v2 (mayo 2024)}
-
-En 2024, DeepMind presentó DeepSeek v2, una versión mejorada de su modelo de búsqueda semántica. 
+En 2024, DeepSeek AI presentó DeepSeek V2, una versión mejorada de su modelo de búsqueda semántica \cite{deepseekai2024deepseekv2strongeconomicalefficient}. 
 Esta versión avanzó notablemente en la precisión y adaptabilidad de los resultados, especialmente al integrar capacidades multimodales y mejorar la generación de respuestas contextualizadas en tiempo real.
 
-Características de DeepSeek v2:
+Características de DeepSeek V2:
 \begin{itemize}
     \item \textbf{Mejor capacidad de comprensión multimodal}: DeepSeek v2 ahora es capaz de interpretar no solo texto, sino también imágenes, audio y otros tipos de datos, lo que le permite ofrecer respuestas aún más completas.
     \item \textbf{Generación de respuestas en tiempo real}: El modelo mejora la interacción con los usuarios al generar respuestas más rápidas y adaptadas a consultas complejas en tiempo real.
@@ -417,9 +410,9 @@ Características de DeepSeek v2:
 DeepSeek v2 se destacó como una herramienta esencial para sistemas de búsqueda avanzados y la recuperación semántica de información, adaptándose a las necesidades de los usuarios de manera más efectiva.
 
 
-\subsection{GPT-4o (mayo 2024)}
+\subsection{GPT-4o}
 
-En mayo de 2024, OpenAI presentó GPT-4o (omni), una nueva iteración de su serie de modelos GPT, con mejoras significativas en velocidad, eficiencia y capacidades multimodales. 
+En mayo de 2024, OpenAI presentó GPT-4o (omni), una nueva iteración de su serie de modelos GPT, con mejoras significativas en velocidad, eficiencia y capacidades multimodales \cite{openai2024gpt4ocard}. 
 A diferencia de su predecesor GPT-4, que dependía de una arquitectura con distintos expertos (Mixture of Experts, MoE) y procesamiento separado para texto, imágenes y audio, GPT-4o adopta un enfoque nativamente multimodal, permitiendo procesar y generar texto, audio e imágenes con latencias mucho más bajas.
 
 Uno de los aspectos más innovadores de GPT-4o es su capacidad para manejar múltiples modalidades de entrada y salida en tiempo real. 
@@ -444,7 +437,7 @@ Además, la reducción en los costos de inferencia ha facilitado su adopción en
 Con GPT-4o, OpenAI ha dado un paso importante hacia una inteligencia artificial más accesible, interactiva y eficiente, consolidando su liderazgo en el desarrollo de modelos multimodales de alto rendimiento.
 
 
-\subsection{GPT-4o mini (junio 2024)}
+\subsection{GPT-4o mini}
 
 En junio de 2024, OpenAI lanzó GPT-4o Mini, una versión optimizada y más ligera de GPT-4o, diseñada para ofrecer un equilibrio entre rendimiento, eficiencia y accesibilidad. 
 Este modelo mantiene muchas de las capacidades avanzadas de su predecesor, pero con un enfoque en menor consumo computacional, lo que lo hace ideal para aplicaciones en dispositivos con recursos limitados y para despliegues comerciales a gran escala.
@@ -470,7 +463,7 @@ Empresas tecnológicas han comenzado a integrarlo en productos de bajo consumo c
 Con el lanzamiento de GPT-4o Mini, OpenAI ha reforzado su enfoque en modelos accesibles y eficientes, ofreciendo una opción poderosa para usuarios y desarrolladores que requieren inteligencia artificial de alto nivel sin los costos computacionales de modelos más grandes. 
 
 
-\subsection{Claude 3.5 Sonnet (julio 2024)}
+\subsection{Claude 3.5 Sonnet}
 
 En julio de 2024, Anthropic lanzó Claude 3.5 Sonnet, una evolución significativa dentro de la serie Claude 3, mejorando notablemente el rendimiento en razonamiento complejo, generación de texto y eficiencia computacional. 
 Este modelo se posiciona como un competidor directo de GPT-4o, ofreciendo capacidades avanzadas en comprensión contextual y generación fluida de contenido.
@@ -495,46 +488,262 @@ Comparado con modelos anteriores de Anthropic, Claude 3.5 Sonnet es más rápido
 Debido a su balance entre rendimiento y eficiencia, Claude 3.5 Sonnet ha sido adoptado en entornos empresariales, plataformas de asistencia virtual y generación de contenido automatizado. 
 Además, su lanzamiento ha fortalecido la posición de Anthropic en la competencia por modelos de IA de alto rendimiento, consolidándose como una de las opciones más avanzadas para usuarios que requieren modelos precisos y eficientes. 
 
-\subsection{DeppSeek V3 (enero 2025)}
+\subsection{DeppSeek V3}
 
-En enero de 2025, DeepSeek lanzó DeepSeek V3, su modelo más avanzado hasta la fecha, que marca una evolución significativa respecto a las versiones anteriores. 
+En enero de 2025, DeepSeek AI lanzó DeepSeek V3, su modelo más avanzado hasta la fecha, que marca una evolución significativa respecto a las versiones anteriores. 
 DeepSeek V3 está diseñado para ofrecer capacidades de razonamiento avanzado, generación de contenido multimodal y aprendizaje más rápido, con un enfoque en mejorar la precisión en tareas complejas y optimizar el rendimiento en plataformas comerciales.
 
-DeepSeek V3 utiliza una arquitectura de transformers de última generación, mejorando los mecanismos de atención y la gestión de memoria para trabajar con secuencias más largas y complejas. Su principal avance radica en la optimización de la interacción multimodal, donde puede procesar texto, imágenes y audio de manera más eficiente, permitiendo un rendimiento fluido en tareas que combinan estas modalidades.
+DeepSeek V3 utiliza una arquitectura de transformers de última generación, mejorando los mecanismos de atención y la gestión de memoria para trabajar con secuencias más largas y complejas. 
+Su principal avance radica en la optimización de la interacción multimodal, donde puede procesar texto, imágenes y audio de manera más eficiente, permitiendo un rendimiento fluido en tareas que combinan estas modalidades.
 
-% \subsection{Modelos Instrucción-Optimized (2023-2024)}
-% Con el éxito de ChatGPT, un enfoque clave en los desarrollos de modelos posteriores fue la optimización para tareas de instrucción directa. Los modelos basados en instrucciones optimizadas permiten a los usuarios interactuar con el modelo de manera más eficiente, formulando comandos más claros y específicos.
+Además, DeepSeek V3 ha mejorado el razonamiento lógico y la generación de código, lo que lo hace particularmente adecuado para aplicaciones en áreas de desarrollo de software y análisis técnico. 
+Comparado con versiones anteriores, su capacidad de generalización y alineación con las intenciones del usuario es más precisa, lo que reduce significativamente los errores de interpretación.
 
-% Ejemplos incluyen el modelo Claude de Anthropic, y las nuevas versiones de PaLM (Pathways Language Model) de Google. Estos modelos se entrenaron específicamente para mejorar la capacidad de seguir instrucciones explícitas y generar respuestas detalladas a partir de entradas más estructuradas.
+Aunque DeepSeek V2 ya ofrecía un rendimiento sólido en múltiples dominios, DeepSeek V3 introduce mejoras importantes:
 
-% Características y avances:
+\begin{itemize}
+    \item \textbf{Mejor razonamiento contextual y manejo de tareas complejas}: El modelo ha optimizado su capacidad para resolver problemas que requieren múltiples pasos de razonamiento.
+    \item \textbf{Generación de contenido más coherente y preciso}: Especialmente en tareas de escritura técnica y generación de código.
+    \item \textbf{Mayor capacidad de alineación con instrucciones específicas del usuario}: Lo que lo hace más eficiente en tareas de personalización.
+    \item \textbf{Mayor capacidad multimodal}: Con mejoras en la interpretación y creación de imágenes y audio a partir de texto, aunque sigue siendo un modelo más centrado en texto en comparación con modelos completamente multimodales como GPT-4o.
+\end{itemize}
 
-% Instrucciones claras: Mejor capacidad para seguir instrucciones más complejas y entregar respuestas más ajustadas a las necesidades del usuario.
+Gracias a su rendimiento mejorado, DeepSeek V3 ha sido adoptado en sectores que requieren precisión avanzada, como la generación de código, análisis de datos, desarrollo de software y asistencia en investigación. 
+Su integración con plataformas de desarrollo de software automatizado ha permitido a empresas optimizar la creación de soluciones tecnológicas más rápidamente.
 
-% Mejor alineación ética y de seguridad: Los nuevos modelos se entrenaron con enfoques mejorados para mitigar riesgos, como el manejo de sesgos y la seguridad de las respuestas generadas.
-
-% Mayor control en la generación de contenido: Estos modelos fueron diseñados para ofrecer un mayor control sobre la generación de contenido, asegurando que las respuestas sean más precisas y menos propensas a desviaciones.
-
-
-% \subsection{Desarrollo de Modelos Multimodales Avanzados (2024)}
-% A medida que avanzamos en 2024, los desarrollos en modelos multimodales continuaron ampliándose. Los modelos que integran no solo texto e imágenes, sino también audio y video, están comenzando a emerger. Gato de DeepMind y Gemini de Google son ejemplos de modelos que combinan diversos tipos de entradas (texto, imágenes, audio, etc.) para realizar tareas más complejas.
-
-% Principales características:
-
-% Integración de múltiples modalidades: Estos modelos pueden comprender y generar respuestas a partir de entradas que combinan texto, imágenes, video y audio, permitiendo un enfoque más holístico para tareas de IA.
-
-% Desempeño mejorado en contextos complejos: Los modelos multimodales son capaces de realizar tareas complejas como la descripción de escenas en imágenes o videos, la transcripción y traducción de discursos en tiempo real, y la creación de contenido audiovisual.
+Además, DeepSeek V3 ha ganado popularidad en herramientas de productividad y asistentes virtuales, gracias a su capacidad para mantener diálogos más coherentes y generar respuestas más precisas en conversaciones prolongadas. 
+Con este lanzamiento, DeepSeek se consolida como un jugador clave en el ámbito de la inteligencia artificial, ofreciendo soluciones de alto rendimiento para una variedad de aplicaciones comerciales. 
 
 
+\section{Prompt Engineering}
+
+El Prompt Engineering (ingeniería de prompts) ha surgido como una técnica clave para mejorar las capacidades de los Grandes Modelos de Lenguaje preentrenados \cite{sahoo2025systematicsurveypromptengineering}. 
+Consiste en diseñar de manera estratégica instrucciones específicas para tareas, conocidas como prompts, que guían la salida del modelo sin modificar sus parámetros. 
+La importancia del prompt engineering es especialmente evidente en su impacto transformador sobre la adaptabilidad de estos modelos. 
+Al ofrecer un mecanismo para ajustar los resultados del modelo mediante instrucciones cuidadosamente elaboradas, el prompt engineering permite a estos modelos sobresalir en una amplia gama de tareas y dominios. 
+Esta adaptabilidad se diferencia de los paradigmas tradicionales, donde a menudo se requiere un reentrenamiento del modelo o un ajuste fino extenso para lograr un rendimiento específico para una tarea.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/prompt_engineering.png}
+	\caption{Flujo del prompt engineering}
+	\label{fig:context-anoni1}
+\end{figure}
+
+
+A continuación se describen algunas de las técnicas de Prompt Engineering mas comunes.
+
+\subsection{Zero-Shot Prompting}
+El zero-shot prompting representa un cambio de paradigma en la utilización de Grandes Modelos del Lenguaje \cite{radford2019}. 
+
+Esta técnica elimina la necesidad de grandes volúmenes de datos de entrenamiento, basándose en prompts diseñados cuidadosamente para guiar al modelo en la resolución de tareas novedosas. 
+Específicamente, el modelo recibe una descripción de la tarea dentro del prompt, pero no dispone de datos etiquetados para entrenarse en mapeos específicos de entrada-salida. 
+
+En su lugar, el modelo aprovecha su conocimiento preexistente para generar predicciones basadas en el prompt proporcionado para la nueva tarea.
+
+\subsection{Few-Shot Prompting}
+El few-shot prompting proporciona a los modelos algunos ejemplos de entrada-salida para inducir la comprensión de una tarea específica \cite{brown2020language}, a diferencia del zero-shot prompting, donde no se suministran ejemplos. 
+Incluir incluso unos pocos ejemplos de alta calidad ha demostrado mejorar el rendimiento del modelo en tareas complejas en comparación con la ausencia de estos. 
+
+Sin embargo, el few-shot prompting requiere tokens adicionales para incorporar los ejemplos, lo que puede encarecer el coste de la tarea en entradas de texto más extensas. 
+Además, la selección y composición de los ejemplos dentro del prompt pueden influir significativamente en el comportamiento del modelo, y sesgos como la preferencia por palabras frecuentes pueden seguir afectando los resultados. 
+
+Aunque el few-shot prompting mejora las capacidades en tareas complejas, una ingeniería de prompts cuidadosa es esencial para alcanzar un rendimiento óptimo y mitigar sesgos no intencionados.
+
+\subsection{Chain-of-Thought Prompting}
+Los Grandes Modelos del Lenguaje suelen enfrentar dificultades en tareas de razonamiento complejo, lo que limita su potencial. 
+Con el objetivo de abordar esta limitación, se desarrolló el concepto de Chain-of-Thought (CoT) prompting \cite{wei2023chainofthoughtpromptingelicitsreasoning}, una técnica que permite estructurar prompts de manera que faciliten procesos de razonamiento coherentes y paso a paso. 
+
+La principal contribución de este enfoque radica en su capacidad para inducir respuestas más estructuradas y reflexivas en comparación con los prompts tradicionales.
+A través de una serie de experimentos, se demostró que el CoT prompting guía a los modelos a seguir una cadena lógica de razonamiento, lo que resulta en respuestas que reflejan una comprensión más profunda de los prompts dados. 
+Por ejemplo, en un problema matemático de múltiples pasos, el prompt incluiría tanto el proceso de razonamiento como la respuesta final, imitando la forma en que los humanos descomponen los problemas en pasos intermedios lógicos.
+
+
+\subsection{Instruction Following}
+
+La técnica de instruction following (seguimiento de instrucciones) se centra en diseñar prompts que especifiquen explícitamente las instrucciones sobre cómo el modelo debe comportarse durante el proceso de inferencia \cite{lou2024largelanguagemodelinstruction}. 
+Esto incluye detalles como el formato de la respuesta esperada, el estilo de escritura, e incluso las restricciones de tiempo para la generación. 
+La capacidad de un modelo para seguir instrucciones con precisión depende tanto de la claridad del prompt como de la estructura subyacente del modelo.
+
+Esta técnica es especialmente útil en tareas de generación de texto controlada, como la redacción de resúmenes, traducción automática o generación de contenido específico en un formato predeterminado. 
+La implementación efectiva de instruction following depende de la habilidad del modelo para interpretar y ejecutar las instrucciones de forma coherente, lo que requiere un equilibrio entre la precisión del modelo y la claridad del prompt.
+
+\subsection{Limitaciones de Promt Engineering}
+El prompt engineering ha revolucionado la forma en que los modelos preentrenados son utilizados en diversas aplicaciones, permitiendo un alto grado de adaptabilidad sin la necesidad de reentrenamiento. 
+Las técnicas presentadas representan solo una fracción del potencial que ofrece el campo. 
+
+Sin embargo, aunque estas estrategias optimizan la generación de respuestas, los modelos siguen enfrentando limitaciones cuando se requiere información actualizada o específica que no está presente en sus datos de entrenamiento.
+Para abordar esta limitación, surge el enfoque de Retrieval-Augmented Generation (RAG), que combina la capacidad generativa de los modelos con sistemas de recuperación de información en tiempo real.
+
+
+\section{Retrieval Augmented Generation (RAG)}
+
+Los Grandes Modelos del Lenguaje han logrado un éxito notable; sin embargo, aún presentan limitaciones significativas, especialmente en tareas específicas de dominio o con alta demanda de conocimiento. 
+En particular, generan alucinaciones al procesar consultas que exceden sus datos de entrenamiento o requieren información actualizada.
+
+Para abordar estos desafíos, se desarrolla la técnica Retrieval Augmented Generation (Generación Aumentada por Recuperación, o RAG) \cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}, que optimiza el desempeño de los LLMs mediante la recuperación de fragmentos de documentos relevantes desde bases de conocimiento externas, utilizando cálculos de similitud semántica. 
+Al referenciar información externa, RAG mitiga la generación de contenido incorrecto o alucinado. 
+Su integración con los LLMs ha impulsado su adopción generalizada, consolidando a RAG como una tecnología clave en la evolución de los chatbots y mejorando la aplicabilidad de los LLMs en entornos reales.
+
+\newpage
+El funcionamiento de un sistema RAG se basa en la combinación de recuperación de información y generación de texto, optimizando la precisión y actualidad de las respuestas mediante LLMs. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/rag.png}
+	\caption{flujo de RAG}
+	\label{fig:context-anoni1}
+\end{figure}
+
+
+\begin{itemize}
+    \item En la fase de \textbf{recuperación}, la consulta del usuario se convierte en un vector mediante un modelo de embeddings y se compara con una base de datos vectorizada, que almacena documentos representados como vectores en un espacio de alta dimensión.
+    \item Estas bases de datos permiten realizar recuperación de conocimiento relevante mediante algoritmos de similitud, reduciendo el costo computacional en la recuperación de información relevante.
+    \item Los fragmentos más cercanos semánticamente a la consulta son recuperados y concatenados con el prompt, ingresando a la fase de \textbf{generación}, donde un LLM procesa la información contextualizada y genera una respuesta fundamentada.
+    \item Finalmente, en la fase de \textbf{aumento}, se pueden aplicar diferentes técnicas para optimizar la coherencia y factualidad de la generación.
+\end{itemize}
+
+Este enfoque permite superar limitaciones de los LLMs, como la generación de contenido alucinatorio o el acceso a información desactualizada, consolidando a RAG como una arquitectura clave en la integración de modelos de lenguaje con bases de conocimiento dinámicas y eficientes.
+
+\subsection{Clasificación del RAG}
+
+El paradigma de investigación en RAG evoluciona continuamente y se clasifica en tres bloques:
+\subsubsection{Naive RAG}
+Representa la metodología inicial de RAG. Se basa en un esquema "Retrieve-Read", compuesto por tres fases: indexación, recuperación y generación \cite{ma2023queryrewritingretrievalaugmentedlarge}.
+En la fase de indexación, se procesan datos en diversos formatos (PDF, HTML, Word, Markdown), normalizándolos a texto plano. 
+Luego, se segmentan en fragmentos más pequeños para ajustarse a las limitaciones de contexto de los LLMs. 
+Estos fragmentos son convertidos en vectores mediante un modelo de embeddings y almacenados en una base de datos vectorizada, lo que permite búsquedas eficientes en la fase de recuperación.
+Durante la recuperación, la consulta del usuario se codifica en un vector utilizando el mismo modelo de embeddings. 
+Posteriormente, se calculan similitudes semánticas entre la consulta y los fragmentos indexados, seleccionando los K fragmentos más relevantes para ampliar el contexto del prompt.
+En la fase de generación, la consulta y los documentos recuperados se combinan en un prompt que el LLM procesa para generar una respuesta. 
+Dependiendo de la tarea, el modelo puede combinar su conocimiento paramétrico con la información recuperada o limitarse exclusivamente a esta última. 
+En diálogos continuos, el historial conversacional se incorpora para mejorar la coherencia en interacciones multi-turno.
+
+\subsubsection{Advanced RAG}
+Introduce mejoras específicas para superar las limitaciones de Naive RAG, con un enfoque en la optimización de la recuperación de información mediante estrategias pre-retrieval y post-retrieval \cite{ilin2023advanced}. 
+Para abordar problemas de indexación, Advanced RAG refina sus técnicas mediante el uso de ventanas deslizantes, segmentación granular y metadatos, además de implementar métodos de optimización para mejorar la eficiencia del proceso de recuperación.
+
+\begin{itemize}
+    \item \textbf{Pre-Retrieval Process}: En esta etapa, se optimizan tanto la estructura de indexación como la consulta original del usuario. 
+    La mejora en la indexación busca aumentar la calidad del contenido indexado mediante estrategias como mayor granularidad de datos, optimización de estructuras de índices, adición de metadatos, alineación de información y recuperación híbrida. 
+    Por otro lado, la optimización de consultas tiene como objetivo hacer que la pregunta del usuario sea más clara y adecuada para la recuperación, utilizando técnicas como reescritura de consultas, transformación, expansión de consultas y otras estrategias.
+    
+    \item \textbf{Post-Retrieval Process}: Una vez recuperado el contexto relevante, es fundamental integrarlo de manera efectiva con la consulta original. 
+    Las principales estrategias incluyen re-ranking y context compression. 
+    El re-ranking reorganiza los fragmentos recuperados, priorizando la información más relevante en los extremos del prompt, una técnica utilizada en frameworks como LlamaIndex, LangChain y HayStack.
+    Dado que alimentar todos los documentos recuperados a un LLM puede generar sobrecarga de información, diluyendo la relevancia del contenido, el proceso post-retrieval se centra en la selección de información clave, priorización de secciones críticas y reducción del contexto para mejorar la precisión y eficiencia en la generación de respuestas.
+\end{itemize}
+
+\subsubsection{Modular RAG}
+Optimiza la adaptabilidad y precisión del paradigma RAG al introducir una arquitectura flexible con módulos especializados \cite{yu2023generateretrievelargelanguage}. 
+Mejora la recuperación mediante técnicas avanzadas como búsqueda híbrida, multi-query retrieval y re-ranking inteligente. 
+Sus nuevos módulos, como Search, Memory, Routing y Predict, permiten una recuperación más precisa y contextualizada, mientras que el Task Adapter personaliza la generación para diversas tareas.
+A nivel estructural, Modular RAG reemplaza el flujo tradicional "Retrieve-Read" por esquemas dinámicos como Rewrite-Retrieve-Read, Generate-Read y Recite-Read, mejorando la integración de datos y reduciendo sesgos. 
+Además, incorpora estrategias iterativas y autoajustables como Demonstrate-Search-Predict (DSP) y ITER-RETGEN, optimizando la interacción entre módulos.
+Su flexibilidad permite la integración con técnicas de fine-tuning y reinforcement learning, optimizando tanto el retriever como el generador para mejorar la relevancia y coherencia de las respuestas.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/rag_types.png}
+	\caption{Tipos de RAG}
+	\label{fig:context-anoni1}
+\end{figure}
+
+
+\subsection{Técnicas de mejora de RAG}
+Los sistemas RAG han ganado mucha atención debido a su capacidad para combinar el poder de los modelos generativos con la recuperación de información. 
+Estos sistemas permiten a los modelos generar respuestas de alta calidad basadas en documentos relevantes recuperados de grandes bases de datos. 
+Sin embargo, para mejorar aún más la precisión y la relevancia de las respuestas generadas, se han desarrollado técnicas avanzadas que optimizan tanto la recuperación como la generación de información. 
+Entre estas técnicas destacan la búsqueda híbrida o hybrid search, el reordenamiento o reranking y el RAG contextual.
+
+
+\subsubsection{Hybrid Search}
+La Búsqueda Híbrida combina dos enfoques clave de recuperación de información: la búsqueda exacta basada en palabras clave y la búsqueda densa basada en embeddings \cite{hybridsearch}. 
+Cada uno de estos métodos tiene ventajas y limitaciones, por lo que su combinación permite mejorar significativamente la calidad de la recuperación de documentos y, por ende, la precisión de las respuestas generadas por los modelos de lenguaje.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/hybrid_search.png}
+	\caption{Flujo de búsqueda híbrida}
+	\label{fig:context-anoni1}
+\end{figure}
+
+\begin{itemize}
+    \item La \textbf{búsqueda exacta} utiliza palabras clave para localizar documentos mediante técnicas como el índice invertido, BM25 y TF-IDF, lo que permite respuestas rápidas y eficientes en grandes bases de datos. 
+    Sin embargo, su limitación radica en la falta de comprensión semántica, lo que puede excluir documentos relevantes si no hay coincidencias exactas. 
+    \item Por otro lado, \textbf{la búsqueda densa} convierte consultas y documentos en embeddings vectoriales utilizando LLMs, lo que permite medir similitudes semánticas y recuperar información más flexible. 
+    Aunque más precisa en términos de significado, esta técnica requiere mayor capacidad computacional y modelos preentrenados, dependiendo de herramientas como bases de datos vectoriales para optimizar la búsqueda en grandes volúmenes de datos.
+    \item La combinación de búsqueda exacta y búsqueda densa en un \textbf{modelo híbrido} aprovecha sus fortalezas complementarias, logrando un equilibrio entre eficiencia y precisión en la recuperación de documentos dentro de sistemas RAG.
+    En este enfoque, la búsqueda exacta actúa como un filtro inicial rápido, identificando documentos potencialmente relevantes. Posteriormente, la búsqueda densa refina estos resultados, asegurando que la información seleccionada sea semánticamente relevante para la consulta.
+    Para fusionar ambas metodologías, se pueden emplear estrategias como la fusión de puntajes, que normaliza y combina los resultados de cada método en un ranking unificado, o el filtrado progresivo, donde la búsqueda exacta reduce el conjunto de documentos antes de aplicar la búsqueda densa para su reordenamiento.
+    Al integrar estas técnicas, los sistemas RAG mejoran la precisión de sus respuestas y reducen la recuperación de documentos irrelevantes, optimizando tanto la velocidad del proceso como la calidad de la información presentada al usuario.
+\end{itemize}
+En esencia, la búsqueda híbrida maximiza la eficiencia del proceso de recuperación al utilizar la rapidez de la búsqueda exacta junto con la capacidad semántica de la búsqueda densa. Este enfoque es particularmente útil en escenarios donde la consulta puede formularse de múltiples maneras y no siempre coincide textualmente con los documentos relevantes disponibles en la base de datos.
+
+\subsubsection{Reranking}
+
+El re-ranking es una técnica utilizada para mejorar la calidad de los documentos recuperados antes de ser utilizados en la generación de respuestas. 
+Su propósito es reorganizar la lista de documentos obtenida en la fase de recuperación, priorizando aquellos que son más relevantes para la consulta del usuario.
+
+En los sistemas RAG, la primera fase de búsqueda (ya sea exacta, densa o híbrida) devuelve un conjunto de documentos ordenados por su similitud con la consulta. 
+Sin embargo, este orden inicial no siempre es el óptimo, ya que los métodos de recuperación pueden devolver documentos parcialmente relevantes o incluso irrelevantes. 
+Aquí es donde entra el re-ranking, aplicando técnicas avanzadas para mejorar la selección final de documentos que serán procesados por el modelo generador.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/rerank.jpg}
+	\caption{Esquema de Reranking}
+	\label{fig:context-anoni1}
+\end{figure}
+
+Existen varios enfoques para realizar el re-ranking en sistemas RAG. Estos métodos pueden variar en complejidad y costo computacional, dependiendo del nivel de precisión requerido.
+
+\begin{itemize}
+    \item \textbf{Re-ranking basado en heurísticas}: Este enfoque utiliza reglas predefinidas y métricas estadísticas para reordenar los documentos recuperados sin necesidad de modelos de aprendizaje profundo. 
+    Algunos métodos comunes incluyen algoritmos como TF-IDF o BM25 ajustado, que prioriza documentos donde los términos clave aparecen con mayor frecuencia y relevancia, y el criterio de posición de aparición, que favorece documentos donde las palabras clave se encuentran al inicio del texto. 
+    También puede aplicarse un filtro basado en la longitud del documento, dando prioridad a textos más concisos si se asume que contienen información más relevante. 
+    Aunque este método es rápido y eficiente, su principal limitación es que no tiene en cuenta el significado semántico de las palabras, lo que puede afectar la precisión de la recuperación en consultas más complejas.
+
+    \item \textbf{Re-ranking con modelos de lenguaje}: En este método, se utilizan modelos del lenguaje para evaluar la relevancia semántica de los documentos con respecto a la consulta. 
+    Modelos como BERT Cross-Encoder procesan cada consulta junto con un documento y generan una puntuación de relevancia basada en su relación semántica. 
+    MonoT5, por otro lado, reformula la tarea de re-ranking como un problema de clasificación, asignando una probabilidad a cada documento según su pertinencia. 
+    Otra alternativa es ColBERT (Contextualized Late Interaction BERT), que optimiza la comparación de embeddings para equilibrar precisión y eficiencia. 
+    Aunque estos modelos mejoran significativamente la calidad del ranking, requieren más recursos computacionales, lo que puede dificultar su implementación en sistemas de respuesta en tiempo real sin optimización adecuada.
+
+    \item \textbf{Re-ranking basado en feedback y aprendizaje reforzado}: Este enfoque se basa en el ajuste dinámico del ranking mediante el aprendizaje a partir de datos históricos o interacciones del usuario. 
+    En el aprendizaje supervisado, los modelos son entrenados con conjuntos de datos etiquetados, donde se identifican manualmente los documentos más relevantes para ciertas consultas. 
+    Por otro lado, los sistemas interactivos pueden aprovechar el feedback del usuario, analizando clics, tiempo de lectura o valoraciones para ajustar la selección de documentos. 
+    Además, el aprendizaje por refuerzo permite que el modelo refine su estrategia de re-ranking con el tiempo, optimizando la recuperación mediante técnicas como bandits contextuales o algoritmos de refuerzo como REINFORCE. 
+    Este enfoque es ideal para sistemas en evolución continua, ya que mejora la precisión de la información recuperada conforme se acumulan datos de uso real.
+
+\end{itemize}
+
+
+\subsubsection{Contextual RAG}
 
 
 
 
+paper https://arxiv.org/pdf/2312.10997
 
 
-% \subsection{Prompt Engineering}
+introduccion a RAG 
 
-% \subsection{Retrieval Augmented Generation (RAG)}
+tipos de rag segun el paper: naive, advanced y modular
+
+tecnicas de mejora de rag
+
+busqueda hibrida
+
+reranking
+
+contextual rag
+
+combinacion con sql
+
+
+
+
 
 % \subsection{Agentes Inteligentes}
 

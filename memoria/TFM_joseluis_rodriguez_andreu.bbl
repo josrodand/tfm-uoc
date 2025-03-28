@@ -40,6 +40,28 @@ M~Asikri¹, S~Krit, Hassan Chaib, and Krit Salah-ddine.
 \newblock Using web scraping in a knowledge environment to build ontologies using python and scrapy.
 \newblock {\em European Journal of Translational and Clinical Medicine}, 7:433--442, 10 2020.
 
+\bibitem{hybridsearch}
+Ashish Bansal.
+\newblock Optimizing rag with hybrid search and contextual chunking.
+\newblock {\em Journal of Engineering and Applied Sciences Technology}, pages 1--5, 08 2023.
+
+\bibitem{brown2020language}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, et~al.
+\newblock Language models are few-shot learners.
+\newblock {\em arXiv preprint arXiv:2005.14165}, 2020.
+
+\bibitem{brown2020languagemodelsfewshotlearners}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, et~al.
+\newblock Language models are few-shot learners, 2020.
+
+\bibitem{deepseekai2024deepseekllmscalingopensource}
+DeepSeek-AI, :, Xiao Bi, Deli Chen, Guanting Chen, et~al.
+\newblock Deepseek llm: Scaling open-source language models with longtermism, 2024.
+
+\bibitem{deepseekai2024deepseekv2strongeconomicalefficient}
+DeepSeek-AI, Aixin Liu, Bei Feng, et~al.
+\newblock Deepseek-v2: A strong, economical, and efficient mixture-of-experts language model, 2024.
+
 \bibitem{devlin2019bertpretrainingdeepbidirectional}
 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
 \newblock Bert: Pre-training of deep bidirectional transformers for language understanding, 2019.
@@ -49,8 +71,12 @@ Liangping Ding, Cornelia Lawson, and Philip Shapira.
 \newblock Rise of generative artificial intelligence in science, 2024.
 
 \bibitem{goodfellow2014generativeadversarialnetworks}
-Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, et~al.
 \newblock Generative adversarial networks, 2014.
+
+\bibitem{grattafiori2024llama3herdmodels}
+Aaron Grattafiori, Abhimanyu Dubey, Abhinav Jauhri, et~al.
+\newblock The llama 3 herd of models, 2024.
 
 \bibitem{Gunawan}
 Rohmat Gunawan, Alam Rahmatulloh, Irfan Darmawan, and Firman Firdaus.
@@ -66,6 +92,15 @@ Thilo Hagendorff.
 Emmanouil Ikonomakis, Sotiris Kotsiantis, and V.~Tampakas.
 \newblock Text classification using machine learning techniques.
 \newblock {\em WSEAS transactions on computers}, 4:966--974, 08 2005.
+
+\bibitem{ilin2023advanced}
+Ivan Ilin.
+\newblock Advanced rag techniques: an illustrated overview.
+\newblock {\em Towards AI}, 2023.
+
+\bibitem{jiang2023mistral7b}
+Albert~Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, et~al.
+\newblock Mistral 7b, 2023.
 
 \bibitem{Khurana_2022}
 Diksha Khurana, Aditya Koli, Kiran Khatter, and Sukhdev Singh.
@@ -88,15 +123,32 @@ Deepika Kumawat and Vinesh Jain.
 \newblock Pos tagging approaches: A comparison.
 \newblock {\em International Journal of Computer Applications}, 118:32--38, 05 2015.
 
+\bibitem{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks, 2021.
+
+\bibitem{Liu_2023}
+Yiheng Liu, Tianle Han, Siyuan Ma, Jiayue Zhang, Yuanyuan Yang, othersiaming, Hao He, Antong Li, Mengshen He, Zhengliang Liu, et~al.
+\newblock Summary of chatgpt-related research and perspective towards the future of large language models.
+\newblock {\em Meta-Radiology}, 1(2):100017, September 2023.
+
 \bibitem{inbook}
 Chaimaa Lotfi, Swetha Srinivasan, Myriam Ertz, and Imen Latrous.
 \newblock {\em Web Scraping Techniques and Applications: A Literature Review}, pages 381--394.
 \newblock 01 2021.
 
+\bibitem{lou2024largelanguagemodelinstruction}
+Renze Lou, Kai Zhang, and Wenpeng Yin.
+\newblock Large language model instruction following: A survey of progresses and challenges, 2024.
+
 \bibitem{9274270}
 Stephanie Lunn, Jia Zhu, and Monique Ross.
 \newblock Utilizing web scraping and natural language processing to better inform pedagogical practice.
 \newblock pages 1--9, 2020.
+
+\bibitem{ma2023queryrewritingretrievalaugmentedlarge}
+Xinbei Ma, Yeyun Gong, Pengcheng He, Hai Zhao, and Nan Duan.
+\newblock Query rewriting for retrieval-augmented large language models, 2023.
 
 \bibitem{9142938}
 K~Usha Manjari, Syed Rousha, Dasi Sumanth, and J~Sirisha~Devi.
@@ -117,10 +169,28 @@ Briony~June Oates.
 \newblock Researching information systems and computing.
 \newblock 2005.
 
+\bibitem{openai2024gpt4technicalreport}
+OpenAI, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, et~al.
+\newblock Gpt-4 technical report, 2024.
+
+\bibitem{openai2024gpt4ocard}
+OpenAI, Aaron Hurst, Adam Lerer, et~al.
+\newblock Gpt-4o system card, 2024.
+
 \bibitem{bow}
 Wisam Qader, Musa M.~Ameen, and Bilal Ahmed.
 \newblock An overview of bag of words;importance, implementation, applications, and challenges.
 \newblock pages 200--204, 06 2019.
+
+\bibitem{radford2019language}
+Alec Radford, Jeff Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever.
+\newblock Language models are unsupervised multitask learners.
+\newblock 2019.
+
+\bibitem{radford2019}
+Alec Radford, Jeff Wu, Rewon Child, David Luan, Dario Amodei, and Ilya Sutskever.
+\newblock Language models are unsupervised multitask learners, 2019.
+\newblock OpenAI Blog.
 
 \bibitem{raffel2023exploringlimitstransferlearning}
 Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter~J. Liu.
@@ -129,6 +199,10 @@ Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael 
 \bibitem{roy2021recenttrendsnamedentity}
 Arya Roy.
 \newblock Recent trends in named entity recognition (ner), 2021.
+
+\bibitem{sahoo2025systematicsurveypromptengineering}
+Pranab Sahoo, Ayush~Kumar Singh, Sriparna Saha, Vinija Jain, Samrat Mondal, and Aman Chadha.
+\newblock A systematic survey of prompt engineering in large language models: Techniques and applications, 2025.
 
 \bibitem{tfidf}
 Claude Sammut and Geoffrey~I. Webb, editors.
@@ -161,14 +235,30 @@ A.D. Stolyarov, A.V. Abramov, and V.I. Abramov.
 \newblock Generative artificial intelligence for business models innovation:opportunities and limitations.
 \newblock {\em Beneficium}, pages 43--51, 09 2024.
 
+\bibitem{thoppilan2022lamdalanguagemodelsdialog}
+Romal Thoppilan, Daniel~De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, et~al.
+\newblock Lamda: Language models for dialog applications, 2022.
+
 \bibitem{iagengraphicdesign}
 Ivana Tomić, Ivana Jurič, Sandra Dedijer, and Savka Adamovic.
 \newblock Artificial intelligence in graphic design.
 \newblock 09 2023.
 
+\bibitem{touvron2023llamaopenefficientfoundation}
+Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, et~al.
+\newblock Llama: Open and efficient foundation language models, 2023.
+
+\bibitem{touvron2023llama2openfoundation}
+Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, et~al.
+\newblock Llama 2: Open foundation and fine-tuned chat models, 2023.
+
 \bibitem{vaswani2023attentionneed}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
 \newblock Attention is all you need, 2023.
+
+\bibitem{wei2023chainofthoughtpromptingelicitsreasoning}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed~Chi, Quoc Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language models, 2023.
 
 \bibitem{yang2024diffusionmodelscomprehensivesurvey}
 Ling Yang, Zhilong Zhang, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao Zhang, Bin Cui, and Ming-Hsuan Yang.
@@ -177,6 +267,10 @@ Ling Yang, Zhilong Zhang, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao 
 \bibitem{yenduri2023generativepretrainedtransformercomprehensive}
 Gokul Yenduri, Ramalingam M, Chemmalar~Selvi G, Supriya Y, Gautam Srivastava, Praveen Kumar~Reddy Maddikunta, Deepti~Raj G, Rutvij~H Jhaveri, Prabadevi B, Weizheng Wang, Athanasios~V. Vasilakos, and Thippa~Reddy Gadekallu.
 \newblock Generative pre-trained transformer: A comprehensive review on enabling technologies, potential applications, emerging challenges, and future directions, 2023.
+
+\bibitem{yu2023generateretrievelargelanguage}
+Wenhao Yu, Dan Iter, Shuohang Wang, Yichong Xu, Mingxuan Ju, Soumya Sanyal, Chenguang Zhu, Michael Zeng, and Meng Jiang.
+\newblock Generate rather than retrieve: Large language models are strong context generators, 2023.
 
 \bibitem{zhang2020surveysyntacticsemanticparsingbased}
 Meishan Zhang.

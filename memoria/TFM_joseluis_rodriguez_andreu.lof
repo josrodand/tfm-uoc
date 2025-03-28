@@ -3,3 +3,8 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Timeline de tareas}}{8}{figure.1.1}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Arquitectura transformer}}{20}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Flujo del prompt engineering}}{31}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces flujo de RAG}}{34}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Tipos de RAG}}{37}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Flujo de búsqueda híbrida}}{38}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Esquema de Reranking}}{39}{figure.2.6}%
