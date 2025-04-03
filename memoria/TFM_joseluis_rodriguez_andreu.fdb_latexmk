@@ -1,24 +1,24 @@
 # Fdb version 4
-["bibtex TFM_joseluis_rodriguez_andreu"] 1743106968.47376 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1743106973.61201 0
-  "./referencias.bib" 1743093203 24030 eaa31c1f64bd4b9295bce41ed7df3d06 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1743106971 14233 2de84d2749fc6a71007a2590f28ca738 "pdflatex"
+["bibtex TFM_joseluis_rodriguez_andreu"] 1743263592.74904 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1743263596.40273 0
+  "./referencias.bib" 1743262743 28508 ea58246e1cbc429f7500d86fde070456 ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1743263595 16029 7c2865500f333e00026303cdfc14dfa0 "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1740402916 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "TFM_joseluis_rodriguez_andreu.bbl"
   "TFM_joseluis_rodriguez_andreu.blg"
   (rewritten before read)
-["pdflatex"] 1743106969.22656 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1743106973.61317 0
+["pdflatex"] 1743263593.27864 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1743263596.40369 0
   "0_resumen.tex" 1742292576 5760 a3dd052f4842c3c9d5950abcf1d421e8 ""
   "0_titulo.tex" 1742312702 1200 738f65d395098a713cd1c1f587a0be8a ""
-  "1_introduccion.tex" 1743106962 12143 b8f8f6d983a7547254749d4686b7c7d8 ""
-  "2_estado_del_arte.tex" 1743106880 80466 d2933af8badfffc096d3a18bc5bd9cf1 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1743106971 14233 2de84d2749fc6a71007a2590f28ca738 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.bbl" 1743106969 12271 3c40d2444fd10c448a98ba015e34e513 "bibtex TFM_joseluis_rodriguez_andreu"
-  "TFM_joseluis_rodriguez_andreu.lof" 1743106972 735 f4d1c23cf2a4e0323202a2ffa2bfbff2 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.lot" 1743106972 70 8fe2ab9072681f28727538b78de0125c "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.out" 1743106972 7271 f42260ec94af277c9afb33aaa2b8cf3a "pdflatex"
+  "1_introduccion.tex" 1743106980 12143 b8f8f6d983a7547254749d4686b7c7d8 ""
+  "2_estado_del_arte.tex" 1743263588 89950 3cfb201bd4569662112834b495618c15 ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1743263595 16029 7c2865500f333e00026303cdfc14dfa0 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.bbl" 1743263593 14436 a512c36ae2f6055ce2fd215b970ced3b "bibtex TFM_joseluis_rodriguez_andreu"
+  "TFM_joseluis_rodriguez_andreu.lof" 1743263595 949 50d810104d629313cd1a681fbc723b5f "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.lot" 1743263595 70 8fe2ab9072681f28727538b78de0125c "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.out" 1743263595 7376 97ffafa1adde1860c7dd92ed26c224c2 "pdflatex"
   "TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
-  "TFM_joseluis_rodriguez_andreu.toc" 1743106972 4343 2f5b41fd67cef3d675463b3df29cbddb "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.toc" 1743263595 4494 9cacc40e80cc89c06ce8589b151e7c6f "pdflatex"
   "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1740403271 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1740404314 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -130,6 +130,8 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1740409354 5512713 1e2df2d1e914a8052c604db674da6db6 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740409644 3352886 db8b5e5cdc6956e817151b10fce306f0 ""
   "c:/texlive/2024/texmf.cnf" 1740409308 713 e69b156964470283e0530f5060668171 ""
+  "figs/agentic_rag.png" 1743263302 22193 c45711c1acf7501cea12d7740d2f4a16 ""
+  "figs/contextual_retrieval.png" 1743169653 256352 6a2c44df80c9e6081eeeb92d85a5cf29 ""
   "figs/gantt.png" 1741190344 32261 d1570e0fb1764c85411b8f5c8de7fbf8 ""
   "figs/hybrid_search.png" 1743093870 207390 7b6bf57f0307b7285e8de35a8b34bed5 ""
   "figs/prompt_engineering.png" 1742906966 29519 2f9a2df272f049ef2a9f3b4b2226b84b ""

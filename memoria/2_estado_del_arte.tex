@@ -263,7 +263,7 @@ Los transformers emplean un mecanismo llamado self-attention, que les permite as
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6\textwidth]{figs/transformer_arquitecture.png}
-	\caption{Arquitectura transformer}
+	\caption{Arquitectura Transformer}
 	\label{fig:context-anoni1}
 \end{figure}
 
@@ -395,7 +395,7 @@ Principales avances en LLaMA 3:
 LLaMA 3 sigue siendo una opción accesible para la investigación en el ámbito de los LLMs, brindando una combinación de potencia y eficiencia.
 
 
-\subsection{deepseek V2}
+\subsection{DeepSeek V2}
 
 En 2024, DeepSeek AI presentó DeepSeek V2, una versión mejorada de su modelo de búsqueda semántica \cite{deepseekai2024deepseekv2strongeconomicalefficient}. 
 Esta versión avanzó notablemente en la precisión y adaptabilidad de los resultados, especialmente al integrar capacidades multimodales y mejorar la generación de respuestas contextualizadas en tiempo real.
@@ -687,7 +687,7 @@ Su propósito es reorganizar la lista de documentos obtenida en la fase de recup
 
 En los sistemas RAG, la primera fase de búsqueda (ya sea exacta, densa o híbrida) devuelve un conjunto de documentos ordenados por su similitud con la consulta. 
 Sin embargo, este orden inicial no siempre es el óptimo, ya que los métodos de recuperación pueden devolver documentos parcialmente relevantes o incluso irrelevantes. 
-Aquí es donde entra el re-ranking, aplicando técnicas avanzadas para mejorar la selección final de documentos que serán procesados por el modelo generador.
+Aquí es donde entra el re-ranking, aplicando técnicas avanzadas para mejorar la selección final de documentos que serán procesados por el modelo generador \cite{mortaheb2025rerankingcontextmultimodalretrieval}.
 
 \begin{figure}[h]
 	\centering
@@ -700,17 +700,17 @@ Existen varios enfoques para realizar el re-ranking en sistemas RAG. Estos méto
 
 \begin{itemize}
     \item \textbf{Re-ranking basado en heurísticas}: Este enfoque utiliza reglas predefinidas y métricas estadísticas para reordenar los documentos recuperados sin necesidad de modelos de aprendizaje profundo. 
-    Algunos métodos comunes incluyen algoritmos como TF-IDF o BM25 ajustado, que prioriza documentos donde los términos clave aparecen con mayor frecuencia y relevancia, y el criterio de posición de aparición, que favorece documentos donde las palabras clave se encuentran al inicio del texto. 
+    Algunos métodos comunes incluyen algoritmos como TF-IDF o BM25 \cite{llordes2023explainlikeibm25}, que prioriza documentos donde los términos clave aparecen con mayor frecuencia y relevancia, y el criterio de posición de aparición, que favorece documentos donde las palabras clave se encuentran al inicio del texto. 
     También puede aplicarse un filtro basado en la longitud del documento, dando prioridad a textos más concisos si se asume que contienen información más relevante. 
     Aunque este método es rápido y eficiente, su principal limitación es que no tiene en cuenta el significado semántico de las palabras, lo que puede afectar la precisión de la recuperación en consultas más complejas.
 
     \item \textbf{Re-ranking con modelos de lenguaje}: En este método, se utilizan modelos del lenguaje para evaluar la relevancia semántica de los documentos con respecto a la consulta. 
     Modelos como BERT Cross-Encoder procesan cada consulta junto con un documento y generan una puntuación de relevancia basada en su relación semántica. 
     MonoT5, por otro lado, reformula la tarea de re-ranking como un problema de clasificación, asignando una probabilidad a cada documento según su pertinencia. 
-    Otra alternativa es ColBERT (Contextualized Late Interaction BERT), que optimiza la comparación de embeddings para equilibrar precisión y eficiencia. 
+    Otra alternativa es ColBERT (Contextualized Late Interaction BERT) \cite{khattab2020colbertefficienteffectivepassage}, que optimiza la comparación de embeddings para equilibrar precisión y eficiencia. 
     Aunque estos modelos mejoran significativamente la calidad del ranking, requieren más recursos computacionales, lo que puede dificultar su implementación en sistemas de respuesta en tiempo real sin optimización adecuada.
 
-    \item \textbf{Re-ranking basado en feedback y aprendizaje reforzado}: Este enfoque se basa en el ajuste dinámico del ranking mediante el aprendizaje a partir de datos históricos o interacciones del usuario. 
+    \item \textbf{Re-ranking basado en feedback y aprendizaje reforzado}: Este enfoque se basa en el ajuste dinámico del ranking mediante el aprendizaje a partir de datos históricos o interacciones del usuario \cite{Nguyen2024}. 
     En el aprendizaje supervisado, los modelos son entrenados con conjuntos de datos etiquetados, donde se identifican manualmente los documentos más relevantes para ciertas consultas. 
     Por otro lado, los sistemas interactivos pueden aprovechar el feedback del usuario, analizando clics, tiempo de lectura o valoraciones para ajustar la selección de documentos. 
     Además, el aprendizaje por refuerzo permite que el modelo refine su estrategia de re-ranking con el tiempo, optimizando la recuperación mediante técnicas como bandits contextuales o algoritmos de refuerzo como REINFORCE. 
@@ -721,32 +721,116 @@ Existen varios enfoques para realizar el re-ranking en sistemas RAG. Estos méto
 
 \subsubsection{Contextual RAG}
 
+En el RAG tradicional, los documentos suelen dividirse en fragmentos más pequeños para facilitar la recuperación. 
+Aunque este enfoque funciona bien para muchas aplicaciones, puede generar problemas cuando los fragmentos individuales carecen de suficiente contexto.
+
+La Recuperación Contextual(Contextual Retrieval) resuelve este problema añadiendo un contexto explicativo específico del fragmento antes de realizar el embedding \cite{veturi2024ragbasedquestionansweringcontextual}.
+
+% \newpage
+
+Anthropic presenta el concepto de Recuperación Contextual como una mejora en los sistemas RAG \cite{Anthropic2024}. 
+La técnica agrega contexto específico a los fragmentos de información mediante embeddings contextuales y la creación de un índice BM25 contextual, lo que reduce significativamente los errores de recuperación.
+
+La Recuperación Contextual soluciona los problemas asociados con la falta de contexto al agregar información relevante específica para cada fragmento recuperado antes de su procesamiento. Esto se logra mediante dos sub-técnicas clave:
+
+\begin{itemize}
+    \item \textbf{Embeddings Contextuales}: Se mejora la representación semántica de los fragmentos al añadir información adicional antes de la codificación. Esto asegura que cada fragmento de texto mantenga la relevancia contextual al momento de ser procesado.
+    \item \textbf{BM25 Contextual}: Se utiliza el índice BM25, un algoritmo tradicional de recuperación, mejorado con contexto adicional. Esto permite realizar una búsqueda más precisa y relevante mediante coincidencias léxicas, integrando la semántica de los fragmentos.
+\end{itemize}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/contextual_retrieval.png}
+	\caption{Contextual retrieval propuesto por Anthropic}
+	\label{fig:context-anoni1}
+\end{figure}
+
+
+Al integrar estas técnicas, se logran mejoras significativas en la precisión y relevancia de la recuperación de información. 
+En estudios y pruebas, se ha demostrado que esta metodología reduce los errores de recuperación en un 49\%. 
+Además, cuando se combina con técnicas de re-ranking, los resultados mejoran aún más, alcanzando un 67\% de mejora en la precisión de las respuestas generadas por los modelos.
+
+Este enfoque es especialmente útil en sistemas que manejan grandes volúmenes de datos, como bases de conocimiento extensas, ya que el contexto adicional mejora la relevancia de los fragmentos recuperados. 
+A su vez, esto garantiza que las respuestas generadas sean más precisas y alineadas con la consulta original del usuario.
+
+Además, la implementación de \textbf{prompt caching} (almacenamiento de fragmentos frecuentes) en este sistema optimiza los costos y reduce la latencia. 
+Con esta técnica, los desarrolladores pueden almacenar consultas previas y reutilizarlas, mejorando el rendimiento y haciendo que las respuestas sean más rápidas y menos costosas de generar.
+
+La Recuperación Contextual mejora sustancialmente los sistemas RAG al permitir que los fragmentos de información sean procesados de manera más inteligente y precisa. 
+Esto no solo reduce los fallos en la recuperación de datos, sino que también optimiza la calidad de las respuestas generadas por modelos de IA. 
+Es una solución eficiente y escalable para aplicaciones que requieren una alta precisión en la recuperación de información.
+
+Se han propuesto otros enfoques para utilizar el contexto y mejorar la recuperación. 
+Algunas propuestas incluyen: añadir resúmenes genéricos de documentos a los fragmentos \cite{10.3115/1118162.1118167}, embedding hipotético de documentos \cite{gao2022precisezeroshotdenseretrieval} e indexación basada en resúmenes \cite{LlamaIndex2024}.
+
+\subsubsection{Agentic RAG}
+
+El RAG Agéntico representa un cambio de paradigma al incorporar agentes autónomos capaces de tomar decisiones dinámicas y optimizar flujos de trabajo \cite{singh2025agenticretrievalaugmentedgenerationsurvey}. 
+A diferencia de los sistemas estáticos, el RAG Agéntico implementa refinamiento iterativo y estrategias de recuperación adaptativa para abordar consultas complejas, en tiempo real y multidominio. 
+Este enfoque aprovecha la modularidad de los procesos de recuperación y generación, al tiempo que introduce autonomía basada en agentes.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/agentic_rag.png}
+	\caption{Flujo de Agentic RAG}
+	\label{fig:context-anoni1}
+\end{figure}
+
+Las características clave del Agentic RAG incluyen:
+\begin{itemize}
+    \item \textbf{Toma de Decisiones Autónoma}: Los agentes evalúan y gestionan de manera independiente las estrategias de recuperación según la complejidad de la consulta.
+    \item \textbf{Refinamiento Iterativo}: Incorpora bucles de retroalimentación para mejorar la precisión en la recuperación y la relevancia de las respuestas.
+    \item \textbf{Optimización del Flujo de Trabajo}: Orquesta dinámicamente las tareas, permitiendo eficiencia en aplicaciones en tiempo real.
+\end{itemize}
+
+Si bien los agentes pueden incorporarse en diferentes etapas del pipeline de RAG, el término RAG Agéntico generalmente se refiere al uso de agentes en el componente de recuperación.
+Específicamente, el componente de recuperación se vuelve agéntico mediante el uso de agentes de recuperación con acceso a diversas herramientas de recuperación, tales como:
+
+\begin{itemize}
+    \item Motores de búsqueda vectorial (también llamados motores de consulta) que realizan búsquedas vectoriales sobre un índice vectorial (como en pipelines RAG tradicionales).
+    \item Búsqueda web.
+    \item Calculadoras.
+    \item APIs para acceder a software de manera programática, como programas de correo electrónico o chat.
+\end{itemize}
+
+El agente de RAG puede razonar y actuar en diversos escenarios de recuperación, por ejemplo:
+
+\begin{itemize}
+    \item Decidir si es necesario recuperar información o no.
+    \item Elegir qué herramienta utilizar para recuperar información relevante.
+    \item Formular la consulta de búsqueda.
+    \item Evaluar el contexto recuperado y determinar si es necesario realizar una nueva recuperación.
+\end{itemize}
+
+A diferencia de la arquitectura secuencial y simplista del RAG tradicional, el núcleo del Agentic RAG es el agente. 
+Las arquitecturas de RAG Agéntico pueden presentar distintos niveles de complejidad. 
+En su forma más simple, una arquitectura RAG de agente único actúa como un simple enrutador. 
+Sin embargo, también es posible incorporar múltiples agentes dentro de una arquitectura RAG multiagente.
+
+Existen por lo tanto dos arquitecturas principales en Agentic RAG \cite{cardenas2024agenticrag}:
+
+\begin{itemize}
+    \item \textbf{RAG de Agente Único (Router)}: En su forma más simple, el RAG Agéntico funciona como un router. Esto significa que hay al menos dos fuentes de conocimiento externas, y el agente decide de cuál recuperar contexto adicional.
+    Sin embargo, estas fuentes de conocimiento externas no se limitan únicamente a bases de datos (vectoriales). También es posible recuperar información a través de herramientas adicionales. Por ejemplo, se puede realizar una búsqueda web o utilizar una API para obtener información de diversas fuentes.
+    \item \textbf{Sistemas RAG Multiagente}: Como es de esperar, el sistema de agente único tiene sus limitaciones, ya que concentra en un solo agente las tareas de razonamiento, recuperación y generación de respuestas. Por ello, resulta beneficioso encadenar múltiples agentes dentro de una aplicación RAG multiagente.
+    Por ejemplo, se puede emplear un agente maestro que coordine la recuperación de información entre múltiples agentes especializados. Un agente podría encargarse de recuperar información de fuentes de datos internas propietarias. Otro agente podría especializarse en la recuperación de datos de cuentas personales, como correos electrónicos o chats. Un tercer agente podría enfocarse en recuperar información pública a través de búsquedas web.
+\end{itemize}
 
 
 
-paper https://arxiv.org/pdf/2312.10997
+A pesar de sus avances, el RAG Agéntico enfrenta algunos desafíos:
+\begin{itemize}
+    \item \textbf{Complejidad en la Coordinación}: La gestión de interacciones entre agentes requiere mecanismos de orquestación sofisticados.
+    \item \textbf{Sobrecarga Computacional}: El uso de múltiples agentes incrementa los requisitos de recursos para flujos de trabajo complejos.
+    \item \textbf{Limitaciones de Escalabilidad}: Aunque es escalable, la naturaleza dinámica del sistema puede generar una carga significativa en los recursos computacionales ante volúmenes elevados de consultas.
+\end{itemize}
+
+El RAG Agéntico sobresale en dominios como el soporte al cliente, el análisis financiero y las plataformas de aprendizaje adaptativo, donde la adaptabilidad dinámica y la precisión contextual son fundamentales.
 
 
-introduccion a RAG 
+\section{Conclusiones}
 
-tipos de rag segun el paper: naive, advanced y modular
-
-tecnicas de mejora de rag
-
-busqueda hibrida
-
-reranking
-
-contextual rag
-
-combinacion con sql
-
-
-
-
-
-% \subsection{Agentes Inteligentes}
-
-% \section{Tecnologías y métodos actuales}
-
-% \section{conclusiones}
+Con esta revisión del estado del arte se ha hecho una recopilación de las principales herramientas y tecnologías mas clásicas asociadas a soluciones como la que abarca el proyecto.
+Del mismo modo, se ha realizado una revisión de los últimos avances en Inteligencia Artificial y Procesamiento de Lenguaje Natural, así como una evolución de los distintos Grandes Modelos del Lenguaje que han ido surgiendo, junto a sus tecnologías asociadas.
+Todo esto nos servirá de base a la hora de abordar el desarrollo de la solución final, donde nos centraremos en las tecnologías mas específicas que se emplearán.

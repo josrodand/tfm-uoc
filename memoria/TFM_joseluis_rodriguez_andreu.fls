@@ -276,6 +276,16 @@ INPUT ./figs/rerank.jpg
 INPUT ./figs/rerank.jpg
 INPUT ./figs/rerank.jpg
 INPUT ./figs/rerank.jpg
+INPUT ./figs/contextual_retrieval.png
+INPUT ./figs/contextual_retrieval.png
+INPUT ./figs/contextual_retrieval.png
+INPUT ./figs/contextual_retrieval.png
+INPUT ./figs/contextual_retrieval.png
+INPUT ./figs/agentic_rag.png
+INPUT ./figs/agentic_rag.png
+INPUT ./figs/agentic_rag.png
+INPUT ./figs/agentic_rag.png
+INPUT ./figs/agentic_rag.png
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT ./TFM_joseluis_rodriguez_andreu.bbl
 INPUT TFM_joseluis_rodriguez_andreu.bbl

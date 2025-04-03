@@ -25,6 +25,11 @@ Sociedad para el desarrollo ragional de cantabria, https://ayudas.sodercan.es/ay
 Felipe Almeida and Geraldo Xexéo.
 \newblock Word embeddings: A survey, 2023.
 
+\bibitem{Anthropic2024}
+Anthropic.
+\newblock Contextual retrieval, 2024.
+\newblock Accessed: 2025-03-29.
+
 \bibitem{miningweb}
 M.~El Asikri, S.~Krit, H.~Chaib, M.~Kabrane, H.~Ouadani, K.~Karimi, K.~Bendaouad, and H.~Elbousty.
 \newblock Mining the web for learning ontologies: State of art and critical review.
@@ -54,6 +59,11 @@ Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, et~al.
 Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, et~al.
 \newblock Language models are few-shot learners, 2020.
 
+\bibitem{cardenas2024agenticrag}
+Erika Cardenas and Leonie Monigatti.
+\newblock What is agentic rag.
+\newblock November 2024.
+
 \bibitem{deepseekai2024deepseekllmscalingopensource}
 DeepSeek-AI, :, Xiao Bi, Deli Chen, Guanting Chen, et~al.
 \newblock Deepseek llm: Scaling open-source language models with longtermism, 2024.
@@ -69,6 +79,10 @@ Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
 \bibitem{ding2024risegenerativeartificialintelligence}
 Liangping Ding, Cornelia Lawson, and Philip Shapira.
 \newblock Rise of generative artificial intelligence in science, 2024.
+
+\bibitem{gao2022precisezeroshotdenseretrieval}
+Luyu Gao, Xueguang Ma, Jimmy Lin, and Jamie Callan.
+\newblock Precise zero-shot dense retrieval without relevance labels, 2022.
 
 \bibitem{goodfellow2014generativeadversarialnetworks}
 Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, et~al.
@@ -102,6 +116,10 @@ Ivan Ilin.
 Albert~Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, et~al.
 \newblock Mistral 7b, 2023.
 
+\bibitem{khattab2020colbertefficienteffectivepassage}
+Omar Khattab and Matei Zaharia.
+\newblock Colbert: Efficient and effective passage search via contextualized late interaction over bert, 2020.
+
 \bibitem{Khurana_2022}
 Diksha Khurana, Aditya Koli, Kiran Khatter, and Sukhdev Singh.
 \newblock Natural language processing: state of the art, current trends and challenges.
@@ -131,6 +149,15 @@ Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin
 Yiheng Liu, Tianle Han, Siyuan Ma, Jiayue Zhang, Yuanyuan Yang, othersiaming, Hao He, Antong Li, Mengshen He, Zhengliang Liu, et~al.
 \newblock Summary of chatgpt-related research and perspective towards the future of large language models.
 \newblock {\em Meta-Radiology}, 1(2):100017, September 2023.
+
+\bibitem{LlamaIndex2024}
+LlamaIndex.
+\newblock A new document summary index for llm-powered qa systems, 2024.
+\newblock Accessed: 2025-03-29.
+
+\bibitem{llordes2023explainlikeibm25}
+Michael Llordes, Debasis Ganguly, Sumit Bhatia, and Chirag Agarwal.
+\newblock Explain like i am bm25: Interpreting a dense model's ranked-list with a sparse approximation, 2023.
 
 \bibitem{inbook}
 Chaimaa Lotfi, Swetha Srinivasan, Myriam Ertz, and Imen Latrous.
@@ -163,6 +190,15 @@ Laia~Subirats Maté and Mireia~Calvo González.
 \bibitem{oreilywebacraping}
 R.~(2018) Mitchell.
 \newblock Web scraping with python: Collecting more data from the modern web. o'reilly media, inc., 2018.
+
+\bibitem{mortaheb2025rerankingcontextmultimodalretrieval}
+Matin Mortaheb, Mohammad A.~Amir Khojastepour, Srimat~T. Chakradhar, and Sennur Ulukus.
+\newblock Re-ranking the context for multimodal retrieval augmented generation, 2025.
+
+\bibitem{Nguyen2024}
+M.~Nguyen, T.Q. Nguyen, K.~KC, Z.~Zhang, and T.~Vu.
+\newblock Reinforcement learning from answer reranking feedback for retrieval-augmented answer generation.
+\newblock In {\em Proceedings of Interspeech 2024}, pages 4044--4048, 2024.
 
 \bibitem{Oates2005ResearchingIS}
 Briony~June Oates.
@@ -226,6 +262,10 @@ Robin~M. Schmidt.
 Sandeep~Singh Sengar, Affan~Bin Hasan, Sanjay Kumar, and Fiona Carroll.
 \newblock Generative artificial intelligence: A systematic review and applications, 2024.
 
+\bibitem{singh2025agenticretrievalaugmentedgenerationsurvey}
+Aditi Singh, Abul Ehtesham, Saket Kumar, and Tala~Talaei Khoei.
+\newblock Agentic retrieval-augmented generation: A survey on agentic rag, 2025.
+
 \bibitem{staudemeyer2019understandinglstmtutorial}
 Ralf~C. Staudemeyer and Eric~Rothstein Morris.
 \newblock Understanding lstm -- a tutorial into long short-term memory recurrent neural networks, 2019.
@@ -255,6 +295,15 @@ Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, et~al.
 \bibitem{vaswani2023attentionneed}
 Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
 \newblock Attention is all you need, 2023.
+
+\bibitem{veturi2024ragbasedquestionansweringcontextual}
+Sriram Veturi, Saurabh Vaichal, Reshma~Lal Jagadheesh, Nafis~Irtiza Tripto, and Nian Yan.
+\newblock Rag based question-answering for contextual response prediction system, 2024.
+
+\bibitem{10.3115/1118162.1118167}
+Mark Wasson.
+\newblock Using summaries in document retrieval.
+\newblock In {\em Proceedings of the ACL-02 Workshop on Automatic Summarization - Volume 4}, AS '02, page 27–44, USA, 2002. Association for Computational Linguistics.
 
 \bibitem{wei2023chainofthoughtpromptingelicitsreasoning}
 Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed~Chi, Quoc Le, and Denny Zhou.
