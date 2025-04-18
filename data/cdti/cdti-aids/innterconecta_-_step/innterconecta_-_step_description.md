@@ -1,0 +1,3 @@
+# INNTERCONECTA - STEP
+La actuación denominada "Consorcios Regionales (INNTERCONECTA STEP) tiene como objetivo la financiación de proyectos de I+D en cooperación, con un enfoque regional, liderados por empresas, que persigan una investigación relevante basada en tecnologías disruptivas y que propongan soluciones a desafíos estratégicos en el ámbito de las Tecnologías Estratégicas para Europa (STEP). 
+Con la convocatoria INNTERCONECTA STEP se pretende mejorar el posicionamiento estratégico y competitivo de la industria española, al tiempo que se fomenta la cooperación público-privada.

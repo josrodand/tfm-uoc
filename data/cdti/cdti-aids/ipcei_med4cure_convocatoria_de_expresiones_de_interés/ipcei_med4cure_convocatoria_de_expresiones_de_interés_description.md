@@ -1,0 +1,2 @@
+# IPCEI Med4Cure: Convocatoria de Expresiones de Interés
+Es un proyecto estratégico a nivel europeo, con la participación de varios países, que mejorará la investigación y el desarrollo de capacidades industriales sanitarias en Europa 

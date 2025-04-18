@@ -16,7 +16,7 @@ Convocatoria de asignación directa a proyectos individuales de I+D.
 La convocatoria estará abierta del 7 de marzo al 21 de marzo de 2025, hasta las 12:00 horas del mediodía, hora peninsular.
 
 # Estado de la convocatoria
-Abierta.
+Cerrada.
 
 # Tipo de la ayuda
 Las ayudas se otorgarán en régimen de concesión directa.

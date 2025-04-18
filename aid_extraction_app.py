@@ -1,4 +1,4 @@
-from extractor.cdti.cdti_extractor_pipeline import CDTIExtractorPipeline
+from src.extraction.cdti.cdti_extractor_pipeline import CDTIExtractorPipeline
 
 
 if __name__ == "__main__":
