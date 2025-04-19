@@ -10,5 +10,9 @@ langchain-core
 langchain-community
 langchain-openai
 langchain-aws
+langchain-chroma
+langchain-qdrant
+qdrant-client
 openai
 pypdf
+pdfplumber
