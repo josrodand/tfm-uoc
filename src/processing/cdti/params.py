@@ -1,0 +1,1 @@
+DATA_PATH = "data/cdti/cdti-aids"
