@@ -1,3 +1,5 @@
+PROCESSING_OUTPUT_DIR = "data/processing/"
+
 PROCESSING_VARIABLES = [
     'organismo',
     'nombre',
@@ -15,7 +17,7 @@ PROCESSING_VARIABLES = [
     'intensidad_de_subvencion',
     'intensidad_del_prestamo',
     'tipo_financiacion',
-    'forma_y_plazo_de_cobro'
+    'forma_y_plazo_de_cobro',
     'minimis',
     'region_de_aplicacion',
     'tipo_de_consorcio',

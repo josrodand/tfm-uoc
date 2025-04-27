@@ -1,3 +1,0 @@
-# Innvierte
-El programa INNVIERTE forma parte de la Estrategia Española de Ciencia y Tecnología y de Innovación, aprobada por Acuerdo del Consejo de Ministros, el 1 de febrero de 2013. Esta Estrategia contiene los objetivos, las reformas y las medidas que deben adoptarse en todo el ámbito de la I+D+i con el fin de impulsar su crecimiento e impacto, y es uno de los pilares sobre los que se asienta el diseño de la política del Gobierno en I+D+i para los próximos años.
-Si quieres saber más sobre esta ayuda, accede al siguiente enlace
