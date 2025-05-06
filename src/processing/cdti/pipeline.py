@@ -100,7 +100,6 @@ class CDTIProcessingPipeline:
         return df_cleaned
 
 
-
     def run_pipeline(self, persist = True):
 
         aid_list = get_aid_list(self.data_path)

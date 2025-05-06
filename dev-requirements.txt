@@ -12,7 +12,13 @@ langchain-openai
 langchain-aws
 langchain-chroma
 langchain-qdrant
+langgraph
 qdrant-client
+faiss-cpu
+rank_bm25
 openai
 pypdf
 pdfplumber
+IPython
+flashrank
+streamlit

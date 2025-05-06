@@ -1,5 +1,12 @@
 PROCESSING_OUTPUT_DIR = "data/processing/"
 
+RAG_DATA_PATH = "rag_data"
+
+SQLITE_DATA_PATH = "sqlite"
+SQLITE_FILE_NAME = "aids_table.sqlite"
+
+
+
 PROCESSING_VARIABLES = [
     'organismo',
     'nombre',
