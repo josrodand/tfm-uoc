@@ -2,7 +2,7 @@
 \contentsline {chapter}{Abstract}{\es@scroman {ix}}{chapter*.4}%
 \contentsline {chapter}{Resumen}{\es@scroman {xi}}{chapter*.5}%
 \contentsline {chapter}{Índice}{\es@scroman {xiii}}{section*.6}%
-\contentsline {chapter}{Lista de Figuras}{\es@scroman {xv}}{section*.8}%
+\contentsline {chapter}{Lista de Figuras}{\es@scroman {xvii}}{section*.8}%
 \contentsline {chapter}{Lista de Tablas}{1}{section*.10}%
 \contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.1}%
 \contentsline {section}{\numberline {1}Descripción general del problema}{3}{section.1.1}%
@@ -51,4 +51,25 @@
 \contentsline {subsubsection}{\numberline {7.2.3}Contextual RAG}{40}{subsubsection.2.7.2.3}%
 \contentsline {subsubsection}{\numberline {7.2.4}Agentic RAG}{42}{subsubsection.2.7.2.4}%
 \contentsline {section}{\numberline {8}Conclusiones}{44}{section.2.8}%
-\contentsline {chapter}{Bibliografía}{45}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Métodos y recursos}{45}{chapter.3}%
+\contentsline {section}{\numberline {1}Introducción}{45}{section.3.1}%
+\contentsline {subsection}{\numberline {1.1}Descripción general del capítulo}{45}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {1.2}Importancia del diseño, desarrollo e implementación en la investigación}{46}{subsection.3.1.2}%
+\contentsline {section}{\numberline {2}Objetivos y Competencias}{46}{section.3.2}%
+\contentsline {subsection}{\numberline {2.1}Objetivos específicos de esta fase del proyecto}{46}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {2.2}Competencias técnicas y metodológicas requeridas}{47}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3}Diseño del sistema}{48}{section.3.3}%
+\contentsline {subsection}{\numberline {3.1}Arquitectura general}{48}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.2}Flujo de trabajo del sistema}{50}{subsection.3.3.2}%
+\contentsline {section}{\numberline {4}Tecnologías y herramientas}{50}{section.3.4}%
+\contentsline {subsection}{\numberline {4.1}Tecnologías seleccionadas}{50}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {4.2}Implementación del módulo de extracción de datos}{53}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Implementación del módulo específico para CDTI}{53}{subsubsection.3.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Implementación del módulo de procesamiento de datos}{55}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {4.4}Implementación del módulo de construcción de las bases de datos}{55}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {4.5}Implementación del RAG multiagente}{55}{subsection.3.4.5}%
+\contentsline {section}{\numberline {5}Recursos utilizados}{55}{section.3.5}%
+\contentsline {subsection}{\numberline {5.1}Hardware y configuración del entorno}{55}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {5.2}Software, frameworks y librerías}{55}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {5.3}Almacenamiento de datos}{55}{subsection.3.5.3}%
+\contentsline {chapter}{Bibliografía}{56}{subsection.3.5.3}%

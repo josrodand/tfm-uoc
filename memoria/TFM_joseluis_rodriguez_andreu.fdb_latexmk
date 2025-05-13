@@ -1,25 +1,26 @@
 # Fdb version 4
-["bibtex TFM_joseluis_rodriguez_andreu"] 1743263592.74904 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1743263596.40273 0
+["bibtex TFM_joseluis_rodriguez_andreu"] 1747171455.73776 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1747171460.80699 0
   "./referencias.bib" 1743262743 28508 ea58246e1cbc429f7500d86fde070456 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1743263595 16029 7c2865500f333e00026303cdfc14dfa0 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.aux" 1747171459 19423 cadef3159f66e9b32d772fa0be1f9cf6 "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1740402916 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "TFM_joseluis_rodriguez_andreu.bbl"
   "TFM_joseluis_rodriguez_andreu.blg"
   (rewritten before read)
-["pdflatex"] 1743263593.27864 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1743263596.40369 0
+["pdflatex"] 1747171456.37232 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1747171460.80808 0
   "0_resumen.tex" 1742292576 5760 a3dd052f4842c3c9d5950abcf1d421e8 ""
   "0_titulo.tex" 1742312702 1200 738f65d395098a713cd1c1f587a0be8a ""
   "1_introduccion.tex" 1743106980 12143 b8f8f6d983a7547254749d4686b7c7d8 ""
   "2_estado_del_arte.tex" 1743263588 89950 3cfb201bd4569662112834b495618c15 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1743263595 16029 7c2865500f333e00026303cdfc14dfa0 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.bbl" 1743263593 14436 a512c36ae2f6055ce2fd215b970ced3b "bibtex TFM_joseluis_rodriguez_andreu"
-  "TFM_joseluis_rodriguez_andreu.lof" 1743263595 949 50d810104d629313cd1a681fbc723b5f "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.lot" 1743263595 70 8fe2ab9072681f28727538b78de0125c "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.out" 1743263595 7376 97ffafa1adde1860c7dd92ed26c224c2 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
-  "TFM_joseluis_rodriguez_andreu.toc" 1743263595 4494 9cacc40e80cc89c06ce8589b151e7c6f "pdflatex"
-  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1742312039 3327 db5f1e836f9b30c43c7299aa04e1a525 ""
+  "3_metodos_y_recursos.tex" 1747171449 24460 ec92e89b825a705bd12ae9983c37ee75 ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1747171459 19423 cadef3159f66e9b32d772fa0be1f9cf6 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.bbl" 1747171456 14436 a512c36ae2f6055ce2fd215b970ced3b "bibtex TFM_joseluis_rodriguez_andreu"
+  "TFM_joseluis_rodriguez_andreu.lof" 1747171459 1069 83493d8c1d74500717deff3cd543b7b3 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.lot" 1747171459 90 eff724def4bc882b614e3f56c68265e6 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.out" 1747171459 12222 54c4632339b1d2e833779a828ccaf7a2 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.tex" 1746957768 3323 81897472af5870684eb667e08260281f ""
+  "TFM_joseluis_rodriguez_andreu.toc" 1747171459 6646 5301ea7e038ac1a8778895599d1dd5fb "pdflatex"
+  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1746957768 3323 81897472af5870684eb667e08260281f ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1740403271 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1740404314 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1740403856 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -131,6 +132,7 @@
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1740409644 3352886 db8b5e5cdc6956e817151b10fce306f0 ""
   "c:/texlive/2024/texmf.cnf" 1740409308 713 e69b156964470283e0530f5060668171 ""
   "figs/agentic_rag.png" 1743263302 22193 c45711c1acf7501cea12d7740d2f4a16 ""
+  "figs/cdti_matrix.png" 1747170516 98963 3d7f734d1bc85e15ec2661907499ba4d ""
   "figs/contextual_retrieval.png" 1743169653 256352 6a2c44df80c9e6081eeeb92d85a5cf29 ""
   "figs/gantt.png" 1741190344 32261 d1570e0fb1764c85411b8f5c8de7fbf8 ""
   "figs/hybrid_search.png" 1743093870 207390 7b6bf57f0307b7285e8de35a8b34bed5 ""
