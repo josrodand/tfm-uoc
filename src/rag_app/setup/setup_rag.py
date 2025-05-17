@@ -4,12 +4,40 @@ from rag_app.setup.vector_store_builder import VectorStoreBuilder
 
 
 class RAGSetup:
+    """
+    A class to set up and run the RAG (Retrieval-Augmented Generation) pipeline.
+    Methods
+    -------
+    __init__():
+        Initializes the RAGSetup instance.
+    run():
+        Executes the RAG pipeline, which includes:
+        - Loading documents using RAGLoader.
+        - Processing documents into text splits using RAGProcessing.
+        - Building a FAISS vector store and a BM25 index using VectorStoreBuilder.
+    """
 
     def __init__(self):
         pass
 
 
     def run(self):
+        """
+        Executes the RAG (Retrieval-Augmented Generation) setup process.
+        This method performs the following steps:
+        1. Loads documents using the RAGLoader.
+        2. Processes the loaded documents using RAGProcessing to generate text splits.
+        3. Builds a FAISS vector store and a BM25 index using the processed text splits.
+        Steps:
+        - Initializes a RAGLoader instance to load documents.
+        - Processes the documents using standard processing to split text into smaller chunks.
+        - Initializes a VectorStoreBuilder with the processed text splits.
+        - Builds a FAISS vector store for efficient similarity search.
+        - Builds a BM25 index for traditional keyword-based search.
+        Prints progress and status updates during the execution.
+        Raises:
+            Any exceptions raised during document loading, processing, or index building.
+        """
 
         rag_loader = RAGLoader()
 

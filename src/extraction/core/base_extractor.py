@@ -5,6 +5,18 @@ from src.extraction.params.extraction_params import CHROMEDRIVE_ROUTE, PERSIST_D
 
 
 class BaseExtractor:
+    """
+    BaseExtractor is a base class designed to handle the setup and configuration of a Selenium WebDriver 
+    for web scraping or automation tasks. It provides methods and attributes to manage the driver setup 
+    and configuration.
+    Attributes:
+        chromedrive_route (str): Path to the ChromeDriver executable.
+        persist_data_dir (str): Directory path for persisting data.
+    Methods:
+        setup_driver():
+            Configures and initializes a Selenium WebDriver instance with predefined options, such as 
+            headless mode and security settings. Returns the configured WebDriver instance.
+    """
 
     def __init__(self):
 

@@ -9,6 +9,45 @@
 
 \subsection{Resúmen del trabajo realizado}
 
+En este proyecto se ha desarrollado una solución completa para la gestión, análisis y explotación de convocatorias de ayudas e empresas, donde se han combinado técnicas de extracción de datos web, técnicas de procesamiento del lenguaje natural mediante Grandes Modelos del Lenguaje, y de explotaciónd e la información mediante agentes inteligentes.
+Los resultados obtenidos muestran que el sistema es capaz de explotar la información obtenida mediante consultas en lenguaje natural, realizando búsquedas tanto sobre fuentes documentales como datos estructurados.
+Se destacan las siguientes características:
+
+\begin{itemize}
+    \item La solución sigue una arquitectura basada en módulos, por lo que es fácilmente escalable para incluir nuevas fuentes de datos.
+    \item La combinación de bases de datos relacionales y vectoriales permiten realizar búsquedas eficientes, dotando al sistema de capacidad para responder consultas de índole mas cuantitativa sobre el conjunto de ayudas.
+    \item El empleo de los frameworks LangChain y LanGraph permiten diseñar un sistema agnóstico a los modelos del lenguaje utilizados, así como a las bases de datos. La solución permite reemplazar los diferentes servicios empleados por otros de la misma índole y seguir funcionando sin problemas.
+    \item El uso de LLMs como servicio desde Azure, y las bases de datos empleadas permiten la ejecución de la solución en entornos con bajos recursos, sin necesidad de una GPU para la ejecución de las llamadas a los modelos y embeddings.
+\end{itemize}
+
 \subsection{Lecciones aprendidas}
 
+El desarrollo de esta solución ha supuesto un aprendizaje en diversos aspectos:
+
+\begin{itemize}
+    \item Se ha mejorado la comprensión y el uso de técnicas basadas en IA generativa y grandes modelos del lenguaje.
+    \item Se ha obtenido una imagen global de como funcionan los frameworks LangChain y LanGraph, y como estos se interconectan con distintas opciones de fuentes de datos y modelos.
+    \item El desarrollo ha estado marcado por el uso de buenas prácticas en el ámbito del desarrollo de software, avanzando mas allá de los típicos notebooks empleados en ciencia de datos y diseñando una aplicación completa.
+    \item Se han revisado y testeado diferentes metodologías y arquitecturas dentro del Retrieval Augmented Generatión, así como el funcionamiento de los sistemas basados en agentes inteligentes.
+\end{itemize}
+
 \subsection{Mejoras y trabajo futuro}
+
+La solución planteada en el proyecto es funcional y da unos resultados acordes a las necesidades del proyecto.
+Sin embargo, hay ciertos puntos en los que podría mejorarse esta solución a nivel global:
+
+\begin{itemize}
+    \item Actualmente está limitada a un único portal de ayudas (CDTI). 
+    Sin embargo, el diseño modular de la solución permitiría integrar fácilmente nuevas fuentes de datos en un futuro.
+    \item La infraestructura de bases de datos es sencilla, de forma que pueda emplearse en local sin demasiada dificultad y sin necesidad de recursos computacionales elevados.
+    Como propuesta de de mejora, se sugiere el empleo de servicios mas completos y profesionales, como por ejemplo PosgreSQL o similares para los datos estructurados, y otras opciones en cuanto a bases de datos vectoriales, como PGVector o Qdrant. 
+    \item En cuanto al uso de los frameworks LangChain y LanGraph, comentar que el desarrollo empleado y las funcionalidades implementadas son funcionales, pero se contempla la posibilidad de emplear un diseño y una arquitectura mejorada, en base a los frecuentes cambios y mejoras que se implementan en estos frameworks.
+    \item Del mismo modo, recientemente está cobrando fuerza en el campo de la IA generativa el concepto de MCP (Model Context Protocol). 
+    Es un estándar abierto que funciona como un "USB-C" para modelos de IA, permitiendo conectar de forma uniforme cualquier modelo a múltiples fuentes de datos y herramientas externas. 
+    En lugar de crear integraciones punto a punto entre cada modelo y cada servicio, MCP reduce la complejidad permitiendo a los modelos y herramientas comunicarse mediante un único protocolo común. 
+    Utiliza JSON-RPC 2.0 para enviar solicitudes y recibir respuestas; así, las aplicaciones IA (clientes MCP) invocan funciones en servidores MCP que adaptan APIs, bases de datos o sistemas de archivos. 
+    Los desarrolladores pueden desplegar servidores MCP para servicios como GitHub, Slack o una base de datos, y los agentes de IA eligen y llaman a estas funciones durante la generación de contenido. 
+    \item Como último aporte en cuanto a mejoras, queda comentar que la solución actualmente no es 100\% reproducible, por lo que aplicar ciertas capas de abstracción en diferentes módulos, y complementar con una arquitectura de contenedores daría lugar a una aplicación agóstica del sistema operativo y completamente reproducible.
+\end{itemize}
+
+Con estas líneas de desarrollo, la solución puede seguir en evolución, con el objetivo de ganar robustez y mayor adaptabilidad a las necesidades del problema inicialmente planteado en el proyecto.

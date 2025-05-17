@@ -13,7 +13,7 @@ def load_rag_chain():
 
 rag_chain = load_rag_chain()
 
-st.title("🧠 Chat con RAGChain")
+st.title("🧠 AID-BOT Chat")
 st.markdown("Asistente conversacional de ayudas a empresas.")
 
 # Historial de chat

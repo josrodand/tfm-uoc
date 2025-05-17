@@ -2,6 +2,13 @@ from src.processing.cdti.pipeline import CDTIProcessingPipeline
 
 
 class ProcessingPipeline:
+    """
+    A class to represent a processing pipeline.
+    Methods
+    -------
+    run_pipeline():
+        Executes the CDTI processing pipeline.
+    """
 
     def __init__(self):
         pass

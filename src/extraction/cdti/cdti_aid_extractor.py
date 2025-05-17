@@ -12,7 +12,42 @@ from src.extraction.params.extraction_params import (
     IMPLICITY_WAIT_TIME
 )
 
+
+
 class CDTIAidExtractor(BaseExtractor):
+    """
+    CDTIAidExtractor is a specialized extractor class designed to scrape and process aid-related data 
+    from the CDTI (Centro para el Desarrollo Tecnológico y la Innovación) website. It extends the 
+    BaseExtractor class and provides methods to extract descriptions, aid cards, document URLs, 
+    and subpage information.
+    Attributes:
+        instrument (str): The instrument associated with the aid.
+        support_ambit (str): The support ambit or scope of the aid.
+        name (str): The name of the aid.
+        url (str): The URL of the aid's main page.
+        persist_data_dir (str): The directory where extracted data will be persisted.
+        implicity_wait_time (int): The implicit wait time for the web driver.
+    Methods:
+        parse_string(string):
+            Converts a string to lowercase and replaces spaces with underscores.
+        extract_description(url=None):
+            Extracts the title and description of the aid from the given URL.
+        extract_aid_card(url=None):
+            Extracts detailed information about the aid in the form of a card from the given URL.
+        extract_aid_doc_url(url=None):
+            Extracts the URL of the aid's associated document from the given URL.
+        extract_aid_subpage(url=None):
+            Extracts information about a subpage related to the aid, including its name and URL.
+        run_aid_extraction(formated=True):
+            Executes the full extraction process for the aid, including descriptions, cards, 
+            document URLs, and subpage data. Returns the extracted data.
+        format_data(aid_data):
+            Formats the extracted aid data into a structured dictionary.
+        persist_data(aid_data):
+            Saves the extracted aid data to the local file system, including descriptions, cards, 
+            documents, and metadata.
+    """
+
 
     def __init__(
         self, 
@@ -32,10 +67,35 @@ class CDTIAidExtractor(BaseExtractor):
 
 
     def parse_string(self, string):
+        """
+        Parses a given string by replacing spaces with underscores and converting 
+        all characters to lowercase.
+
+        Args:
+            string (str): The input string to be parsed.
+
+        Returns:
+            str: The parsed string with spaces replaced by underscores and all 
+            characters in lowercase.
+        """
         return string.replace(" ", "_").lower()
 
     
     def extract_description(self, url = None):
+        """
+        Extracts the title and description from a given URL using a web driver.
+        This method navigates to the specified URL (or the instance's default URL if none is provided),
+        locates the title and description elements on the page, and returns their text content. If the
+        description element is not found, it returns `None` for both title and description.
+        Args:
+            url (str, optional): The URL to extract the description from. Defaults to `self.url`.
+        Returns:
+            tuple:
+                - aid_title_text (str): The text content of the title element, if found.
+                - aid_description_md (str): The markdown-formatted text content of the description element,
+                including the title as a header, if found. Returns `None, None` if the description element
+                is not found.
+        """
 
         url = url if url else self.url
         
@@ -67,8 +127,20 @@ class CDTIAidExtractor(BaseExtractor):
             return None, None
 
 
-    
     def extract_aid_card(self, url=None):
+        """
+        Extracts the aid card information from a given URL or the default URL.
+        This method uses a Selenium WebDriver to navigate to the specified URL and 
+        extract information from an HTML element with the class name "card-body". 
+        The extracted information is formatted in Markdown.
+        Args:
+            url (str, optional): The URL to extract the aid card from. If not provided, 
+            the default URL (`self.url`) is used.
+        Returns:
+            str: A Markdown-formatted string containing the extracted aid card information 
+            if the "card-body" element is found.
+            None: If the "card-body" element is not found.
+        """
 
         url = url if url else self.url
 
@@ -100,6 +172,19 @@ class CDTIAidExtractor(BaseExtractor):
         
 
     def extract_aid_doc_url(self, url=None):
+        """
+        Extracts the URL of an aid document from a given webpage.
+        This method navigates to the specified URL (or a default URL if none is provided),
+        searches for an HTML element containing the aid document link, and retrieves the
+        hyperlink reference (href) of the document.
+        Args:
+            url (str, optional): The URL of the webpage to extract the aid document link from.
+            If not provided, the method will use the instance's `self.url`.
+        Returns:
+            str or None: The URL of the aid document if found, otherwise `None`.
+        Raises:
+            NoSuchElementException: If the required elements are not found on the webpage.
+        """
 
         url = url if url else self.url
 
@@ -124,6 +209,20 @@ class CDTIAidExtractor(BaseExtractor):
 
 
     def extract_aid_subpage(self, url=None):
+        """
+        Extracts the name and URL of a subpage from the specified or default URL.
+        This method navigates to the given URL (or the default URL if none is provided),
+        searches for a specific HTML element containing subpage information, and extracts
+        the name and URL of the subpage if available.
+        Args:
+            url (str, optional): The URL to navigate to. If not provided, the default `self.url` is used.
+        Returns:
+            tuple: A tuple containing:
+                - subpage_name (str or None): The name of the subpage if found, otherwise None.
+                - subpage_url (str or None): The URL of the subpage if found, otherwise None.
+        Raises:
+            NoSuchElementException: If the required elements are not found on the page.
+        """
 
         url = url if url else self.url
 
@@ -154,8 +253,41 @@ class CDTIAidExtractor(BaseExtractor):
             return None, None
 
 
-
     def run_aid_extraction(self, formated=True):
+        """
+        Executes the aid extraction process and returns the extracted data.
+        This method performs the following steps:
+        1. Sets up the web driver.
+        2. Extracts the description title and body of the aid.
+        3. Extracts the aid card information.
+        4. Extracts the document URL associated with the aid.
+        5. If no document URL is found, attempts to extract information from a subpage:
+            - Extracts the subpage name and URL.
+            - Extracts the description title and body from the subpage.
+            - Extracts the aid card information from the subpage.
+            - Extracts the document URL from the subpage.
+        Args:
+            formated (bool): If True, formats the extracted data before returning it. Defaults to True.
+        Returns:
+            dict: A dictionary containing the extracted data, including:
+                - 'description_title': The title of the aid description (if found).
+                - 'description_body': The body of the aid description (if found).
+                - 'aid_card': The aid card information (if found).
+                - 'aid_doc_url': The document URL of the aid (if found).
+                - 'subpage': A dictionary containing subpage-specific data (if a subpage is found), including:
+                    - 'subpage_name': The name of the subpage.
+                    - 'subpage_url': The URL of the subpage.
+                    - 'description_title_subpage': The title of the subpage description (if found).
+                    - 'description_body_subpage': The body of the subpage description (if found).
+                    - 'aid_card_subpage': The aid card information from the subpage (if found).
+                    - 'aid_doc_subpage_url': The document URL from the subpage (if found).
+        Raises:
+            Any exceptions raised during the extraction process are not explicitly handled here.
+        Note:
+            This method assumes the presence of helper methods such as `setup_driver`, 
+            `extract_description`, `extract_aid_card`, `extract_aid_doc_url`, 
+            `extract_aid_subpage`, and `format_data` within the class.
+        """
 
         extraction_data = {}
 
@@ -250,6 +382,31 @@ class CDTIAidExtractor(BaseExtractor):
 
 
     def format_data(self, aid_data):
+        """
+        Formats aid data by extracting and organizing relevant information from the input dictionary.
+        Args:
+            aid_data (dict): A dictionary containing aid-related data. It may include the following keys:
+                - 'description_title' (str): The title of the aid description.
+                - 'description_body' (str): The body of the aid description.
+                - 'aid_card' (str): Information about the aid card.
+                - 'aid_doc_url' (str): URL to the aid document.
+                - 'subpage' (dict): A nested dictionary that may include:
+                    - 'description_title_subpage' (str): The title of the aid description from the subpage.
+                    - 'description_body_subpage' (str): The body of the aid description from the subpage.
+                    - 'aid_card_subpage' (str): Information about the aid card from the subpage.
+                    - 'aid_doc_subpage_url' (str): URL to the aid document from the subpage.
+        Returns:
+            dict: A formatted dictionary containing the following keys:
+                - 'aid_url' (str): The URL of the aid (from the instance's `self.url` attribute).
+                - 'description_title' (str): The formatted title of the aid description.
+                - 'description_body' (str): The formatted body of the aid description.
+                - 'aid_card' (str): The formatted aid card information.
+                - 'aid_doc_url' (str): The formatted URL to the aid document.
+        Notes:
+            - If a key is missing in the main dictionary but exists in the 'subpage' dictionary, the value from the 'subpage' is used.
+            - If both main and subpage values exist for 'description_body', they are concatenated with a double newline.
+            - If a key is missing in both the main and subpage dictionaries, an empty string is assigned.
+        """
 
         aid_data_formated = {}
         aid_data_formated["aid_url"] = self.url
@@ -302,7 +459,26 @@ class CDTIAidExtractor(BaseExtractor):
 
 
     def persist_data(self, aid_data):
-
+        """
+        Persist aid data into files and directories.
+        This method saves various components of the aid data (description, card, document, and metadata)
+        into the specified directory. It creates the directory if it does not exist.
+        Args:
+            aid_data (dict): A dictionary containing the following keys:
+                - 'description_body' (str): The body of the description to be saved.
+                - 'description_title' (str): The title of the description, used for naming files.
+                - 'aid_card' (str): The content of the aid card to be saved.
+                - 'aid_doc_url' (str): The URL of the aid document to be downloaded and saved.
+                - 'aid_url' (str): The URL of the aid, included in the metadata.
+        Behavior:
+            - Saves the description body to a markdown file if it is not empty.
+            - Saves the aid card content to a markdown file if it is not empty.
+            - Downloads the aid document from the provided URL and saves it locally.
+            - Saves metadata (aid URL and document URL) to a markdown file.
+        Notes:
+            - The method uses PowerShell's `Start-BitsTransfer` command to download the document.
+            - File and directory names are sanitized using the `parse_string` method.
+        """
         if not os.path.exists(self.persist_data_dir):
             os.makedirs(self.persist_data_dir)
 

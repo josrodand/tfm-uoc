@@ -1,26 +1,27 @@
 # Fdb version 4
-["bibtex TFM_joseluis_rodriguez_andreu"] 1747171455.73776 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1747171460.80699 0
+["bibtex TFM_joseluis_rodriguez_andreu"] 1747411047.07296 "TFM_joseluis_rodriguez_andreu.aux" "TFM_joseluis_rodriguez_andreu.bbl" "TFM_joseluis_rodriguez_andreu" 1747411232.20198 0
   "./referencias.bib" 1743262743 28508 ea58246e1cbc429f7500d86fde070456 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1747171459 19423 cadef3159f66e9b32d772fa0be1f9cf6 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.aux" 1747411231 21114 55a05e39c65a74ae441214690d2d4d79 "pdflatex"
   "c:/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1740402916 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
   (generated)
   "TFM_joseluis_rodriguez_andreu.bbl"
   "TFM_joseluis_rodriguez_andreu.blg"
   (rewritten before read)
-["pdflatex"] 1747171456.37232 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1747171460.80808 0
+["pdflatex"] 1747411228.74269 "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" "TFM_joseluis_rodriguez_andreu.pdf" "TFM_joseluis_rodriguez_andreu" 1747411232.20272 0
   "0_resumen.tex" 1742292576 5760 a3dd052f4842c3c9d5950abcf1d421e8 ""
   "0_titulo.tex" 1742312702 1200 738f65d395098a713cd1c1f587a0be8a ""
   "1_introduccion.tex" 1743106980 12143 b8f8f6d983a7547254749d4686b7c7d8 ""
   "2_estado_del_arte.tex" 1743263588 89950 3cfb201bd4569662112834b495618c15 ""
-  "3_metodos_y_recursos.tex" 1747171449 24460 ec92e89b825a705bd12ae9983c37ee75 ""
-  "TFM_joseluis_rodriguez_andreu.aux" 1747171459 19423 cadef3159f66e9b32d772fa0be1f9cf6 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.bbl" 1747171456 14436 a512c36ae2f6055ce2fd215b970ced3b "bibtex TFM_joseluis_rodriguez_andreu"
-  "TFM_joseluis_rodriguez_andreu.lof" 1747171459 1069 83493d8c1d74500717deff3cd543b7b3 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.lot" 1747171459 90 eff724def4bc882b614e3f56c68265e6 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.out" 1747171459 12222 54c4632339b1d2e833779a828ccaf7a2 "pdflatex"
-  "TFM_joseluis_rodriguez_andreu.tex" 1746957768 3323 81897472af5870684eb667e08260281f ""
-  "TFM_joseluis_rodriguez_andreu.toc" 1747171459 6646 5301ea7e038ac1a8778895599d1dd5fb "pdflatex"
-  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1746957768 3323 81897472af5870684eb667e08260281f ""
+  "3_metodos_y_recursos.tex" 1747398898 42119 d01eaaae6b4b431fba6ff5c08504cdae ""
+  "5_conclusiones_y_trabajo_futuro.tex" 1747411227 5382 c15a9cc2b00684fc7aaa701b5350086d ""
+  "TFM_joseluis_rodriguez_andreu.aux" 1747411231 21114 55a05e39c65a74ae441214690d2d4d79 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.bbl" 1747411047 14436 a512c36ae2f6055ce2fd215b970ced3b "bibtex TFM_joseluis_rodriguez_andreu"
+  "TFM_joseluis_rodriguez_andreu.lof" 1747411231 1195 c1a48dec51986e3261ebdd559e764b7e "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.lot" 1747411231 110 23afabf659c39586fe5fdf469f0fda26 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.out" 1747411231 12747 cf774c19901656f4f9fc9ffda1b36544 "pdflatex"
+  "TFM_joseluis_rodriguez_andreu.tex" 1747171525 3319 8609da4f0c4c8b7ffddeb12cf329107f ""
+  "TFM_joseluis_rodriguez_andreu.toc" 1747411231 7555 9e55a5d5e2778cbe2a131938250d2775 "pdflatex"
+  "c:/Users/jlrodriguez.andreu/dev/formacion/TFM/tfm-uoc/memoria/TFM_joseluis_rodriguez_andreu.tex" 1747171525 3319 8609da4f0c4c8b7ffddeb12cf329107f ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1740403271 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1740404314 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1740403856 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -140,6 +141,7 @@
   "figs/rag.png" 1743074064 237196 f19c05ef2d1274b542b02e7fc205d68f ""
   "figs/rag_types.png" 1743090120 150039 b11ea1ce3c99faec95a851c16fbe5d4a ""
   "figs/rerank.jpg" 1743106713 17872 10e645cb6203e2d428334dfa5ffae9ed ""
+  "figs/streamlit_app.png" 1747334218 63307 efc0545a95991f66aae9fba32e161da8 ""
   "figs/transformer_arquitecture.png" 1742815529 36004 717af1ee6383dd79ee4a18ac2787eb33 ""
   "images/UOC-logo.png" 1740472071 20022 88d0abedab165f70c13152c87632c8c7 ""
   "images/license.png" 1740472071 5332 ccaceeca2358bb244c29a37e82101f6c ""

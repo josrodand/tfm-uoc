@@ -64,12 +64,21 @@
 \contentsline {section}{\numberline {4}Tecnologías y herramientas}{50}{section.3.4}%
 \contentsline {subsection}{\numberline {4.1}Tecnologías seleccionadas}{50}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {4.2}Implementación del módulo de extracción de datos}{53}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Implementación del módulo específico para CDTI}{53}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1}Implementación del módulo específico para CDTI}{54}{subsubsection.3.4.2.1}%
 \contentsline {subsection}{\numberline {4.3}Implementación del módulo de procesamiento de datos}{55}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {4.4}Implementación del módulo de construcción de las bases de datos}{55}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {4.5}Implementación del RAG multiagente}{55}{subsection.3.4.5}%
-\contentsline {section}{\numberline {5}Recursos utilizados}{55}{section.3.5}%
-\contentsline {subsection}{\numberline {5.1}Hardware y configuración del entorno}{55}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {5.2}Software, frameworks y librerías}{55}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {5.3}Almacenamiento de datos}{55}{subsection.3.5.3}%
-\contentsline {chapter}{Bibliografía}{56}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Implementación del módulo específico para CDTI}{56}{subsubsection.3.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}Implementación del módulo de construcción de las bases de datos}{57}{subsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Construcción de la base de datos SQL}{57}{subsubsection.3.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Construcción de la base de datos vectorial}{57}{subsubsection.3.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}Implementación del RAG multiagente}{58}{subsection.3.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Agente SQL}{58}{subsubsection.3.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Agente RAG}{59}{subsubsection.3.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Grafo orquestador de los agentes}{61}{subsubsection.3.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}Implementación de la interfaz gráfica}{61}{subsection.3.4.6}%
+\contentsline {section}{\numberline {5}Resultados}{62}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Conclusiones y trabajo futuro}{63}{chapter.4}%
+\contentsline {section}{\numberline {1}Conclusiones y trabajo futuro}{63}{section.4.1}%
+\contentsline {subsection}{\numberline {1.1}Resúmen del trabajo realizado}{63}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {1.2}Lecciones aprendidas}{64}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {1.3}Mejoras y trabajo futuro}{64}{subsection.4.1.3}%
+\contentsline {chapter}{Bibliografía}{66}{subsection.4.1.3}%

@@ -181,6 +181,17 @@ A continuación, se detallan las tecnologías clave empleadas:
     Esta capacidad resulta especialmente útil para construir aplicaciones conversacionales multi-turno, flujos de trabajo ramificados, agentes colaborativos y sistemas de toma de decisiones basados en LLMs. 
     Además, LangGraph permite la reutilización, trazabilidad y depuración de flujos, facilitando el desarrollo de sistemas robustos, auditables y adaptables a escenarios empresariales complejos donde se requiere control granular del comportamiento conversacional y de los procesos impulsados por inteligencia artificial.
     
+    \item \textbf{Azure AI Studio}: Es una plataforma integrada dentro del ecosistema Microsoft Azure, orientada a facilitar el desarrollo, despliegue y gestión de aplicaciones basadas en inteligencia artificial generativa. 
+    Proporciona un entorno unificado para construir soluciones personalizadas combinando modelos de lenguaje, visión, voz y decisiones, integrados con datos corporativos y flujos de negocio. 
+    Azure AI Studio permite a las organizaciones acelerar el ciclo de vida de desarrollo de aplicaciones de IA generativa mediante herramientas visuales, asistentes guiados y flujos predefinidos, al tiempo que asegura la gobernanza, seguridad y cumplimiento normativo mediante políticas de Azure. 
+    Además, ofrece capacidades avanzadas para la orquestación de flujos de trabajo de IA, integración con Azure OpenAI Service, Azure Machine Learning, y conectividad con fuentes de datos empresariales, permitiendo desarrollar soluciones escalables, seguras y adaptadas a necesidades específicas de negocio.
+
+    Dentro de Azure AI Studio se han empleado los siguientes modelos:
+    \begin{itemize}
+        \item \textbf{o3-mini}: Es un modelo de razonamiento ligero y rentable optimizado para tareas de programación, matemáticas y ciencia, que ofrece tres niveles de esfuerzo de razonamiento (bajo, medio y alto) y soporta funcionalidades avanzadas como Structured Outputs y llamada de funciones.
+        \item \textbf{text-embedding-3-large}: Es el modelo de incrustaciones de texto de siguiente generación de OpenAI, que genera vectores de hasta 3072 dimensiones para representar conceptos en texto y código.
+    \end{itemize}
+
     \item \textbf{Streamlit}: Es un framework de código abierto orientado al desarrollo ágil de interfaces web interactivas para aplicaciones de ciencia de datos, machine learning y visualización de información. 
     Diseñado con un enfoque declarativo y minimalista, Streamlit permite a los desarrolladores crear aplicaciones web funcionales utilizando exclusivamente Python, sin necesidad de conocimientos avanzados en desarrollo frontend. 
     La plataforma facilita la integración directa con librerías populares como Pandas, Matplotlib, Plotly o TensorFlow, permitiendo desplegar dashboards interactivos, formularios y visualizaciones en tiempo real con mínima complejidad. 
@@ -240,26 +251,190 @@ El módulo asociado a CDTI sigue el siguiente flujo de trabajo:
 
 Tras la ejecución del módulo, obtenemos un directorio local para cada ayuda con los tres documentos markdown y los pdf asociados a la ayuda.
 
+%meter esquema de codigo
 
 \subsection{Implementación del módulo de procesamiento de datos}
+
+La funcionalidad principal de éste módulo es la extracción de determinados valores o parámetros específicos de cada ayuda, con el objetivo de construir una base de datos estructurada con esa información.
+
+Para ello, se ha diseñado una solución basada en IA Generativa que permite analizar los diferentes documentos asociado a la convocatoria de ayuda y extraer los siguientes parámetros:
+
+\begin{itemize}
+    \item \textbf{organismo}: Entidad que da la subvención.
+    \item \textbf{nombre}: Título de la ayuda o subvención. 
+    \item \textbf{linea}: Modalidades de la subvención.
+    \item \textbf{fecha\_inicio}: Fecha de inicio del plazo para presentar la solicitud.
+    \item \textbf{fecha\_fin}: Fecha de fin del plazo para presentar la solicitud.
+    \item \textbf{objetivo}: Objetivo general de la ayuda o actuación.
+    \item \textbf{beneficiarios}: Beneficiarios de la ayuda o actuación.
+    \item \textbf{anio}: Año de la convocatoria.
+    \item \textbf{area}: Clasificación de la ayuda en una de las siguientes áreas:I+D, Innovación, Inversión o Internacional.
+    \item \textbf{presupuesto\_minimo}: Valor del presupuesto mínimo.
+    \item \textbf{presupuesto\_maximo}: Valor del presupuesto máximo.
+    \item \textbf{duración\_mínima}: Duración mínima de la ayuda.
+    \item \textbf{duración\_máxima}: Duración máxima de la ayuda.
+    \item \textbf{intensidad\_del\_prestamo}: Información sobre la intensidad del préstamo.
+    \item \textbf{tipo\_financiacion}: Tipo de la ayuda.
+    \item \textbf{link\_ficha\_tecnica}: URL de la página principal de la ayuda.
+    \item \textbf{link\_convocatoria}: URL de los documentos PDF asociados a la ayuda.
+\end{itemize}
+
+De la misma manera que el módulo de extracción de datos, este módulo ha sido diseñado de forma que exista un submódulo asociado a cada portal de ayudas específico.
+Esto es debido a que cada portal tiene su propia arquitectura y formato de distribución de la información. 
+En el caso de CDTI, los datos a extraer se encuentran tanto en la ficha técnica como en el PDF de la convocatoria.
+
+
+\subsubsection{Implementación del módulo específico para CDTI}
+
+El módulo asociado a CDTI sigue el siguiente flujo de trabajo para cada ayuda:
+
+\begin{itemize}
+    \item Se cargan los documentos markdown como texto plano y se concatenan para tener un único documento. También se carga por otro lado el pdf a texto plano con el loader estándar de LangChain.
+    \item Ese documento pasa por una cadena de LangChain con un prompt de extracción de un subconjunto de las variables anteriores. 
+    La cadena genera directamente un JSON con las variables y su contenido.
+    \item Por otro lado, se genera otra cadena con una arquitectura de "RAG dinámico" donde a partir de otro conjunto de prompts, se extrae el resto de variables, también en formato JSON. 
+    \item Finalmente, se concatenan ambos JSON para tener el registro completo de la ayuda.
+\end{itemize}
+
+El módulo se ejecuta para cada una de las ayudas disponibles de CDTI, y finalmente se concatenan para construir un DataFrame de Pandas, el cual se almacena en local como fichero CSV.
 
 
 \subsection{Implementación del módulo de construcción de las bases de datos}
 
+La finalidad de este módulo es la carga de los datos obtenidos para cada ayuda al conjunto de bases de datos que conforman la solución.
+Estas bases de datos son:
+
+\begin{itemize}
+    \item Una base de datos relacional, donde se almacena una la tabla \textbf{aids\_table}, con los campos previamente descritos para cada ayuda.
+    \item Una base de datos vectorial, donde se almacenan los documentos pertinentes de cada una de las ayudas.
+    \item Adicionalmente, se emplea un directorio local para almacenar ficheros binarios necesarios para la aplicación.
+\end{itemize}
+
+Aunque ya se ha realizado procesamiento de datos en el módulo anterior, en este módulo se realizan algunas transformaciones para preparar las fuentes de datos para el RAG multiagente.
+
+\subsubsection{Construcción de la base de datos SQL}
+
+En este caso, consiste simplemente en la creación de la tabla y la subida del csv a ésta.
+Posteriormente, mediante librerías de Python como SQLAlchemy, podemos acceder a esa base de datos y extraer la tabla como un dataframe de Pandas.
+
+\subsubsection{Construcción de la base de datos vectorial}
+
+Para la construcción de la base de datos vectorial y partiendo de los documentos markdown y PDF, es necesario un flujo de procesamiento:
+
+\begin{itemize}
+    \item En primer lugar se cargan desde LangChain los documentos de cada ayuda, usando sus módulos específicos para lectura de markdown y PDf.
+    \item Esos documentos son divididos en chunks, a partir de los siguientes parámetros:
+    
+    \begin{itemize}
+            \item \textbf{Chunk size}: Es el tamaño, en tokens o caracteres, en que se fragmenta un documento para su indexación en bases de datos vectoriales, permitiendo una representación semántica eficiente. 
+            Un tamaño mayor aporta más contexto pero puede reducir precisión, mientras que tamaños pequeños mejoran el enfoque pero pueden perder información relevante.
+            \item \textbf{Chunk overlap}: El chunk overlap es el solapamiento intencional entre chunks consecutivos. Se define como el número de caracteres o tokens que se repiten al inicio de cada nuevo chunk respecto al anterior. 
+            Este solapamiento es crucial para evitar pérdidas de contexto en los límites de cada fragmento, asegurando que la transición entre secciones del texto no genere huecos semánticos.
+        \end{itemize}
+    
+    \item Cada uno de los chunks de cada documento es procesado por un modelo de generación de embeddings, que transforma el contenido textual en un vector numérico de alta dimensión. 
+    Este vector captura la representación semántica del chunk, permitiendo que el sistema comprenda y compare su significado con otros textos dentro del espacio vectorial.  
+    \item Estos embeddings son posteriormente almacenados en la base de datos vectorial para facilitar búsquedas semánticas rápidas y precisas.
+    \item Adicionalmente, se almacena como fichero binario esa matriz de embeddings asociada al conjunto de documentos. 
+    Esto es necesario para la implementación de algunas de las tecnicas empleadas en el RAG multiagente, ya que el procesado de embeddings requiere un tiempo de procesado y un coste asociado.
+
+\end{itemize}
+
 
 \subsection{Implementación del RAG multiagente}
 
+El sistema de recuperación de información es el núcleo de esta solución.
+Consiste en un asistente conversacional que recibe consultas en lenguaje natural y tiene la capacidad de interpretar la consulta, decidir que fuente de datos es la mas acertada, extraer información y generar una respuesta precisa.
+El sistema está formado por dos agentes principales: El Agente SQL y el Agente RAG.
+
+\subsubsection{Agente SQL}
+
+Este agente consiste en un sistema de recuperación a partir de una base de datos SQL. Aunque desde LangChain es relativamente simple, internamente sigue el siguiente flujo:
+
+\begin{itemize}
+    \item El usuario introduce una consulta en lenguaje natural.
+    \item El LLM interpreta la consulta y genera una consulta SQL a partir de las necesidades del usuario.
+    \item El sistema ejecuta la consulta sobre la base de datos, y obtiene como resultado un conjuto de datos.
+    \item Ese conjunto de datos, la query SQL generada y la consulta inicial en lenguaje natural son pasados como entrada al LLM, el cual genera una respuesta en lenguaje natural.
+\end{itemize}
 
 
-\section{Recursos utilizados}
+
+\subsubsection{Agente RAG}
+
+Este agente se basa en un sistema Retrieval-Augmented Generation (RAG), el cual combina técnicas de recuperación de información y generación de lenguaje natural para mejorar la precisión y contextualización de las respuestas generadas por los modelos de lenguaje. 
+El proceso comienza con la recepción de una consulta en lenguaje natural, que se utiliza para realizar una búsqueda semántica en una base de datos vectorial, obteniendo documentos, o fragmentos de éstos relevantes. 
+Estos resultados recuperados son luego proporcionados como contexto en la entrada del LLM, que utiliza dicha información para generar una respuesta enriquecida, fundamentada y específica. 
+
+En el agente se han incorporado una serie de mejoras que se consideran punteras dentro del estado del arte:
+
+\begin{itemize}
+    \item \textbf{BM25}: Best Matching 25 es una técnica clásica de recuperación de información basada en el modelo probabilístico de espacio vectorial, que calcula la relevancia de documentos en función de la frecuencia de aparición de términos (TF) y la inversa de la frecuencia documental (IDF). 
+    Al utilizar BM25 como motor de recuperación dentro de un flujo RAG, las consultas en lenguaje natural son transformadas en términos clave que BM25 utiliza para recuperar documentos o fragmentos con coincidencias léxicas precisas. 
+    Esta aproximación es especialmente efectiva cuando se requiere alta exactitud en la correspondencia de términos o en dominios con vocabulario técnico específico, asegurando que las evidencias recuperadas contengan explícitamente los términos consultados. 
+    Posteriormente, estos documentos son integrados como contexto en el modelo generativo, mejorando la fundamentación factual de las respuestas generadas.
+    \item \textbf{Búsqueda híbrida}: La búsqueda híbrida en sistemas RAG combina de manera complementaria técnicas de recuperación basadas en búsqueda vectorial semántica y búsqueda clásica basada en términos (keyword search, BM25, etc). 
+    Este enfoque busca aprovechar las fortalezas de ambos métodos: mientras la búsqueda semántica permite recuperar documentos relevantes aunque no coincidan literalmente las palabras clave, la búsqueda basada en términos asegura precisión léxica y cobertura de coincidencias exactas. 
+    En un flujo de RAG híbrido, ambas búsquedas se ejecutan en paralelo o de manera combinada, fusionando los resultados para seleccionar los documentos o fragmentos más relevantes. 
+    Estos se integran como contexto enriquecido en el modelo generativo, mejorando la precisión, cobertura y robustez frente a ambigüedades, términos específicos o consultas complejas.
+
+    \item \textbf{Reranking}: El reranking es una etapa crítica que permite optimizar la selección de los documentos recuperados antes de ser entregados al modelo generativo. 
+    Tras ejecutar la búsqueda inicial, ya sea semántica, basada en términos o híbrida, se obtiene un conjunto preliminar de documentos candidatos. 
+    El proceso de reranking consiste en reordenar estos documentos aplicando modelos de clasificación más sofisticados, que pueden estar basados en aprendizaje profundo, heurísticas personalizadas o combinaciones de puntuaciones semánticas y léxicas. 
+    Este proceso evalúa con mayor precisión la relevancia contextual de cada documento respecto a la consulta original, priorizando aquellos que aporten mayor valor semántico o evidencias más directas. 
+    Al mejorar la calidad y pertinencia de los documentos suministrados al LLM, el reranking incrementa la exactitud, coherencia y fundamentación de las respuestas generadas en el flujo RAG.
+    
+    En este caso, se ha optado por emplear \textbf{FlashRerank}, una técnica de reranking eficiente que utiliza modelos ligeros tipo cross-encoder optimizados para reordenar grandes volúmenes de documentos candidatos, evaluando de manera cruzada cada fragmento con la consulta para obtener puntuaciones de relevancia más precisas. 
+    Diseñado para entornos de alta demanda, permite mejorar la selección de documentos relevantes de forma rápida y escalable, optimizando la calidad y pertinencia del contexto entregado al modelo generativo.
+\end{itemize}
+
+El flujo del agente RAG quedaría de la siguiente forma:
+\begin{itemize}
+    \item El usuario introduce una consulta en lenguaje natural.
+    \item El sistema realiza una búsqueda híbrida de documentos relevantes:
+    \begin{itemize}
+        \item En la búsqueda semántica, el sistema calcula los embeddings de la consulta, y busca en la base de datos vectorial los K documentos similares.
+        \item en la búsqueda por keywords, se aplica BM25: Se calculan los parámetros de palabras clave meiante TF-IDF a la consulta, y se comparan con los parámetros almacenados del cnjunto de documentos. Se buscan los K documentos mas similares y se devuelven.
+        \item Mediante un proceso de ponderación, que se encuentra al 50\% de peso en ambas modalidades de búsqueda, se devuelve un conjunto de documentos similares.
+    \end{itemize}
+    \item Una vez obtenidos los documentos similares, se aplica el algoritmo de reranking. Este vuelve a evaluar la relación entre cada documento y la consulta, asignando nuevas puntuaciones de relevancia.
+    \item Finalmente, se proporciona los documentos relevantes obtenidos junto a la consulta al LLM, el cual genera una respuesta.
+\end{itemize}
+
+Adicionalmente, se incluye un proceso paralelo al flujo principal, donde se extraen los títulos y páginas de los documentos relevantes, se formatea como texto markdown y se añaden a la respuesta.
+
+\subsubsection{Grafo orquestador de los agentes}
+
+Mediante el uso combinado de LangChain y Langraph, se construye un grafo principal que permite orquestar los dos agentes.
+La creación de un grafo con LangGraph se basa en la definición de nodos, que representan agentes, funciones o pasos de procesamiento, y aristas que definen las transiciones entre nodos en función del estado o la lógica de control. 
+Cada nodo puede incorporar agentes de LangChain, herramientas externas o lógica personalizada, permitiendo modelar flujos flexibles, iterativos o condicionales. 
+Una vez definidos, el grafo se ejecuta gestionando el paso de estados, controlando la persistencia, la gestión de errores y la toma de decisiones de forma explícita y trazable, habilitando la implementación de workflows de IA modulares, reutilizables y controlados.
+
+El sistema implementado en esta solución se compone de un flujo en el que, a partir de una consulta, pasa por un elemento llamado enrutador o Router.
+Este router no es mas que una cadena de LangChain que emplea un LLM para decidir si la consulta la debe responder el agente SQL o el agente RAG.
+
+\subsection{Implementación de la interfaz gráfica}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figs/streamlit_app.png}
+	\caption{Interfaz gráfica con Streamlit}
+	\label{fig:context-anoni1}
+\end{figure}
+
+Finalmente, se implementa mediante Streamlit una interfaz gráfica sencilla a modo de chat, donde se pueden enviar mensajes directamente al sistema.
+Streamlit permite generar con un único script de Python una aplicación grafica de manera rápida y sencilla, la cual puede ser posteriormente desplegada con rapidez.
 
 
-\subsection{Hardware y configuración del entorno}
 
+\section{Resultados}
 
-\subsection{Software, frameworks y librerías}
+Tras la implementación de cad auno d elos módulos lo que obtenemos es una solución completa con las siguientes características:
 
-
-\subsection{Almacenamiento de datos}
-
-
+\begin{itemize}
+    \item Una aplicación de asistencia conversacional, donde conversas con una IA que tiene acceso tanto a los documentos asociados a las ayudas como a los datos estructurados generados por el procesamiento.
+    \item Cuando el usuario realiza una consulta, el sistema decide internamente si el contexto que necesita lo extrae de la base de datos SQL o de la vectorial. En cada caso, realiza una búsqueda de información y en base a esos datos genera una respuesta.
+    En el caso de que la consulta sea a la base de datos vectorial, el sistema te devuelve una lista de fuentes empleadas.
+    \item El propio sistema integra las pipelines de extracción y procesamiento de datos, con los que se puede mantener actualizada la aplicación realizando ejecuciones de manera periódica.
+    \item El sistema está construido con una arquitectura modular, por lo que se pueden integrar nuevas fuentes de datos (portales de ayudas) con facilidad.
+\end{itemize}

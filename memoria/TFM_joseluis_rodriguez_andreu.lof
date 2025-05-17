@@ -11,4 +11,6 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Contextual retrieval propuesto por Anthropic}}{41}{figure.2.7}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Flujo de Agentic RAG}}{42}{figure.2.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Matriz de ayudas del CDTI}}{54}{figure.3.1}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Matriz de ayudas del CDTI}}{55}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Interfaz gráfica con Streamlit}}{62}{figure.3.2}%
+\addvspace {10\p@ }
