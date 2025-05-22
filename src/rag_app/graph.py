@@ -91,11 +91,15 @@ class MultiAgentGraph:
     - graph: StateGraph
         The compiled state graph that orchestrates the query routing and retrieval process.
     """
-    def __init__(self):
+    def __init__(self, type = "vanilla"):
         self.rag_chain = RAGChain()
         self.sql_chain = SQLRetrieval()
         self.llm = self.get_llm()
-        self.graph = self.build_graph()
+
+        if type == "vanilla":
+            self.graph = self.build_graph()
+        if type == "sqlbackup":
+            self.graph = self.build_sqlbackup_graph()
 
 
     def get_llm(self):
@@ -246,7 +250,73 @@ class MultiAgentGraph:
         workflow.add_edge("rag", END)
         workflow.add_edge("sql", END)
 
-        # memory = MemorySaver()
+        # memory = MemorySaver()  # Crear una instancia de MemorySaver
+        # workflow.enable_memory(memory)  # Habilitar la memoria en el grafo
+
+        graph = workflow.compile()
+
+        return graph
+    
+
+    def build_sqlbackup_graph(self):
+        """
+        Builds and compiles a state graph workflow for query routing and processing.
+        The method creates a `StateGraph` instance and defines nodes and edges
+        to represent the workflow. It includes two retriever nodes ("rag" and "sql")
+        and conditional logic to route queries based on the `route_query` function.
+        If the SQL retriever does not find information, the query is routed to the RAG retriever.
+        Returns:
+            graph: The compiled state graph representing the workflow.
+        """
+
+        workflow = StateGraph(State)
+
+        # Add nodes for RAG and SQL retrievers
+        workflow.add_node("rag", self.rag_retriever)
+        workflow.add_node("sql", self.sql_retriever)
+
+        # Add conditional logic to route queries based on the question router
+        workflow.add_conditional_edges(
+            START,
+            self.route_query,
+            {
+                "rag": "rag",
+                "sql": "sql"
+            }
+        )
+
+        # Add conditional logic to check SQL response using LLM
+        def check_sql_response(state):
+            """
+            Checks if the SQL retriever found relevant information by invoking the LLM.
+            If the LLM determines the response is not relevant, routes the query to the RAG retriever.
+            """
+            response = state["response"]
+            query = state["query"]
+
+            # Use LLM to evaluate the relevance of the SQL response
+            llm_prompt = f"Is the following response relevant to the query? Query: {query} Response: {response}. Answer with 'yes' or 'no'."
+            llm_response = self.llm.invoke({"query": llm_prompt})
+
+            if llm_response.strip().lower() == "no":
+                return "rag"
+            else:
+                return END
+
+        # Add edges for SQL fallback to RAG
+        workflow.add_conditional_edges(
+            "sql",
+            check_sql_response,
+            {
+                "rag": "rag",
+                END: END
+            }
+        )
+
+        # Add direct edge from RAG to END
+        workflow.add_edge("rag", END)
+
+        # Compile the graph
         graph = workflow.compile()
 
         return graph
@@ -263,5 +333,5 @@ class MultiAgentGraph:
         """"""
         response = self.graph.invoke({"query": query})
 
-        return response["response"]
-
+        # return response["response"]
+        return response

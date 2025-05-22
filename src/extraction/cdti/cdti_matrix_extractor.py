@@ -10,7 +10,8 @@ from src.extraction.params.extraction_params import (
     CDTI_MAIN_DIR, 
     CDTI_MATRIX_DATA_DIR, 
     CDTI_MATRIX_FILENAME,
-    IMPLICITY_WAIT_TIME
+    IMPLICITY_WAIT_TIME,
+    CDTI_EXCEPTION_AIDS
 )
 
 
@@ -48,8 +49,8 @@ class CDTIMatrixExtractor(BaseExtractor):
         self.url_cdti = URL_CDTI
         self.persist_data_dir = self.persist_data_dir + "/" + CDTI_MAIN_DIR + "/" + CDTI_MATRIX_DATA_DIR
         self.file_name = CDTI_MATRIX_FILENAME
-
         self.implicity_wait_time = IMPLICITY_WAIT_TIME
+        self.exception_aids = CDTI_EXCEPTION_AIDS
 
     
     def get_row_titles(self, section):
@@ -161,8 +162,10 @@ class CDTIMatrixExtractor(BaseExtractor):
                                 "name": aid_name, 
                                 "url": aid_href
                             }
-        
-                            aid_list.append(aid_data)
+
+                            if aid_name not in self.exception_aids:
+                                # check if aid is not already in the list
+                                aid_list.append(aid_data)
         driver.quit()
 
         # clean aid list

@@ -22,3 +22,5 @@ pdfplumber
 IPython
 flashrank
 streamlit
+fastapi
+uvicorn

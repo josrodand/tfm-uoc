@@ -1,17 +1,10 @@
-# streamlit_app.py
-
 import streamlit as st
-# from src.rag_app.chain import RAGChain
-from src.rag_app.graph import MultiAgentGraph
+import requests
 
 st.set_page_config(page_title="Chat RAG", page_icon="🤖", layout="centered")
 
-# Inicializar el RAGChain
-@st.cache_resource
-def load_rag_chain():
-    return MultiAgentGraph()
-
-rag_chain = load_rag_chain()
+# URL
+API_URL = "http://localhost:8000/invoke"  
 
 st.title("🧠 AID-BOT Chat")
 st.markdown("Asistente conversacional de ayudas a empresas.")
@@ -34,15 +27,18 @@ if prompt:
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Llamada a RAGChain
+    # Llamada a la API
     with st.chat_message("assistant"):
         with st.spinner("Pensando..."):
             try:
-                response = rag_chain.invoke(prompt)
-            except Exception as e:
-                response = f"❌ Error: {e}"
+                response = requests.post(API_URL, json={"query": prompt})
+                response.raise_for_status()  # Verifica si hubo errores en la solicitud
+                response_data = response.json()
+                bot_response = response_data.get("response", "No se recibió respuesta.")
+            except requests.exceptions.RequestException as e:
+                bot_response = f"❌ Error al conectar con la API: {e}"
 
-            st.markdown(response)
+            st.markdown(bot_response["response"])
 
     # Guardar respuesta del asistente
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.session_state.messages.append({"role": "assistant", "content": bot_response})
